@@ -11,5 +11,8 @@
             <ColumnDefinition Width="19*" />
             <ColumnDefinition Width="141*" />
         </Grid.ColumnDefinitions>
+        <Label Name="IPv6Label" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="322,100,0,0" VerticalAlignment="Top" Width="373"/>
+        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="451,167,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click"/>
+        <TextBox Name="IPBox" Grid.Column="1" HorizontalAlignment="Left" Margin="451,146,0,0" Text="IPv4" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" TextChanged="TextBox_TextChanged"/>
     </Grid>
 </Window>
