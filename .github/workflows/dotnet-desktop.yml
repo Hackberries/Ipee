@@ -41,8 +41,3 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
         
-    - uses: nikeee/docfx-action@v1.0.0
-      name: Build Documentation
-      with:
-        args: doc/docfx.json
-
