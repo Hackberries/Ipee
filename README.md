@@ -15,4 +15,4 @@ Die Doku wird mittels [DocFX](https://github.com/dotnet/docfx) aus den .cs Datei
 docfx ".\docfx\docfx.json" -o ".\docs" --serve
 ```
 
-Für weiter Hilfe bezüglich Dokumentationskommentare sind hier zu finden: [C#-Programmierhandbuch](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/xmldoc/summary)
+Weitere Hilfe bezüglich Dokumentationskommentare ist hier zu finden: [C#-Programmierhandbuch](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/xmldoc/summary)
