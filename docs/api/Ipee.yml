@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ipee
+  commentId: N:Ipee
+  id: Ipee
+  children:
+  - Ipee.App
+  - Ipee.IPAddressStore
+  - Ipee.MainWindow
+  langs:
+  - csharp
+  - vb
+  name: Ipee
+  nameWithType: Ipee
+  fullName: Ipee
+  type: Namespace
+  assemblies:
+  - Ipee
+references:
+- uid: Ipee.App
+  commentId: T:Ipee.App
+  name: App
+  nameWithType: App
+  fullName: Ipee.App
+- uid: Ipee.IPAddressStore
+  commentId: T:Ipee.IPAddressStore
+  parent: Ipee
+  name: IPAddressStore
+  nameWithType: IPAddressStore
+  fullName: Ipee.IPAddressStore
+- uid: Ipee.MainWindow
+  commentId: T:Ipee.MainWindow
+  name: MainWindow
+  nameWithType: MainWindow
+  fullName: Ipee.MainWindow
+- uid: Ipee
+  commentId: N:Ipee
+  name: Ipee
+  nameWithType: Ipee
+  fullName: Ipee
