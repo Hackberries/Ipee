@@ -4,5 +4,6 @@ Still feel free to look at the code! 😄
 
 # Ipee
 ![Generic badge](https://img.shields.io/static/v1?label=Framework&message=.net5&color=green)
+![.NET Core Desktop](https://github.com/Hackberries/Ipee/workflows/.NET%20Core%20Desktop/badge.svg)
 
 IP Enterprise Editor
