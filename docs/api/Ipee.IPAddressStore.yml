@@ -1,0 +1,461 @@
+### YamlMime:ManagedReference
+items:
+- uid: Ipee.IPAddressStore
+  commentId: T:Ipee.IPAddressStore
+  id: IPAddressStore
+  parent: Ipee
+  children:
+  - Ipee.IPAddressStore.AddAddress(System.Net.IPAddress)
+  - Ipee.IPAddressStore.Instance
+  langs:
+  - csharp
+  - vb
+  name: IPAddressStore
+  nameWithType: IPAddressStore
+  fullName: Ipee.IPAddressStore
+  type: Class
+  source:
+    remote:
+      path: Ipee/IPAddressStore.cs
+      branch: main
+      repo: https://github.com/Hackberries/Ipee.git
+    id: IPAddressStore
+    path: ../Ipee/IPAddressStore.cs
+    startLine: 12
+  assemblies:
+  - Ipee
+  namespace: Ipee
+  summary: "\nRegelt die Vergabe von IPv4-Adressen, hält diese, schlägt Adressen für neue Clients vor und stellt die Kompatibilität sicher.\n"
+  example: []
+  syntax:
+    content: public class IPAddressStore
+    content.vb: Public Class IPAddressStore
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Ipee.IPAddressStore.Instance
+  commentId: P:Ipee.IPAddressStore.Instance
+  id: Instance
+  parent: Ipee.IPAddressStore
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: IPAddressStore.Instance
+  fullName: Ipee.IPAddressStore.Instance
+  type: Property
+  source:
+    remote:
+      path: Ipee/IPAddressStore.cs
+      branch: main
+      repo: https://github.com/Hackberries/Ipee.git
+    id: Instance
+    path: ../Ipee/IPAddressStore.cs
+    startLine: 17
+  assemblies:
+  - Ipee
+  namespace: Ipee
+  summary: "\nSingleton Instanz der Klasse.\n"
+  example: []
+  syntax:
+    content: public static IPAddressStore Instance { get; }
+    parameters: []
+    return:
+      type: Ipee.IPAddressStore
+    content.vb: Public Shared ReadOnly Property Instance As IPAddressStore
+  overload: Ipee.IPAddressStore.Instance*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Ipee.IPAddressStore.AddAddress(System.Net.IPAddress)
+  commentId: M:Ipee.IPAddressStore.AddAddress(System.Net.IPAddress)
+  id: AddAddress(System.Net.IPAddress)
+  parent: Ipee.IPAddressStore
+  langs:
+  - csharp
+  - vb
+  name: AddAddress(IPAddress)
+  nameWithType: IPAddressStore.AddAddress(IPAddress)
+  fullName: Ipee.IPAddressStore.AddAddress(System.Net.IPAddress)
+  type: Method
+  source:
+    remote:
+      path: Ipee/IPAddressStore.cs
+      branch: main
+      repo: https://github.com/Hackberries/Ipee.git
+    id: AddAddress
+    path: ../Ipee/IPAddressStore.cs
+    startLine: 27
+  assemblies:
+  - Ipee
+  namespace: Ipee
+  summary: "\nFügt eine neue IpAdresse hinzu.\n"
+  example: []
+  syntax:
+    content: public void AddAddress(IPAddress address)
+    parameters:
+    - id: address
+      type: System.Net.IPAddress
+      description: Die Adresse, welche hinzugefügt werden soll.
+    content.vb: Public Sub AddAddress(address As IPAddress)
+  overload: Ipee.IPAddressStore.AddAddress*
+  exceptions:
+  - type: Ipee.AdressAlreadyExistException
+    commentId: T:Ipee.AdressAlreadyExistException
+  - type: System.NullReferenceException
+    commentId: T:System.NullReferenceException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Ipee
+  commentId: N:Ipee
+  name: Ipee
+  nameWithType: Ipee
+  fullName: Ipee
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Ipee.IPAddressStore.Instance*
+  commentId: Overload:Ipee.IPAddressStore.Instance
+  name: Instance
+  nameWithType: IPAddressStore.Instance
+  fullName: Ipee.IPAddressStore.Instance
+- uid: Ipee.IPAddressStore
+  commentId: T:Ipee.IPAddressStore
+  parent: Ipee
+  name: IPAddressStore
+  nameWithType: IPAddressStore
+  fullName: Ipee.IPAddressStore
+- uid: Ipee.AdressAlreadyExistException
+  commentId: T:Ipee.AdressAlreadyExistException
+  isExternal: true
+- uid: System.NullReferenceException
+  commentId: T:System.NullReferenceException
+  isExternal: true
+- uid: Ipee.IPAddressStore.AddAddress*
+  commentId: Overload:Ipee.IPAddressStore.AddAddress
+  name: AddAddress
+  nameWithType: IPAddressStore.AddAddress
+  fullName: Ipee.IPAddressStore.AddAddress
+- uid: System.Net.IPAddress
+  commentId: T:System.Net.IPAddress
+  parent: System.Net
+  isExternal: true
+  name: IPAddress
+  nameWithType: IPAddress
+  fullName: System.Net.IPAddress
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
