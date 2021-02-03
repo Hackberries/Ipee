@@ -40,4 +40,9 @@ jobs:
       run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
+        
+    - uses: nikeee/docfx-action@v1.0.0
+      name: Build Documentation
+      with:
+        args: doc/docfx.json
 
