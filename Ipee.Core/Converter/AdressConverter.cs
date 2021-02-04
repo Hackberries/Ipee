@@ -29,7 +29,21 @@ namespace Ipee.Core.Converter
                     IPv6 = IPv6 + ":";
                 }
             }
-            return IPv6;
+            return IPv6.ToLower();
         }
+
+        public static string IPtoBinary(string IP)
+        {
+            string BinaryIP= "";
+            int[] SplitOctetsInt = Array.ConvertAll(IP.Split("."), s => int.Parse(s));
+            for (int i = 0; i < 4; i++)
+            {
+                string binary =  Convert.ToString(SplitOctetsInt[i], 2).PadLeft(8, '0');
+                BinaryIP +=binary+" ";
+            }
+            return BinaryIP;
+        }
+
+
     }
 }

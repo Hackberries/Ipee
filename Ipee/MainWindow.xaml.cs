@@ -43,6 +43,7 @@ namespace Ipee
                 if (System.Net.IPAddress.TryParse(IPBox.Text, out myAddress))
                 {
                     IPv6Label.Content = AdressConverter.IPtoHex(IPBox.Text);
+                    AdressConverter.IPtoBinary(IPBox.Text);
                 }
                 else
                 {
