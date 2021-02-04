@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ipee
+namespace Ipee.Store
 {
     /// <summary>
     /// Regelt die Vergabe von IPv4-Adressen, hält diese, schlägt Adressen für neue Clients vor und stellt die Kompatibilität sicher.
