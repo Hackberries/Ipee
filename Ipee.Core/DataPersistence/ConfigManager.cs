@@ -26,6 +26,23 @@ namespace Ipee.Core.DataPersistence
             return this.configFileList;
         }
 
+        public SubnetConfig EditIpAddress (string oldIpAddress, string newIpAddress)
+        {
+            foreach (SubnetConfig subnetConfig in this.configFileList)
+            {
+                foreach (string address in subnetConfig.IpAddresses)
+                {
+                    if (address == oldIpAddress)
+                    {
+                        Console.WriteLine("FUCKIN STRNGS ARE IMMUTABLE! :(");
+                        Console.WriteLine("Build new model! :(");
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public SubnetConfig FindSubnetConfigByDescription(string description)
         {
             foreach (SubnetConfig subnetConfig in this.configFileList)
