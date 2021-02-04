@@ -5,7 +5,7 @@ Still feel free to look at the code! 😄
 # Ipee
 
 ![Generic badge](https://img.shields.io/static/v1?label=Framework&message=.net5&color=green)
-![.NET](https://github.com/Hackberries/Ipee/workflows/.NET/badge.svg)
+![test](https://github.com/Hackberries/Ipee/workflows/test/badge.svg)
 
 IP Enterprise Editor
 
