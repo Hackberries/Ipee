@@ -15,5 +15,26 @@ namespace Ipee.Test
         {
             ConfigManager manager = new();
         }
+
+        [Fact]
+        public void CanFindByClientIp()
+        {
+            ConfigManager manager = new();
+            Assert.NotNull(manager.FindSubnetConfigByClientIp("127.0.0.10"));
+        }
+
+        [Fact]
+        public void CanFindBySubnetIp()
+        {
+            ConfigManager manager = new();
+            Assert.NotNull(manager.FindSubnetConfigBySubnetIp("127.0.0.1"));
+        }
+
+        [Fact]
+        public void CanGetAll()
+        {
+            ConfigManager manager = new();
+            Assert.NotNull(manager.GetAllSubnetsAsList());
+        }
     }
 }
