@@ -1,29 +1,28 @@
-name: .NET
+name: test
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies Ipee.Core
-      run: dotnet restore Ipee.Core
-    - name: Restore dependencies Ipee.Test
-      run: dotnet restore Ipee.Test
-    - name: Build Core
-      run: dotnet build Ipee.Core --no-restore
-    - name: Build Test
-      run: dotnet build Ipee.Test --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: Restore dependencies Ipee.Core
+        run: dotnet restore Ipee.Core
+      - name: Restore dependencies Ipee.Test
+        run: dotnet restore Ipee.Test
+      - name: Build Core
+        run: dotnet build Ipee.Core --no-restore
+      - name: Build Test
+        run: dotnet build Ipee.Test --no-restore
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
