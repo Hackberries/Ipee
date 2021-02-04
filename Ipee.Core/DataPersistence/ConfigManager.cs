@@ -72,24 +72,28 @@ namespace Ipee.Core.DataPersistence
         // Private functions below ....
         private List<SubnetConfig> ReadConfigFileAndGetAsList()
         {
-            const string filepath = "/files/subnetConfig.json";
+            /* NOTE:
+             * ONLY LOCAL ABSOLUTH PATH WORKING! 
+             * PLEASE ADJUST FOR YOUR OWN SYSTEM! */
+
+            string filepath = "C:/Users/User1080/source/repos/Ipee/Ipee.Core/DataPersistence/files/subnetConfig.json";
+            
+            // string filepath = Path.Combine(Directory.GetCurrentDirectory()  , "files", "subnetConfig.json");
 
             string jsonString = File.ReadAllText(filepath, Encoding.ASCII);
-            JObject jObject = JObject.Parse(jsonString);
-            JArray subnets = (JArray)jObject.SelectToken("subnets");
+            SubnetConfig[] subnetLists = System.Text.Json.JsonSerializer.Deserialize<SubnetConfig[]>(jsonString);
 
             List<SubnetConfig> subnetConfigList = new List<SubnetConfig>();
 
-            foreach (JToken subnet in subnets)
+            foreach (SubnetConfig subnet in subnetLists)
             {
                 SubnetConfig config = new SubnetConfig { };
                 List<string> ipAddressList = new List<string>();
 
-                config.Description = (string)subnet.SelectToken("Description");
-                config.SubnetIp = (string)subnet.SelectToken("SubnetIp");
+                config.Description = subnet.Description;
+                config.SubnetIp = subnet.SubnetIp;
+                var ipAddresses = subnet.IpAddresses;
 
-                // JArray ipAddresses = (JArray)jObject.SelectToken("IpAddresses");
-                var ipAddresses = (JArray)jObject.SelectToken("IpAddresses").ToObject(typeof(List<string>));
                 foreach (string ipAddress in ipAddresses)
                 {
                     ipAddressList.Add(ipAddress);

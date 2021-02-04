@@ -17,6 +17,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Xps;
 
+using Ipee.Core.DataPersistence;
+using Ipee.Core.DataPersistence.Models;
+
 namespace Ipee
 {
     /// <summary>
@@ -58,6 +61,17 @@ namespace Ipee
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+        }
+
+        private void subnetListBox_button_Click(object sender, RoutedEventArgs e)
+        {
+            List<SubnetConfig> subnetList = new ConfigManager().GetAllSubnetsAsList();
+
+            foreach (SubnetConfig subnet in subnetList)
+            {
+                subnetListBox.Items.Add(subnet.Description);
+            }
+            
         }
     }
 }

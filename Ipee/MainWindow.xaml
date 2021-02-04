@@ -15,5 +15,7 @@
         <Label Name="IPv6Label" Content="Biite geben Sie eine IPv4 Adresse ein." Grid.Column="1" HorizontalAlignment="Left" Margin="417,104,0,0" VerticalAlignment="Top" Width="217"/>
         <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="451,167,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click"/>
         <TextBox Name="IPBox" Grid.Column="1" HorizontalAlignment="Left" Margin="451,146,0,0" Text="IPv4" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" TextChanged="TextBox_TextChanged"/>
+        <ListBox x:Name="subnetListBox" Grid.Column="1" Margin="0,10,384,163"/>
+        <Button x:Name="subnetListBox_button" Content="Lade Subnetze" Grid.Column="1" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" Height="27" Width="304" Click="subnetListBox_button_Click"/>
     </Grid>
 </Window>
