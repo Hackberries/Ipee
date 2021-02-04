@@ -15,9 +15,13 @@
         <Label Name="IPv6Label" Content="Biite geben Sie eine IPv4 Adresse ein." Grid.Column="1" HorizontalAlignment="Left" Margin="417,104,0,0" VerticalAlignment="Top" Width="217"/>
         <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="451,167,0,0" VerticalAlignment="Top" Width="149" Click="Button_Click"/>
         <TextBox Name="IPBox" Grid.Column="1" HorizontalAlignment="Left" Margin="451,146,0,0" Text="IPv4" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" TextChanged="TextBox_TextChanged"/>
-        <ListBox x:Name="subnetListBox" Margin="10,10,630,163" Grid.ColumnSpan="2"/>
-        <Button x:Name="subnetListBox_button" Content="Lade Subnetze" HorizontalAlignment="Left" Margin="10,276,0,0" VerticalAlignment="Top" Height="27" Width="321" Click="subnetListBox_button_Click" Grid.ColumnSpan="2"/>
-        <ListBox x:Name="subnetListBox_Copy" Margin="76,10,469,163" Grid.Column="1"/>
-        <Button x:Name="updateConfigFile_button" Content="Update Konfigurationsdatei" HorizontalAlignment="Left" Margin="10,322,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="321" Click="UpdateConfigFile_button"/>
+        <ListBox x:Name="subnetListBox" Margin="6,50,634,123" Grid.ColumnSpan="2" SelectionChanged="subnetListBox_SelectionChanged"/>
+        <Button x:Name="subnetListBox_button" Content="Lade Subnetze" HorizontalAlignment="Left" Margin="6,10,0,0" VerticalAlignment="Top" Height="27" Width="321" Click="subnetListBox_button_Click" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="ipAddressesListBox" Margin="83,50,462,123" Grid.Column="1"/>
+        <Button x:Name="updateConfigFile_button" Content="Speicher Konfigurationsdatei" HorizontalAlignment="Left" Margin="486,365,0,0" VerticalAlignment="Top" Width="170" Click="UpdateConfigFile_button" Grid.Column="1"/>
+        <Button x:Name="chooseSubnet_button" Content="Auswählen" HorizontalAlignment="Left" Margin="55,321,0,0" VerticalAlignment="Top" Click="ChooseSubnet_button_Click" Grid.ColumnSpan="2" Height="20"/>
+        <Button x:Name="chooseIpAddress_button" Content="Auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="132,321,0,0" VerticalAlignment="Top" Click="chooseIpAddress_button_Click"/>
+        <Button x:Name="editIpAddress_button" Content="Änderungen speichern" Grid.Column="1" Margin="142,365,400,25" Click="editIpAddress_button_Click"/>
+        <TextBox x:Name="ipAddress_textBox" HorizontalAlignment="Left" Margin="6,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2" Height="20" TextChanged="ipAddress_textBox_TextChanged"/>
     </Grid>
 </Window>
