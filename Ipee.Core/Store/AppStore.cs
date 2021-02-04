@@ -18,6 +18,11 @@ namespace Ipee.Core.Store
         public static AppStore Instance { get; set; } = new AppStore();
 
         private IPAddressStore addressStore = new IPAddressStore();
-        private ConfigManager configManager = new ConfigManager();
+        public ConfigManager ConfigManager;
+
+        public void Initialized(string configPath)
+        {
+            this.ConfigManager = new ConfigManager(configPath);
+        }
     }
 }

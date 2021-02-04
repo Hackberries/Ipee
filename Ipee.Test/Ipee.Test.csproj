@@ -23,4 +23,7 @@
     <ProjectReference Include="..\Ipee.Core\Ipee.Core.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Content Include="..\SharedFiles\subnetConfig.json" Link="subnetConfig.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 </Project>

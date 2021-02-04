@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
-// using System.Linq;
+using System.Linq;
 using System.Text;
 using System.IO;
 using Newtonsoft.Json;
@@ -16,9 +15,9 @@ namespace Ipee.Core.DataPersistence
         private List<SubnetConfig> configFileList;
 
         // Constructor:
-        public ConfigManager()
+        public ConfigManager(string filepath)
         {
-            this.configFileList = ReadConfigFileAndGetAsList();
+            this.configFileList = ReadConfigFileAndGetAsList(filepath);
         }
 
         // Public functions
@@ -70,16 +69,8 @@ namespace Ipee.Core.DataPersistence
         }
 
         // Private functions below ....
-        private List<SubnetConfig> ReadConfigFileAndGetAsList()
+        private List<SubnetConfig> ReadConfigFileAndGetAsList(string filepath)
         {
-            /* NOTE:
-             * ONLY LOCAL ABSOLUTH PATH WORKING! 
-             * PLEASE ADJUST FOR YOUR OWN SYSTEM! */
-
-            string filepath = "C:/Users/User1080/source/repos/Ipee/Ipee.Core/DataPersistence/files/subnetConfig.json";
-            
-            // string filepath = Path.Combine(Directory.GetCurrentDirectory()  , "files", "subnetConfig.json");
-
             string jsonString = File.ReadAllText(filepath, Encoding.ASCII);
             SubnetConfig[] subnetLists = System.Text.Json.JsonSerializer.Deserialize<SubnetConfig[]>(jsonString);
 

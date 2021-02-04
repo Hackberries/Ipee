@@ -19,6 +19,7 @@ using System.Windows.Xps;
 
 using Ipee.Core.DataPersistence;
 using Ipee.Core.DataPersistence.Models;
+using Ipee.Core.Store;
 
 namespace Ipee
 {
@@ -30,6 +31,7 @@ namespace Ipee
         public MainWindow()
         {
             InitializeComponent();
+            AppStore.Instance.Initialized("./subnetConfig.json");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -65,13 +67,12 @@ namespace Ipee
 
         private void subnetListBox_button_Click(object sender, RoutedEventArgs e)
         {
-            List<SubnetConfig> subnetList = new ConfigManager().GetAllSubnetsAsList();
+            List<SubnetConfig> subnetList = AppStore.Instance.ConfigManager.GetAllSubnetsAsList();
 
             foreach (SubnetConfig subnet in subnetList)
             {
                 subnetListBox.Items.Add(subnet.Description);
             }
-            
         }
     }
 }

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30914.41
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ipee", "Ipee\Ipee.csproj", "{47F8F72D-B1F5-4612-BE23-E05A27CB06C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipee.Core", "Ipee.Core\Ipee.Core.csproj", "{34D16AB9-78CC-4064-8097-6F7D275DB5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ipee.Core", "Ipee.Core\Ipee.Core.csproj", "{34D16AB9-78CC-4064-8097-6F7D275DB5FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipee.Test", "Ipee.Test\Ipee.Test.csproj", "{0205A171-9F3E-48DA-8B31-A4406BE913D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ipee.Test", "Ipee.Test\Ipee.Test.csproj", "{0205A171-9F3E-48DA-8B31-A4406BE913D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

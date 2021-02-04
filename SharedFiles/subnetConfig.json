@@ -1,0 +1,19 @@
+[
+    {
+      "Description": "private",
+      "SubnetIp": "127.0.0.1",
+      "IpAddresses": [
+        "127.0.0.10",
+        "127.0.0.20"
+      ]
+    },
+    {
+      "Description": "external",
+      "SubnetIp": "",
+      "IpAddresses": [
+        "85.123.123.100",
+        "85.123.123.101",
+        "85.123.123.102"
+      ]
+    }
+  ]
