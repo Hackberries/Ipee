@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ipee.Store
+namespace Ipee.Core.Exceptions
 {
     /// <summary>
     /// Wird geworfen, wenn eine Adresse bereits vorhanden ist.

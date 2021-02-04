@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ipee.Converter
+namespace Ipee.Core.Converter
 {
     public class AdressConverter
     {
@@ -20,13 +20,12 @@ namespace Ipee.Converter
             {
                 string binary = Convert.ToString(SplitOctetsInt[i], 2);
                 IPBinary.Add(binary);
-
             }
             for (int i = 0; i < IPBinary.Count; i++)
             {
-
                 IPv6 = IPv6 + Convert.ToInt32(IPBinary[i], 2).ToString("X");
-                if (i == 1){
+                if (i == 1)
+                {
                     IPv6 = IPv6 + ":";
                 }
             }

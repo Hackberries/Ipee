@@ -1,4 +1,4 @@
-﻿using Ipee.Converter;
+﻿using Ipee.Core.Converter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,16 +24,14 @@ namespace Ipee
     /// </summary>
     public partial class MainWindow : Window
     {
-
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            IPAddress myAddress;           
+            IPAddress myAddress;
             var countDots = IPBox.Text.Split('.').Length - 1;
             if (countDots == 3)
             {
@@ -56,14 +54,10 @@ namespace Ipee
                 txtBlock.Text = "Bitte geben Sie eine GÜLTIGE IPv4 Adresse ein!";
                 IPv6Label.Content = txtBlock;
             }
-
-
-
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
     }
 }

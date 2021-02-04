@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+
 // using System.Linq;
 using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 using System.Text.Json;
 using Newtonsoft.Json.Linq;
-using Ipee.data_persistence.models;
+using Ipee.Core.DataPersistence.Models;
 
-
-namespace Ipee.data_persistence
+namespace Ipee.Core.DataPersistence
 {
     public class ConfigManager
     {
-
         private List<SubnetConfig> configFileList;
 
-        // Constructor: 
+        // Constructor:
         public ConfigManager()
         {
             this.configFileList = ReadConfigFileAndGetAsList();
@@ -70,7 +69,6 @@ namespace Ipee.data_persistence
             return null;
         }
 
-        
         // Private functions below ....
         private List<SubnetConfig> ReadConfigFileAndGetAsList()
         {
@@ -81,7 +79,7 @@ namespace Ipee.data_persistence
             JArray subnets = (JArray)jObject.SelectToken("subnets");
 
             List<SubnetConfig> subnetConfigList = new List<SubnetConfig>();
-            
+
             foreach (JToken subnet in subnets)
             {
                 SubnetConfig config = new SubnetConfig { };
@@ -99,8 +97,7 @@ namespace Ipee.data_persistence
 
                 config.IpAddresses = ipAddressList;
                 subnetConfigList.Add(config);
-            } 
-            
+            }
 
             if (subnetConfigList.Count == 0 || subnetConfigList == null)
             {
@@ -114,33 +111,23 @@ namespace Ipee.data_persistence
             return subnetConfigList;
         }
 
-
-
-
-
-
-
-
-
         private object ReadConfigFile()
         {
             string filepath = "/files/ipConfig.json";
             object configFileAsObject = JsonConvert.DeserializeObject(File.ReadAllText(filepath, Encoding.ASCII));
 
-
             /** Note: Create JsonElement from file if needed, otherwise delete before final version */
-             string configFileAsString = File.ReadAllText(filepath, Encoding.ASCII);
-             using JsonDocument doc = JsonDocument.Parse(configFileAsString);
-             JsonElement configFile = doc.RootElement;
-             var u1 = configFile[0];
-             var u2 = configFile[1];
-             Console.WriteLine(u1);
-             Console.WriteLine(u2);
-             Console.WriteLine(u1.GetProperty("Subnets"));
+            string configFileAsString = File.ReadAllText(filepath, Encoding.ASCII);
+            using JsonDocument doc = JsonDocument.Parse(configFileAsString);
+            JsonElement configFile = doc.RootElement;
+            var u1 = configFile[0];
+            var u2 = configFile[1];
+            Console.WriteLine(u1);
+            Console.WriteLine(u2);
+            Console.WriteLine(u1.GetProperty("Subnets"));
             Console.WriteLine(u1.GetProperty("Description"));
-             Console.WriteLine(u2.GetProperty("Subnets"));
-             Console.WriteLine(u2.GetProperty("Description"));
-
+            Console.WriteLine(u2.GetProperty("Subnets"));
+            Console.WriteLine(u2.GetProperty("Description"));
 
             var configObject = JsonConvert.DeserializeObject(File.ReadAllText(filepath, Encoding.ASCII));
             // Console.WriteLine(configObject);

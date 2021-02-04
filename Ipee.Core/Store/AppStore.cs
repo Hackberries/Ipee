@@ -1,11 +1,11 @@
-﻿using Ipee.data_persistence;
+﻿using Ipee.Core.DataPersistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ipee.Store
+namespace Ipee.Core.Store
 {
     /// <summary>
     /// Der AppStore hält den gesammten Zustand der Anwendung und dient als Schnittstelle zwischen Logik und Oberfläche.

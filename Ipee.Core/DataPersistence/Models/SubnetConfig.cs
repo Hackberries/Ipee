@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Ipee.data_persistence.models
+namespace Ipee.Core.DataPersistence.Models
 {
     public class SubnetConfig
     {

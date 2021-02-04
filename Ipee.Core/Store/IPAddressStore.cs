@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Ipee.Core.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ipee.Store
+namespace Ipee.Core.Store
 {
     /// <summary>
     /// Regelt die Vergabe von IPv4-Adressen, hält diese, schlägt Adressen für neue Clients vor und stellt die Kompatibilität sicher.
