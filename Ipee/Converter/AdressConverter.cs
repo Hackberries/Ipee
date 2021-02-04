@@ -26,6 +26,9 @@ namespace Ipee.Converter
             {
 
                 IPv6 = IPv6 + Convert.ToInt32(IPBinary[i], 2).ToString("X");
+                if (i == 1){
+                    IPv6 = IPv6 + ":";
+                }
             }
             return IPv6;
         }
