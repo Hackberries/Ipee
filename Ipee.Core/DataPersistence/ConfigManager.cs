@@ -106,28 +106,11 @@ namespace Ipee.Core.DataPersistence
             return subnetConfigList;
         }
 
-        private object ReadConfigFile()
+        public void UpdateConfigFile(string filepath)
         {
-            string filepath = "/files/ipConfig.json";
-            object configFileAsObject = JsonConvert.DeserializeObject(File.ReadAllText(filepath, Encoding.ASCII));
-
-            /** Note: Create JsonElement from file if needed, otherwise delete before final version */
-            string configFileAsString = File.ReadAllText(filepath, Encoding.ASCII);
-            using JsonDocument doc = JsonDocument.Parse(configFileAsString);
-            JsonElement configFile = doc.RootElement;
-            var u1 = configFile[0];
-            var u2 = configFile[1];
-            Console.WriteLine(u1);
-            Console.WriteLine(u2);
-            Console.WriteLine(u1.GetProperty("Subnets"));
-            Console.WriteLine(u1.GetProperty("Description"));
-            Console.WriteLine(u2.GetProperty("Subnets"));
-            Console.WriteLine(u2.GetProperty("Description"));
-
-            var configObject = JsonConvert.DeserializeObject(File.ReadAllText(filepath, Encoding.ASCII));
-            // Console.WriteLine(configObject);
-
-            return u1;
+            string jsonConfigFile = JsonConvert.SerializeObject(this.configFileList.ToArray());
+            // write string to file
+            File.WriteAllText(filepath, jsonConfigFile);
         }
     }
 }

@@ -20,6 +20,7 @@ using System.Windows.Xps;
 using Ipee.Core.DataPersistence;
 using Ipee.Core.DataPersistence.Models;
 using Ipee.Core.Store;
+using Newtonsoft.Json;
 
 namespace Ipee
 {
@@ -68,12 +69,17 @@ namespace Ipee
 
         private void subnetListBox_button_Click(object sender, RoutedEventArgs e)
         {
+            subnetListBox.Items.Clear();
             List<SubnetConfig> subnetList = AppStore.Instance.ConfigManager.GetAllSubnetsAsList();
 
             foreach (SubnetConfig subnet in subnetList)
             {
-                subnetListBox.Items.Add(subnet.Description);
+                subnetListBox.Items.Add(subnet.Description + " " + subnet.SubnetIp);
             }
+        }
+        private void UpdateConfigFile_button(object sender, RoutedEventArgs e)
+        {          
+            AppStore.Instance.ConfigManager.UpdateConfigFile("./subnetConfig.json");
         }
     }
 }
