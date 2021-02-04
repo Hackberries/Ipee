@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ipee", "Ipee\Ipee.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipee.Core", "Ipee.Core\Ipee.Core.csproj", "{34D16AB9-78CC-4064-8097-6F7D275DB5FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ipee.Test", "Ipee.Test\Ipee.Test.csproj", "{0205A171-9F3E-48DA-8B31-A4406BE913D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{34D16AB9-78CC-4064-8097-6F7D275DB5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34D16AB9-78CC-4064-8097-6F7D275DB5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34D16AB9-78CC-4064-8097-6F7D275DB5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0205A171-9F3E-48DA-8B31-A4406BE913D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0205A171-9F3E-48DA-8B31-A4406BE913D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0205A171-9F3E-48DA-8B31-A4406BE913D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0205A171-9F3E-48DA-8B31-A4406BE913D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
