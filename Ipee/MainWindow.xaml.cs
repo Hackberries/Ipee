@@ -115,7 +115,7 @@ namespace Ipee
         private void editIpAddress_button_Click(object sender, RoutedEventArgs e)
         {
             var newIpAddress = ipAddress_textBox.Text;
-            AppStore.Instance.ConfigManager.F;
+            // AppStore.Instance.ConfigManager.F;
         }
 
         private void ipAddress_textBox_TextChanged(object sender, TextChangedEventArgs e)
