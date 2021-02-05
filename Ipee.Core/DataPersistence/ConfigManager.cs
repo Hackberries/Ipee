@@ -17,13 +17,42 @@ namespace Ipee.Core.DataPersistence
         // Constructor:
         public ConfigManager(string filepath)
         {
-            this.configFileList = ReadConfigFileAndGetAsList(filepath);
+            configFileList = ReadConfigFileAndGetAsList(filepath);
         }
 
         // Public functions
         public List<SubnetConfig> GetAllSubnetsAsList()
         {
-            return this.configFileList;
+            return configFileList;
+        }
+
+        public void AddSubnet(string subnetIp, string? description)
+        {
+            List<SubnetConfig> subnetConfigList = configFileList;
+
+            SubnetConfig newSubnetConfig = new SubnetConfig();
+            newSubnetConfig.SubnetIp = subnetIp;
+            if (description is not null)
+            {
+                newSubnetConfig.Description = description;
+            }
+            subnetConfigList.Add(newSubnetConfig);
+        }
+
+        public void DeleteSubnet(string subnetIp)
+        {
+            List<SubnetConfig> subnetConfigList = configFileList;
+            SubnetConfig subnetConfig = FindSubnetConfigBySubnetIp(subnetIp);
+
+            if (subnetConfig != null)
+            {
+                bool isRemoved = subnetConfigList.Remove(subnetConfig);
+                
+                if (isRemoved == false)
+                {
+                    Console.WriteLine("Subnet connot be removed!");
+                }
+            }
         }
 
         public SubnetConfig EditIpAddress (string oldIpAddress, string newIpAddress)
@@ -85,6 +114,13 @@ namespace Ipee.Core.DataPersistence
             return null;
         }
 
+        public void UpdateConfigFile(string filepath)
+        {
+            string jsonConfigFile = JsonConvert.SerializeObject(this.configFileList.ToArray());
+            // write string to file
+            File.WriteAllText(filepath, jsonConfigFile);
+        }
+
         // Private functions below ....
         private List<SubnetConfig> ReadConfigFileAndGetAsList(string filepath)
         {
@@ -102,12 +138,15 @@ namespace Ipee.Core.DataPersistence
                 config.SubnetIp = subnet.SubnetIp;
                 var ipAddresses = subnet.IpAddresses;
 
-                foreach (string ipAddress in ipAddresses)
+                if (ipAddresses is not null)
                 {
-                    ipAddressList.Add(ipAddress);
-                }
+                    foreach (string ipAddress in ipAddresses)
+                    {
+                        ipAddressList.Add(ipAddress);
+                    }
 
-                config.IpAddresses = ipAddressList;
+                    config.IpAddresses = ipAddressList;
+                }
                 subnetConfigList.Add(config);
             }
 
@@ -121,13 +160,6 @@ namespace Ipee.Core.DataPersistence
             Console.WriteLine("Config file successfully loaded!");
 
             return subnetConfigList;
-        }
-
-        public void UpdateConfigFile(string filepath)
-        {
-            string jsonConfigFile = JsonConvert.SerializeObject(this.configFileList.ToArray());
-            // write string to file
-            File.WriteAllText(filepath, jsonConfigFile);
         }
     }
 }
