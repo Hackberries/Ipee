@@ -21,7 +21,10 @@
         <Button x:Name="updateConfigFile_button" Content="Speicher Konfigurationsdatei" HorizontalAlignment="Left" Margin="486,365,0,0" VerticalAlignment="Top" Width="170" Click="UpdateConfigFile_button" Grid.Column="1"/>
         <Button x:Name="chooseSubnet_button" Content="Auswählen" HorizontalAlignment="Left" Margin="55,321,0,0" VerticalAlignment="Top" Click="ChooseSubnet_button_Click" Grid.ColumnSpan="2" Height="20"/>
         <Button x:Name="chooseIpAddress_button" Content="Auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="132,321,0,0" VerticalAlignment="Top" Click="chooseIpAddress_button_Click"/>
-        <Button x:Name="editIpAddress_button" Content="Änderungen speichern" Grid.Column="1" Margin="142,365,400,25" Click="editIpAddress_button_Click"/>
-        <TextBox x:Name="ipAddress_textBox" HorizontalAlignment="Left" Margin="6,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2" Height="20" TextChanged="ipAddress_textBox_TextChanged"/>
+        <Button x:Name="editIpAddress_button" Content="Änderungen speichern" Grid.Column="1" Margin="142,380,400,10" Click="editIpAddress_button_Click"/>
+        <TextBox x:Name="ipAddress_textBox" HorizontalAlignment="Left" Margin="6,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2" Height="20" TextChanged="ipAddress_textBox_TextChanged"/>
+        <TextBox x:Name="newSubnet_textBox" Grid.Column="1" HorizontalAlignment="Left" Margin="269,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1"/>
+        <Button x:Name="newSubnet_button" Content="Neues Subnet anlegen" Grid.Column="1" HorizontalAlignment="Left" Margin="269,89,0,0" VerticalAlignment="Top" Click="newSubnet_button_Click"/>
+        <Button x:Name="deleteSubnet_button" Content="Lösche Subnet" HorizontalAlignment="Left" Margin="48,355,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="deleteSubnet_button_Click"/>
     </Grid>
 </Window>

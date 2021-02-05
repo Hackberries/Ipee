@@ -88,9 +88,12 @@ namespace Ipee
                 
                 if (selectedSubnetConfig == subnetConfig )
                 {
-                    foreach (string ipAddress in ipAddresses)
+                    if (ipAddresses is not null)
                     {
-                        ipAddressesListBox.Items.Add(ipAddress);
+                        foreach (string ipAddress in ipAddresses)
+                        {
+                            ipAddressesListBox.Items.Add(ipAddress);
+                        }
                     }
                 }
             }
@@ -115,12 +118,32 @@ namespace Ipee
         private void editIpAddress_button_Click(object sender, RoutedEventArgs e)
         {
             var newIpAddress = ipAddress_textBox.Text;
-            // AppStore.Instance.ConfigManager.F;
+            // TODO: call method to change ipAddress
         }
 
         private void ipAddress_textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void newSubnet_button_Click(object sender, RoutedEventArgs e)
+        {
+            string newSubnetIp = newSubnet_textBox.Text;
+            AppStore.Instance.ConfigManager.AddSubnet(newSubnetIp, "New subnet");
+            subnetListBox_button_Click(sender, e);
+        }
+
+        private void deleteSubnet_button_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: needs to be validated!
+            string selectedSubnet = subnetListBox.Items[subnetListBox.SelectedIndex].ToString();
+            AppStore.Instance.ConfigManager.DeleteSubnet(selectedSubnet);
+            subnetListBox.Items.Remove(selectedSubnet);
         }
     }
 }
