@@ -8,11 +8,11 @@ namespace Ipee.Core.Addressing
 {
     public class IPv4Address
     {
-        private readonly byte[] octets;
+        private readonly byte[] bytes;
 
         public IPv4Address(string address)
         {
-            this.octets = Parse(address);
+            this.bytes = Parse(address);
         }
 
         public static byte[] Parse(string address)
@@ -34,10 +34,10 @@ namespace Ipee.Core.Addressing
         {
             if (obj is IPv4Address address)
             {
-                return this.octets[0] == address.octets[0]
-                    && this.octets[1] == address.octets[1]
-                    && this.octets[2] == address.octets[2]
-                    && this.octets[3] == address.octets[3];
+                return this.bytes[0] == address.bytes[0]
+                    && this.bytes[1] == address.bytes[1]
+                    && this.bytes[2] == address.bytes[2]
+                    && this.bytes[3] == address.bytes[3];
             }
             else
             {
@@ -45,11 +45,11 @@ namespace Ipee.Core.Addressing
             }
         }
 
-        public override int GetHashCode() => HashCode.Combine(octets);
+        public override int GetHashCode() => HashCode.Combine(bytes);
 
         public override string ToString()
         {
-            return $"{this.octets[0]}.{this.octets[1]}.{this.octets[2]}.{this.octets[3]}";
+            return $"{this.bytes[0]}.{this.bytes[1]}.{this.bytes[2]}.{this.bytes[3]}";
         }
     }
 }
