@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using Newtonsoft.Json;
-using System.Text.Json;
-using Newtonsoft.Json.Linq;
 using Ipee.Core.DataPersistence.Models;
+using Ipee.Core.Exceptions;
 
 namespace Ipee.Core.DataPersistence
 {
@@ -55,34 +54,41 @@ namespace Ipee.Core.DataPersistence
             }
         }
 
-        public SubnetConfig EditIpAddress (string oldIpAddress, string newIpAddress)
+        public void EditIpAddress (string oldIpAddress, string newIpAddress)
         {
-            foreach (SubnetConfig subnetConfig in this.configFileList)
+            // Note: Handle invalid input data
+            if (oldIpAddress == "" || oldIpAddress == null)
             {
-                foreach (string address in subnetConfig.IpAddresses)
-                {
-                    if (address == oldIpAddress)
-                    {
-                        Console.WriteLine("FUCKIN STRNGS ARE IMMUTABLE! :(");
-                        Console.WriteLine("Build new model! :(");
-                    }
-                }
+                throw new SomethingWentWrongException("Bitte wählen Sie eine IP-Adresse aus!");
             }
 
-            return null;
+            if (newIpAddress == "" || newIpAddress == null)
+            {
+                throw new SomethingWentWrongException("Bitte geben sie eine IP-Adresse ein!");
+            }
+
+            try {
+                var configFile = configFileList.Where((c) => c.IpAddresses.Contains(oldIpAddress)).FirstOrDefault();
+                configFile.IpAddresses.Remove(oldIpAddress);
+                configFile.IpAddresses.Add(newIpAddress);
+            }
+            catch (Exception exception) {
+                throw new EntryNotFoundException("IP-Adresse konnte nicht geändert werden:" + exception.Message.ToString());
+            };
         }
 
-        public SubnetConfig FindSubnetConfigByDescription(string description)
+        public SubnetConfig GetSubnetConfigByDescription(string description)
         {
-            foreach (SubnetConfig subnetConfig in this.configFileList)
+            // Note: Handle invalid description input
+            if (description == "")
             {
-                if (description == subnetConfig.Description)
-                {
-                    return subnetConfig;
-                }
+                throw new SomethingWentWrongException("Bitte geben Sie Beschreibung ein!");
             }
 
-            return null;
+            SubnetConfig foundConfigFile = configFileList.Where((config) => config.Description == description).FirstOrDefault();
+
+            return foundConfigFile;
+
         }
 
         public SubnetConfig FindSubnetConfigByClientIp(string ipAddress)

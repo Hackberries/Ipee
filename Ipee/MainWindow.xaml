@@ -26,5 +26,6 @@
         <TextBox x:Name="newSubnet_textBox" Grid.Column="1" HorizontalAlignment="Left" Margin="269,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged_1"/>
         <Button x:Name="newSubnet_button" Content="Neues Subnet anlegen" Grid.Column="1" HorizontalAlignment="Left" Margin="269,89,0,0" VerticalAlignment="Top" Click="newSubnet_button_Click"/>
         <Button x:Name="deleteSubnet_button" Content="Lösche Subnet" HorizontalAlignment="Left" Margin="48,355,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="deleteSubnet_button_Click"/>
+        <TextBlock x:Name="exception_textBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="269,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="420" Foreground="Red"/>
     </Grid>
 </Window>
