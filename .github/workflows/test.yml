@@ -26,3 +26,8 @@ jobs:
         run: dotnet build Ipee.Test --no-restore
       - name: Test
         run: dotnet test --no-build --verbosity normal
+      - name: Send message to ms teams
+        uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.10
+        with:
+          webhook: 'https://g18.webhook.office.com/webhookb2/5bab9959-e3ca-4fb7-b875-b1c4501a4dcd@5e98bbb4-4a0c-4dae-8254-dcaa73b41da8/IncomingWebhook/b9b2b28814dd428598e1d7da6fb03224/1723910c-0886-48c8-840c-e30172af056b'
+          message: 'Neue Änderungen im main!'
