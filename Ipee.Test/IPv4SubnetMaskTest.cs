@@ -20,5 +20,14 @@ namespace Ipee.Test
             var mask = IPv4SubnetMask.ByBitCount(bitCount);
             Assert.Equal(expected, mask.ToString());
         }
+
+        [Theory]
+        [InlineData(33)]
+        [InlineData(0)]
+        [InlineData(-1)]
+        public void ThrowsByBitCountException(int bitCount)
+        {
+            Assert.ThrowsAny<Exception>(() => IPv4SubnetMask.ByBitCount(bitCount));
+        }
     }
 }

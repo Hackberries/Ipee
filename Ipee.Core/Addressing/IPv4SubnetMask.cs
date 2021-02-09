@@ -1,6 +1,7 @@
 using System.Globalization;
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Ipee.Core.Addressing
 {
@@ -16,8 +17,17 @@ namespace Ipee.Core.Addressing
 
         public static IPv4SubnetMask ByBitCount(int bitCount)
         {
-            var maxValue = (uint)(Math.Pow(2.0, (double)bitCount) - 1);
-            var bytes = BitConverter.GetBytes(maxValue);
+            if (bitCount < 1 || bitCount > 32)
+                throw new Exception("Only specifications between 1 and 32 bits are valid.");
+
+            BitArray bits = new BitArray(length: 32);
+            for (int bitIndex = 32; bitIndex > 32 - bitCount; bitIndex--)
+                bits.Set(bitIndex - 1, true);
+
+            byte[] bytes = new byte[4];
+            bits.CopyTo(bytes, 0);
+            Array.Reverse(bytes);
+
             return new IPv4SubnetMask(bytes);
         }
     }
