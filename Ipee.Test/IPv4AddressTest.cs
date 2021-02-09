@@ -49,5 +49,27 @@ namespace Ipee.Test
         {
             Assert.ThrowsAny<Exception>(() => new IPv4Address("abc.lorem.ipsum.WerDasLießtIstDoof"));
         }
+
+        [Fact]
+        public void AND_Operation()
+        {
+            var ip = new IPv4Address("253.21.161.14");
+            var mask = new IPv4Address("255.255.255.0");
+
+            var subnet = ip & mask;
+
+            Assert.Equal("253.21.161.0", subnet.ToString());
+        }
+
+        [Fact]
+        public void OR_Operation()
+        {
+            var ip = new IPv4Address("253.21.161.14");
+            var mask = new IPv4Address("255.255.255.0");
+
+            var subnet = ip | mask;
+
+            Assert.Equal("255.255.255.14", subnet.ToString());
+        }
     }
 }
