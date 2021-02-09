@@ -10,10 +10,24 @@ namespace Ipee.Core.Addressing
     {
         private readonly byte[] bytes;
 
+        /// <summary>
+        /// Erstellt aus dem angegebenen String eine neue IPv4Address-Instanz.<br />
+        /// Siehe <seealso cref="IPv4Address.Parse(string)"/> für genaueres.
+        /// </summary>
         public IPv4Address(string address) => this.bytes = Parse(address);
 
         private IPv4Address(byte[] bytes) => this.bytes = bytes;
 
+        /// <summary>
+        /// Ließt den angegebenen String als ein Byte-Array ein.<br />
+        /// Zum Beispiel wird "192.168.10.10" zu "new byte() { 192, 168, 10, 10}".
+        /// </summary>
+        /// <param name="address">Der string, welcher als Byte-Array eingelesen werden soll. Zum Beispiel "192.168.10.10"</param>
+        /// <example>
+        /// <code>
+        /// var bytes = IPv4Address.Parse("192.168.10.10");
+        /// </code>
+        /// </example>
         public static byte[] Parse(string address)
         {
             var stringOctets = address.Split('.');
@@ -31,6 +45,12 @@ namespace Ipee.Core.Addressing
 
         private int ToInt() => BitConverter.ToInt32(bytes);
 
+        /// <summary>
+        /// Vergleicht diese Instanz mit der angegebenen. Dafür werden jeweils die 4 <see cref="IPv4Address.bytes"/> miteinander verglichen.<br/>
+        /// Gibt immer false zurück, wenn es sich bei dem angegebenen Objekt nicht um ein <see cref="IPv4Address"/> handelt.
+        /// </summary>
+        /// <param name="obj">Die Instanz, mit der verglichen werden soll.</param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (obj is IPv4Address address)
