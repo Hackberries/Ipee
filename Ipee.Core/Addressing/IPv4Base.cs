@@ -64,6 +64,21 @@ namespace Ipee.Core.Addressing
             }
         }
 
+        public static IPv4Base Increase(IPv4Base address, int increaseBy)
+        {
+            var reversedBytes = address.bytes;
+
+            Array.Reverse(reversedBytes);
+
+            var reversedValue = BitConverter.ToInt32(reversedBytes);
+            reversedValue = reversedValue + increaseBy;
+
+            var bytes = BitConverter.GetBytes(reversedValue);
+            Array.Reverse(bytes);
+
+            return new IPv4Base(bytes);
+        }
+
         public override int GetHashCode() => HashCode.Combine(bytes);
 
         public override string ToString() => $"{this.bytes[0]}.{this.bytes[1]}.{this.bytes[2]}.{this.bytes[3]}";

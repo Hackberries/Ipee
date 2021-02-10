@@ -76,5 +76,16 @@ namespace Ipee.Test
 
             Assert.Equal("255.255.255.14", subnet.ToString());
         }
+
+        [Theory]
+        [InlineData("192.168.0.0", 1, "192.168.0.1")]
+        [InlineData("192.168.0.0", 2, "192.168.0.2")]
+        [InlineData("192.168.8.0", 1, "192.168.8.1")]
+        public void IncreaseCorrectly(string input, int increaseBy, string excpected)
+        {
+            var address = new IPv4Address(input);
+
+            Assert.Equal(excpected, IPv4Address.Increase(address, increaseBy).ToString());
+        }
     }
 }

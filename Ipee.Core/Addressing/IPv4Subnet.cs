@@ -11,6 +11,8 @@ namespace Ipee.Core.Addressing
 
         public IPv4Base BroadcastAddress => address | IPv4SubnetMask.Invert(mask);
 
+        public IPv4Base HostAddress => IPv4Address.Increase(NetAddress, 1);
+
         public IPv4Subnet(IPv4Address address, IPv4SubnetMask mask)
         {
             this.address = address;
