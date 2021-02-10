@@ -42,5 +42,16 @@ namespace Ipee.Test
 
             Assert.Equal("192.168.8.1", subnet.HostAddress.ToString());
         }
+
+        [Fact]
+        public void CanCalculateAllPossibleAddresses()
+        {
+            var address = new IPv4Address("192.168.10.5");
+            var mask = new IPv4SubnetMask("255.255.252.0");
+
+            var subnet = new IPv4Subnet(address, mask);
+
+            Assert.Equal(1022, subnet.AllPossibleAddresses.Count());
+        }
     }
 }
