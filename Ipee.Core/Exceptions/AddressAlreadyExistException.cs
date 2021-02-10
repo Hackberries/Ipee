@@ -6,7 +6,7 @@ namespace Ipee.Core.Exceptions
     /// Wird geworfen, wenn eine Adresse bereits vorhanden ist.
     /// Siehe <see cref="IPAddressStore.AddAddress(System.Net.IPAddress)"/>.
     /// </summary>
-    internal class AdressAlreadyExistException : Exception
+    internal class AddressAlreadyExistException : Exception
     {
     }
 }
