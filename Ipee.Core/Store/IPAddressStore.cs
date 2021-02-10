@@ -32,7 +32,7 @@ namespace Ipee.Core.Store
                 throw new NullReferenceException();
 
             if (addresses.Contains(address))
-                throw new AdressAlreadyExistException();
+                throw new AddressAlreadyExistException();
 
             this.addresses.Add(address);
         }
