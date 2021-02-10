@@ -26,7 +26,6 @@ namespace Ipee.Core.Addressing
 
             byte[] bytes = new byte[4];
             bits.CopyTo(bytes, 0);
-            Array.Reverse(bytes);
 
             return new IPv4SubnetMask(bytes);
         }

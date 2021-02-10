@@ -1,20 +1,29 @@
 using Ipee.Core.Exceptions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Ipee.Core.Addressing
 {
     public class IPv4Base
     {
-        private readonly byte[] bytes;
+        private readonly byte[] _bytes = new byte[4];
 
         /// <summary>
         /// Erstellt aus dem angegebenen String eine neue IPv4Base-Instanz.<br />
         /// Siehe <seealso cref="IPv4Base.Parse(string)"/> für genaueres.
         /// </summary>
-        public IPv4Base(string address) => this.bytes = Parse(address);
+        public IPv4Base(string address)
+        {
+            var bytes = Parse(address).Reverse().ToArray();
+            Array.Copy(bytes, _bytes, bytes.Length);
+        }
 
-        protected IPv4Base(byte[] bytes) => this.bytes = bytes;
+        protected IPv4Base(byte[] bytes)
+        {
+            Array.Copy(bytes, _bytes, bytes.Length);
+        }
 
         /// <summary>
         /// Ließt den angegebenen String als ein Byte-Array ein.<br />
@@ -41,10 +50,13 @@ namespace Ipee.Core.Addressing
             return output.ToArray();
         }
 
-        protected int ToInt() => BitConverter.ToInt32(bytes);
+        protected int ToInt()
+        {
+            return BitConverter.ToInt32(_bytes);
+        }
 
         /// <summary>
-        /// Vergleicht diese Instanz mit der angegebenen. Dafür werden jeweils die 4 <see cref="IPv4Base.bytes"/> miteinander verglichen.<br/>
+        /// Vergleicht diese Instanz mit der angegebenen. Dafür werden jeweils die 4 <see cref="IPv4Base._bytes"/> miteinander verglichen.<br/>
         /// Gibt immer false zurück, wenn es sich bei dem angegebenen Objekt nicht um ein <see cref="IPv4Base"/> handelt.
         /// </summary>
         /// <param name="obj">Die Instanz, mit der verglichen werden soll.</param>
@@ -53,10 +65,10 @@ namespace Ipee.Core.Addressing
         {
             if (obj is IPv4Base address)
             {
-                return this.bytes[0] == address.bytes[0]
-                    && this.bytes[1] == address.bytes[1]
-                    && this.bytes[2] == address.bytes[2]
-                    && this.bytes[3] == address.bytes[3];
+                return this._bytes[0] == address._bytes[0]
+                    && this._bytes[1] == address._bytes[1]
+                    && this._bytes[2] == address._bytes[2]
+                    && this._bytes[3] == address._bytes[3];
             }
             else
             {
@@ -66,22 +78,25 @@ namespace Ipee.Core.Addressing
 
         public static IPv4Base Increase(IPv4Base address, int increaseBy)
         {
-            var reversedBytes = address.bytes;
+            //var reversedBytes = address._bytes;
 
-            Array.Reverse(reversedBytes);
+            //Array.Reverse(reversedBytes);
 
-            var reversedValue = BitConverter.ToInt32(reversedBytes);
-            reversedValue = reversedValue + increaseBy;
+            //var reversedValue = BitConverter.ToInt32(reversedBytes);
+            //reversedValue = reversedValue + increaseBy;
 
-            var bytes = BitConverter.GetBytes(reversedValue);
-            Array.Reverse(bytes);
+            //var bytes = BitConverter.GetBytes(reversedValue);
+            //Array.Reverse(bytes);
+
+            var value = address.ToInt() + increaseBy;
+            var bytes = BitConverter.GetBytes(value);
 
             return new IPv4Base(bytes);
         }
 
-        public override int GetHashCode() => HashCode.Combine(bytes);
+        public override int GetHashCode() => HashCode.Combine(_bytes);
 
-        public override string ToString() => $"{this.bytes[0]}.{this.bytes[1]}.{this.bytes[2]}.{this.bytes[3]}";
+        public override string ToString() => $"{this._bytes[3]}.{this._bytes[2]}.{this._bytes[1]}.{this._bytes[0]}";
 
         /// <summary>
         /// Führt eine UND-Operation zwischen den beiden angegebenen IPv4Base-Objekten durch.
@@ -100,5 +115,11 @@ namespace Ipee.Core.Addressing
         /// </summary>
         public static IPv4Base operator |(IPv4Base left, IPv4Base right)
             => new IPv4Base(BitConverter.GetBytes(left.ToInt() | right.ToInt()));
+
+        public static bool operator <(IPv4Base left, IPv4Base right)
+            => left.ToInt() < right.ToInt();
+
+        public static bool operator >(IPv4Base left, IPv4Base right)
+            => left.ToInt() > right.ToInt();
     }
 }
