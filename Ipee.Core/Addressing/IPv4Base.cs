@@ -41,7 +41,7 @@ namespace Ipee.Core.Addressing
             return output.ToArray();
         }
 
-        private int ToInt() => BitConverter.ToInt32(bytes);
+        protected int ToInt() => BitConverter.ToInt32(bytes);
 
         /// <summary>
         /// Vergleicht diese Instanz mit der angegebenen. Dafür werden jeweils die 4 <see cref="IPv4Base.bytes"/> miteinander verglichen.<br/>

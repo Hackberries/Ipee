@@ -29,5 +29,15 @@ namespace Ipee.Test
         {
             Assert.ThrowsAny<Exception>(() => IPv4SubnetMask.ByBitCount(bitCount));
         }
+
+        [Theory]
+        [InlineData("255.255.255.255", "0.0.0.0")]
+        [InlineData("255.255.255.0", "0.0.0.255")]
+        [InlineData("255.255.0.0", "0.0.255.255")]
+        [InlineData("255.128.0.0", "0.127.255.255")]
+        public void CanInvert(string subnet, string expected)
+        {
+            Assert.Equal(expected, IPv4SubnetMask.Invert(new IPv4SubnetMask(subnet)).ToString());
+        }
     }
 }

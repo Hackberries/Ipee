@@ -30,5 +30,8 @@ namespace Ipee.Core.Addressing
 
             return new IPv4SubnetMask(bytes);
         }
+
+        public static IPv4SubnetMask Invert(IPv4SubnetMask mask)
+            => new IPv4SubnetMask(BitConverter.GetBytes(~mask.ToInt()));
     }
 }
