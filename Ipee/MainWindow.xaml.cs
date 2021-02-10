@@ -35,8 +35,8 @@ namespace Ipee
             {
                 if (System.Net.IPAddress.TryParse(IPBox.Text, out myAddress))
                 {
-                    IPv6Label.Content = AdressConverter.IPtoHex(IPBox.Text);
-                    AdressConverter.IPtoBinary(IPBox.Text);
+                    IPv6Label.Content = AddressConverter.IPtoHex(IPBox.Text);
+                    AddressConverter.IPtoBinary(IPBox.Text);
                 }
                 else
                 {

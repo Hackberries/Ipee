@@ -8,8 +8,19 @@ using System.Threading.Tasks;
 
 namespace Ipee.Core.Converter
 {
-    public class AdressConverter
+    public class AddressConverter
     {
+        /// <summary>
+        /// Mappt eine IPv4 Adresse auf eine IPv6 Adresse.
+        /// DIe IP wird gesplittet, dann in Binär umgewandelt und dann in Hex.
+        /// Anschließend wird die fertige IPv6 Adresse wieder zusammengesetzt.
+        /// </summary>
+        /// <param name="IP">
+        /// IPv4 Adresse im String Format.
+        /// </param>
+        /// <returns>
+        /// Gibt die gemappte IPv6 Adresse im lowercase zurück.
+        /// </returns>
         public static string IPtoHex(string IP)
         {
             String IPv4 = IP;
@@ -23,7 +34,7 @@ namespace Ipee.Core.Converter
             }
             for (int i = 0; i < IPBinary.Count; i++)
             {
-                IPv6 = IPv6 + Convert.ToInt32(IPBinary[i], 2).ToString("X");
+                IPv6 = IPv6 + Convert.ToInt32(IPBinary[i], 2).ToString("X2");
                 if (i == 1)
                 {
                     IPv6 = IPv6 + ":";
@@ -32,6 +43,11 @@ namespace Ipee.Core.Converter
             return IPv6.ToLower();
         }
 
+        /// <summary>
+        /// Wandelt die IPv4 Adresse in Binär um und gibt sie zurück.
+        /// </summary>
+        /// <param name="IP"></param>
+        /// <returns></returns>
         public static string IPtoBinary(string IP)
         {
             string BinaryIP= "";
