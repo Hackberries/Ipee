@@ -18,7 +18,7 @@ namespace Ipee.Test
         [InlineData("217.76.148.213", "0:0:0:0:0:ffff:d94c:94d5")]
         public void CanConvertToHex(string ip, string expectedHex)
         {
-            Assert.Equal(expectedHex, AddressConverter.IPtoHex(ip));
+            Assert.Equal(expectedHex, AddressConverter.IPv4toIPv6(ip));
         }
     }
 }

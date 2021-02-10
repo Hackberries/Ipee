@@ -21,7 +21,7 @@ namespace Ipee.Core.Converter
         /// <returns>
         /// Gibt die gemappte IPv6 Adresse im lowercase zurück.
         /// </returns>
-        public static string IPtoHex(string IP)
+        public static string IPv4toIPv6(string IP)
         {
             String IPv4 = IP;
             int[] SplitOctetsInt = Array.ConvertAll(IPv4.Split("."), s => int.Parse(s));
@@ -31,9 +31,6 @@ namespace Ipee.Core.Converter
             {
                 string binary = Convert.ToString(SplitOctetsInt[i], 2);
                 IPBinary.Add(binary);
-            }
-            for (int i = 0; i < IPBinary.Count; i++)
-            {
                 IPv6 = IPv6 + Convert.ToInt32(IPBinary[i], 2).ToString("X2");
                 if (i == 1)
                 {
