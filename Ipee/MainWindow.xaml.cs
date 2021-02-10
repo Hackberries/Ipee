@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using Ipee.Core.DataPersistence.Models;
 using Ipee.Core.Store;
 using Ipee.Core.Exceptions;
+using Ipee.Core.Addressing;
 
 namespace Ipee
 {
@@ -29,28 +30,17 @@ namespace Ipee
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            IPAddress myAddress;
-            var countDots = IPBox.Text.Split('.').Length - 1;
-            if (countDots == 3)
+            try
             {
-                if (System.Net.IPAddress.TryParse(IPBox.Text, out myAddress))
-                {
-                    IPv6Label.Content = AddressConverter.IPv4toIPv6(IPBox.Text);
-                    AddressConverter.IPtoBinary(IPBox.Text);
-                }
-                else
-                {
-                    TextBlock txtBlock = new TextBlock();
-                    txtBlock.TextWrapping = TextWrapping.Wrap;
-                    txtBlock.Text = "Bitte geben Sie eine GÜLTIGE IPv4 Adresse ein!";
-                    IPv6Label.Content = txtBlock;
-                }
+                var adress = new IPv4Address(IPBox.Text);
+                IPv6Label.Content = AddressConverter.IPv4toIPv6(adress);
+                AddressConverter.IPtoBinary(IPBox.Text);
             }
-            else
+            catch (Exception ex)
             {
                 TextBlock txtBlock = new TextBlock();
                 txtBlock.TextWrapping = TextWrapping.Wrap;
-                txtBlock.Text = "Bitte geben Sie eine GÜLTIGE IPv4 Adresse ein!";
+                txtBlock.Text = ex.Message;
                 IPv6Label.Content = txtBlock;
             }
         }
@@ -69,20 +59,20 @@ namespace Ipee
                 subnetListBox.Items.Add(subnet.Description + " - " + subnet.SubnetIp);
             }
         }
+
         private void UpdateConfigFile_button(object sender, RoutedEventArgs e)
         {
-            try {
-                AppStore.Instance.ConfigManager.UpdateConfigFile("./subnetConfig.json");
-            } catch (Exception)
+            try
             {
-                
+                AppStore.Instance.ConfigManager.UpdateConfigFile("./subnetConfig.json");
             }
-            
+            catch (Exception)
+            {
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void ChooseSubnet_button_Click(object sender, RoutedEventArgs e)
@@ -116,19 +106,15 @@ namespace Ipee
             }
             catch (Exception)
             {
-
             }
-
         }
 
         private void subnetListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void chooseIpAddress_button_Click(object sender, RoutedEventArgs e)
@@ -137,16 +123,15 @@ namespace Ipee
             {
                 string selectedIpAddress = ipAddressesListBox.Items[ipAddressesListBox.SelectedIndex].ToString();
                 ipAddress_textBox.Text = selectedIpAddress;
-            } catch (Exception)
-            {
-                
             }
-
+            catch (Exception)
+            {
+            }
         }
 
         private void editIpAddress_button_Click(object sender, RoutedEventArgs e)
         {
-            var newIpAddress = ipAddress_textBox.Text;            
+            var newIpAddress = ipAddress_textBox.Text;
             string selectedIpAddress = ipAddressesListBox.Items[ipAddressesListBox.SelectedIndex].ToString();
 
             AppStore.Instance.ConfigManager.EditIpAddress(selectedIpAddress, newIpAddress);
@@ -154,12 +139,10 @@ namespace Ipee
 
         private void ipAddress_textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-
         }
 
         private void newSubnet_button_Click(object sender, RoutedEventArgs e)
@@ -180,10 +163,9 @@ namespace Ipee
 
                 AppStore.Instance.ConfigManager.DeleteSubnet(subs[1]);
                 subnetListBox.Items.Remove(selectedSubnet);
-            } 
+            }
             catch (Exception)
             {
-                
             }
         }
     }

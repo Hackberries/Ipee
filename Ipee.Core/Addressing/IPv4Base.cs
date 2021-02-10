@@ -1,3 +1,4 @@
+using Ipee.Core.Exceptions;
 using System;
 using System.Collections.Generic;
 
@@ -30,7 +31,7 @@ namespace Ipee.Core.Addressing
             var stringOctets = address.Split('.');
 
             if (stringOctets.Length != 4)
-                throw new Exception();
+                throw new IPv4BaseParsingException();
 
             var output = new List<byte>();
 

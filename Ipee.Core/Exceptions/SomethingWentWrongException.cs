@@ -4,11 +4,8 @@ namespace Ipee.Core.Exceptions
 {
     internal class SomethingWentWrongException : Exception
     {
-        public string ExceptionText { get; set; }
-
-        public SomethingWentWrongException(string text)
+        public SomethingWentWrongException(string message) : base(message)
         {
-            ExceptionText = text;
         }
     }
 }

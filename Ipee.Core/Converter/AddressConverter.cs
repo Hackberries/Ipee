@@ -1,4 +1,5 @@
 ﻿using Ipee;
+using Ipee.Core.Addressing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,11 @@ namespace Ipee.Core.Converter
             return IPv6.ToLower();
         }
 
+        public static string IPv4toIPv6(IPv4Address address)
+        {
+            return IPv4toIPv6(address.ToString());
+        }
+
         /// <summary>
         /// Wandelt die IPv4 Adresse in Binär um und gibt sie zurück.
         /// </summary>
@@ -47,16 +53,14 @@ namespace Ipee.Core.Converter
         /// <returns></returns>
         public static string IPtoBinary(string IP)
         {
-            string BinaryIP= "";
+            string BinaryIP = "";
             int[] SplitOctetsInt = Array.ConvertAll(IP.Split("."), s => int.Parse(s));
             for (int i = 0; i < 4; i++)
             {
-                string binary =  Convert.ToString(SplitOctetsInt[i], 2).PadLeft(8, '0');
-                BinaryIP +=binary+" ";
+                string binary = Convert.ToString(SplitOctetsInt[i], 2).PadLeft(8, '0');
+                BinaryIP += binary + " ";
             }
             return BinaryIP;
         }
-
-
     }
 }

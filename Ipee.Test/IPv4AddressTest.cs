@@ -44,10 +44,15 @@ namespace Ipee.Test
                 Assert.Equal(excpectedBytes[index], octets[index]);
         }
 
-        [Fact]
-        public void ThrowsParseException()
+        [Theory]
+        [InlineData("abc.lorem.ipsum.WerDasLießtIstDoof")]
+        [InlineData("300.999.0.1")]
+        [InlineData("30099901")]
+        [InlineData("30099......901")]
+        [InlineData("192.168.01.")]
+        public void ThrowsParseException(string input)
         {
-            Assert.ThrowsAny<Exception>(() => new IPv4Address("abc.lorem.ipsum.WerDasLießtIstDoof"));
+            Assert.ThrowsAny<Exception>(() => new IPv4Address(input));
         }
 
         [Fact]
