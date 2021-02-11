@@ -10,7 +10,7 @@ namespace Ipee.Core.Addressing
     /// <summary>
     /// Stellt ein IPv4 Addresse dar.
     /// </summary>
-    public class IPv4Address : IPv4Base
+    public class IPv4Address : IPv4Value
     {
         public IPv4Address(string address) : base(address)
         {

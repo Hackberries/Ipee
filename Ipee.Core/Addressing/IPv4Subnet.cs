@@ -8,16 +8,16 @@ namespace Ipee.Core.Addressing
         private IPv4Address address;
         private IPv4SubnetMask mask;
 
-        public IPv4Base NetAddress => address & mask;
+        public IPv4Value NetAddress => address & mask;
 
-        public IPv4Base BroadcastAddress => address | IPv4SubnetMask.Invert(mask);
+        public IPv4Value BroadcastAddress => address | IPv4SubnetMask.Invert(mask);
 
-        public IPv4Base HostAddress => IPv4Address.Increase(NetAddress, 1);
+        public IPv4Value HostAddress => IPv4Address.Increase(NetAddress, 1);
 
         /// <summary>
-        /// Gibt alle Addressen in Form <see cref="IPv4Base"/>  aus, welche sich zwischen der errechneten HostAddress und der BroadcastAddress befinden.
+        /// Gibt alle Addressen in Form <see cref="IPv4Value"/>  aus, welche sich zwischen der errechneten HostAddress und der BroadcastAddress befinden.
         /// </summary>
-        public IEnumerable<IPv4Base> AllPossibleAddresses
+        public IEnumerable<IPv4Value> AllPossibleAddresses
         {
             get
             {
@@ -25,7 +25,7 @@ namespace Ipee.Core.Addressing
 
                 while (current < BroadcastAddress)
                 {
-                    current = IPv4Base.Increase(current, 1);
+                    current = IPv4Value.Increase(current, 1);
                     yield return current;
                 }
             }

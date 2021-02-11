@@ -9,7 +9,7 @@ namespace Ipee.Core.Addressing
     /// <summary>
     /// Stellt eine Subnetzmaske dar.
     /// </summary>
-    public class IPv4SubnetMask : IPv4Base
+    public class IPv4SubnetMask : IPv4Value
     {
         public IPv4SubnetMask(string address) : base(address)
         {

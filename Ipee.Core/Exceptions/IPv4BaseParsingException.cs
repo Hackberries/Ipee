@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ipee.Core.Exceptions
 {
-    internal class IPv4BaseParsingException : Exception
+    internal class IPv4ValueParsingException : Exception
     {
-        public IPv4BaseParsingException()
+        public IPv4ValueParsingException()
         {
         }
 
-        public IPv4BaseParsingException(string message) : base(message)
+        public IPv4ValueParsingException(string message) : base(message)
         {
         }
     }

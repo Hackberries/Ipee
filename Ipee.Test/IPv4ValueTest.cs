@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Ipee.Test
 {
-    public class IPv4BaseTest
+    public class IPv4ValueTest
     {
         [Theory]
         [InlineData("192.168.0.1")]
@@ -18,16 +18,16 @@ namespace Ipee.Test
         [InlineData("217.76.148.213")]
         public void IsConstructedCorrectly(string address)
         {
-            var ip = new IPv4Base(address);
+            var ip = new IPv4Value(address);
             Assert.Equal(address, ip.ToString());
         }
 
         [Fact]
         public void IsComparable()
         {
-            var ip = new IPv4Base("253.21.161.14");
-            var ip2 = new IPv4Base("253.21.161.14");
-            var ip3 = new IPv4Base("192.168.0.1");
+            var ip = new IPv4Value("253.21.161.14");
+            var ip2 = new IPv4Value("253.21.161.14");
+            var ip3 = new IPv4Value("192.168.0.1");
             Assert.Equal(ip, ip2);
             Assert.NotEqual(ip, ip3);
         }
@@ -38,7 +38,7 @@ namespace Ipee.Test
         [InlineData("78.208.127.94", new byte[] { 78, 208, 127, 94 })]
         public void CanParseFromString(string input, byte[] excpectedBytes)
         {
-            var octets = IPv4Base.Parse(input);
+            var octets = IPv4Value.Parse(input);
 
             for (int index = 0; index < octets.Length; index++)
                 Assert.Equal(excpectedBytes[index], octets[index]);
@@ -52,14 +52,14 @@ namespace Ipee.Test
         [InlineData("192.168.01.")]
         public void ThrowsParseException(string input)
         {
-            Assert.ThrowsAny<Exception>(() => new IPv4Base(input));
+            Assert.ThrowsAny<Exception>(() => new IPv4Value(input));
         }
 
         [Fact]
         public void AND_Operation()
         {
-            var ip = new IPv4Base("253.21.161.14");
-            var mask = new IPv4Base("255.255.255.0");
+            var ip = new IPv4Value("253.21.161.14");
+            var mask = new IPv4Value("255.255.255.0");
 
             var subnet = ip & mask;
 
@@ -69,8 +69,8 @@ namespace Ipee.Test
         [Fact]
         public void OR_Operation()
         {
-            var ip = new IPv4Base("253.21.161.14");
-            var mask = new IPv4Base("255.255.255.0");
+            var ip = new IPv4Value("253.21.161.14");
+            var mask = new IPv4Value("255.255.255.0");
 
             var subnet = ip | mask;
 
@@ -85,7 +85,7 @@ namespace Ipee.Test
         {
             var address = new IPv4Address(input);
 
-            Assert.Equal(excpected, IPv4Base.Increase(address, increaseBy).ToString());
+            Assert.Equal(excpected, IPv4Value.Increase(address, increaseBy).ToString());
         }
     }
 }
