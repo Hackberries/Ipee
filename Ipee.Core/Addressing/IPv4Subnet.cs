@@ -14,6 +14,9 @@ namespace Ipee.Core.Addressing
 
         public IPv4Base HostAddress => IPv4Address.Increase(NetAddress, 1);
 
+        /// <summary>
+        /// Gibt alle Addressen in Form <see cref="IPv4Base"/>  aus, welche sich zwischen der errechneten HostAddress und der BroadcastAddress befinden.
+        /// </summary>
         public IEnumerable<IPv4Base> AllPossibleAddresses
         {
             get
