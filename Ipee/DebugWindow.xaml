@@ -28,7 +28,8 @@
         <Button x:Name="deleteSubnet_button" Content="Lösche Subnet" HorizontalAlignment="Left" Margin="48,355,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="deleteSubnet_button_Click" />
         <TextBlock x:Name="exception_textBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="269,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="420" Foreground="Red" />
         <TextBox Name="MaskBox" Grid.Column="1" HorizontalAlignment="Left" Margin="705,194,0,0" Text="Subnetz Maske" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" />
-        <Button Name="alleNetzwerke" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="705,227,0,0" VerticalAlignment="Top" Width="160" Click="alleNetzwerke_Click"/>
-        <ListBox Name="IPListe" Grid.Column="1" Margin="717,10,110,256"/>
+        <Button Name="alleNetzwerke" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="705,227,0,0" VerticalAlignment="Top" Width="160" Click="alleNetzwerke_Click" />
+        <ListBox Name="IPListe" Grid.Column="1" Margin="717,10,110,256" />
+        <Button Content="Netwerk Test" Grid.Column="1" HorizontalAlignment="Left" Margin="525,307,0,0" VerticalAlignment="Top" Height="47" Width="87" Click="Button_Click_3" />
     </Grid>
 </Window>

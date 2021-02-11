@@ -181,5 +181,14 @@ namespace Ipee
                 IPListe.Items.Add(item);
             }
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            var address = new IPv4Address("192.168.10.5");
+            var mask = new IPv4SubnetMask("255.255.252.0");
+
+            var view = new NetworkView(new IPv4Network(address, mask));
+            view.Show();
+        }
     }
 }
