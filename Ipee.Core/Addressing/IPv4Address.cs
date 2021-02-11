@@ -19,5 +19,7 @@ namespace Ipee.Core.Addressing
         protected IPv4Address(byte[] bytes) : base(bytes)
         {
         }
+
+        public static IPv4Address Random() => new IPv4Address(BitConverter.GetBytes(new Random().Next(int.MinValue, int.MaxValue)));
     }
 }

@@ -60,5 +60,7 @@ namespace Ipee.Core.Addressing
         /// </example>
         public static IPv4SubnetMask Invert(IPv4SubnetMask mask)
             => new IPv4SubnetMask(BitConverter.GetBytes(~mask.ToInt()));
+
+        public static IPv4SubnetMask Random() => ByBitCount(new Random().Next(1, 32));
     }
 }
