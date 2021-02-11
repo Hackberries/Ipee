@@ -29,5 +29,11 @@ namespace Ipee
             var debugWindow = new DebugWindow();
             debugWindow.Show();
         }
+
+        private void OpenAddressConverterWindowButtonClick(object sender, RoutedEventArgs e)
+        {
+            var converterWindow = new IP4toIP6Window();
+            converterWindow.Show();
+        }
     }
 }
