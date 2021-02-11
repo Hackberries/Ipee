@@ -8,6 +8,7 @@ using Ipee.Core.DataPersistence.Models;
 using Ipee.Core.Store;
 using Ipee.Core.Exceptions;
 using Ipee.Core.Addressing;
+using System.Linq;
 
 namespace Ipee
 {
@@ -167,6 +168,20 @@ namespace Ipee
             catch (Exception)
             {
             }
+        }
+
+        private void alleNetzwerke_Click(object sender, RoutedEventArgs e)
+        {
+            var address = new IPv4Address(IPBox.Text);
+            var mask = new IPv4SubnetMask(MaskBox.Text);
+
+            var subnet = new IPv4Subnet(address, mask);
+            IPListe.Items.Clear();
+            foreach (var item in subnet.AllPossibleAddresses.Take(100000))
+            {
+                IPListe.Items.Add(item);
+            }
+
         }
     }
 }

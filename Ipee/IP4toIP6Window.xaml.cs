@@ -32,15 +32,15 @@ namespace Ipee
                 try
                 {
                     var adress = new IPv4Address(Ipv4TextBox.Text);
-                    IPv6_Addresse.Content = AddressConverter.IPv4toIPv6(adress);
-                    Binary_Addresse_Copy.Content = AddressConverter.IPtoBinary(Ipv4TextBox.Text);
+                    IPv6_Addresse.Text = AddressConverter.IPv4toIPv6(adress);
+                    Binary_Addresse_Copy.Text = AddressConverter.IPtoBinary(Ipv4TextBox.Text);
                 }
                 catch (Exception ex)
                 {
                     TextBlock txtBlock = new TextBlock();
                     txtBlock.TextWrapping = TextWrapping.Wrap;
-                    txtBlock.Text = "Bitte geben sie eine ordentliche IPv4 Addresse ein!";
-                    IPv6_Addresse.Content = txtBlock;
+                   
+                    IPv6_Addresse.Text = "Bitte geben sie eine ordentliche IPv4 Addresse ein!";
             }
             
         }
