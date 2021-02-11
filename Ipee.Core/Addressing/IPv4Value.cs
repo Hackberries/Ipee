@@ -8,6 +8,8 @@ namespace Ipee.Core.Addressing
 {
     public class IPv4Value
     {
+        public IPv4Network Network { get; set; }
+
         private readonly byte[] _bytes = new byte[4];
 
         /// <summary>

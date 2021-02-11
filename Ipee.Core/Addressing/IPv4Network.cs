@@ -7,6 +7,8 @@ namespace Ipee.Core.Addressing
 {
     public class IPv4Network
     {
+        public IPv4Network MotherNetwork { get; set; }
+
         private IPv4Address address;
         private IPv4SubnetMask mask;
 
@@ -78,6 +80,7 @@ namespace Ipee.Core.Addressing
             if (IsNotInRange(address))
                 throw new AddressOutOfRangeException();
 
+            address.Network = this;
             givenAddresses.Add(address);
         }
 
@@ -91,6 +94,8 @@ namespace Ipee.Core.Addressing
         {
             if (address is null)
                 throw new NullReferenceException();
+
+            address.Network = null;
 
             givenAddresses.Remove(address);
         }
@@ -106,6 +111,7 @@ namespace Ipee.Core.Addressing
             if (IsNotInRange(subnet.NetAddress))
                 throw new NetworkOutOfRangeException();
 
+            subnet.MotherNetwork = this;
             subnets.Add(subnet);
         }
 
