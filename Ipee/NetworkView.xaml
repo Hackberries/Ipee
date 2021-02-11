@@ -7,14 +7,18 @@
         mc:Ignorable="d"
         Title="NetworkView" Height="450" Width="800">
     <Grid>
-        <Label Content="Netz-Adresse" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
-        <Label Content="Host-Adresse" HorizontalAlignment="Left" Margin="12,41,0,0" VerticalAlignment="Top" />
-        <Label Content="Broadcast-Adresse" HorizontalAlignment="Left" Margin="12,72,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="NetAddressText" HorizontalAlignment="Left" Margin="143,14,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="HostAddressText" HorizontalAlignment="Left" Margin="143,45,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="BroadcastAddressText" HorizontalAlignment="Left" Margin="143,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label Content="Netz-Adresse" HorizontalAlignment="Left" Margin="13,97,0,0" VerticalAlignment="Top" />
+        <Label Content="Host-Adresse" HorizontalAlignment="Left" Margin="15,128,0,0" VerticalAlignment="Top" />
+        <Label Content="Broadcast-Adresse" HorizontalAlignment="Left" Margin="15,159,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="NetAddressText" HorizontalAlignment="Left" Margin="146,101,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="HostAddressText" HorizontalAlignment="Left" Margin="146,132,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="BroadcastAddressText" HorizontalAlignment="Left" Margin="146,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <ListBox x:Name="PossibleAddressBox" Margin="0,41,10,10" HorizontalAlignment="Right" Width="416" />
         <Label Content="Mögliche Adressen" HorizontalAlignment="Left" Margin="374,10,0,0" VerticalAlignment="Top" />
-        <Label x:Name="PossibleAddressCountLabel" Content="9999" Margin="0,10,259,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="38" />
+        <Label x:Name="PossibleAddressCountLabel" Content="9999" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="287" />
+        <Label Content="Ursprüngliche IP" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" />
+        <Label Content="Subnetzmaske" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="SourceAddressBox" HorizontalAlignment="Left" Margin="146,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="SubnetMaskBox" HorizontalAlignment="Left" Margin="146,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
     </Grid>
 </Window>

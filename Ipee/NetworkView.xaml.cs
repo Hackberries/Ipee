@@ -28,13 +28,18 @@ namespace Ipee
 
             InitializeComponent();
 
+            this.SourceAddressBox.Text = this.network.SourceAddress.ToString();
+            this.SubnetMaskBox.Text = this.network.SubnetMask.ToString();
+
             this.NetAddressText.Text = this.network.NetAddress.ToString();
             this.HostAddressText.Text = this.network.HostAddress.ToString();
             this.BroadcastAddressText.Text = this.network.BroadcastAddress.ToString();
 
-            PossibleAddressCountLabel.Content = network.AllPossibleAddresses.Count();
+            var allAddresses = network.AllPossibleAddresses.ToArray();
 
-            foreach (var address in network.AllPossibleAddresses.Take(2500))
+            PossibleAddressCountLabel.Content = allAddresses.Length;
+
+            foreach (var address in allAddresses.Take(2500))
                 PossibleAddressBox.Items.Add(address);
         }
     }

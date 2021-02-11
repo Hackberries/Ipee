@@ -9,8 +9,8 @@ namespace Ipee.Core.Addressing
     {
         public IPv4Network MotherNetwork { get; set; }
 
-        private IPv4Address address;
-        private IPv4SubnetMask mask;
+        public IPv4Address SourceAddress { get; private set; }
+        public IPv4SubnetMask SubnetMask { get; private set; }
 
         private List<IPv4Value> givenAddresses = new();
         private List<IPv4Network> subnets = new();
@@ -28,9 +28,9 @@ namespace Ipee.Core.Addressing
             }
         }
 
-        public IPv4Value NetAddress => address & mask;
+        public IPv4Value NetAddress => SourceAddress & SubnetMask;
 
-        public IPv4Value BroadcastAddress => address | IPv4SubnetMask.Invert(mask);
+        public IPv4Value BroadcastAddress => SourceAddress | IPv4SubnetMask.Invert(SubnetMask);
 
         public IPv4Value HostAddress => IPv4Address.Increase(NetAddress, 1);
 
@@ -59,8 +59,8 @@ namespace Ipee.Core.Addressing
 
         public IPv4Network(IPv4Address address, IPv4SubnetMask mask)
         {
-            this.address = address;
-            this.mask = mask;
+            this.SourceAddress = address;
+            this.SubnetMask = mask;
         }
 
         /// <summary>
