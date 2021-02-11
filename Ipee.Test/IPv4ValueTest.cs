@@ -77,6 +77,32 @@ namespace Ipee.Test
             Assert.Equal("255.255.255.14", subnet.ToString());
         }
 
+        [Fact]
+        public void GreaterThanOrEqual_Operation()
+        {
+            var value = new IPv4Value("253.21.161.14");
+            var same = new IPv4Value("253.21.161.14");
+            var smaller = new IPv4Value("253.21.161.2");
+            var bigger = new IPv4Value("253.21.162.16");
+
+            Assert.True(value >= same);
+            Assert.True(value >= smaller);
+            Assert.False(value >= bigger);
+        }
+
+        [Fact]
+        public void LessThanOrEqual_Operation()
+        {
+            var value = new IPv4Value("253.21.161.14");
+            var same = new IPv4Value("253.21.161.14");
+            var smaller = new IPv4Value("253.21.161.2");
+            var bigger = new IPv4Value("253.21.162.16");
+
+            Assert.True(value <= same);
+            Assert.True(value <= bigger);
+            Assert.False(value <= smaller);
+        }
+
         [Theory]
         [InlineData("192.168.0.0", 1, "192.168.0.1")]
         [InlineData("192.168.0.0", 2, "192.168.0.2")]
