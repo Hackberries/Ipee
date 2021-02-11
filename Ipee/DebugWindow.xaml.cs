@@ -20,7 +20,6 @@ namespace Ipee
         public DebugWindow()
         {
             InitializeComponent();
-            AppStore.Instance.Initialized("./subnetConfig.json");
         }
 
         // NOTE: Exception handling

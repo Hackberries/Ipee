@@ -20,40 +20,10 @@ namespace Ipee.Core.Store
         /// </summary>
         public static AppStore Instance { get; set; } = new AppStore();
 
-        private List<IPv4Address> addresses = new();
+        public IPv4Network MainNetwork { get; set; } = new IPv4Network(new IPv4Address("0.0.0.0"), new IPv4SubnetMask("255.255.255.255"));
 
-        private List<IPv4Network> subnets = new();
+        public ConfigManager ConfigManager = new ConfigManager("./subnetConfig.json");
 
-        public ConfigManager ConfigManager;
-
-        public void Initialized(string configPath)
-        {
-            this.ConfigManager = new ConfigManager(configPath);
-        }
-
-        /// <summary>
-        /// Fügt eine neue IpAdresse hinzu.
-        /// </summary>
-        /// <exception cref="AddressAlreadyExistException"></exception>
-        /// <exception cref="NullReferenceException"></exception>
-        /// <param name="address">Die Adresse, welche hinzugefügt werden soll.</param>
-        public void AddAddress(IPv4Address address)
-        {
-            if (address is null)
-                throw new NullReferenceException();
-
-            if (addresses.Contains(address))
-                throw new AddressAlreadyExistException();
-
-            this.addresses.Add(address);
-        }
-
-        public void AddSubnet(IPv4Network subnet)
-        {
-            if (subnet is null)
-                throw new NullReferenceException();
-
-            this.subnets.Add(subnet);
-        }
+        public IEnumerable<IPv4Value> GivenAddresses => MainNetwork?.GivenAddresses;
     }
 }
