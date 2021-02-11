@@ -175,13 +175,12 @@ namespace Ipee
             var address = new IPv4Address(IPBox.Text);
             var mask = new IPv4SubnetMask(MaskBox.Text);
 
-            var subnet = new IPv4Subnet(address, mask);
+            var subnet = new IPv4Network(address, mask);
             IPListe.Items.Clear();
             foreach (var item in subnet.AllPossibleAddresses.Take(100000))
             {
                 IPListe.Items.Add(item);
             }
-
         }
     }
 }
