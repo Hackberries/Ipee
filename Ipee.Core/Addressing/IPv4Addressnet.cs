@@ -1,6 +1,7 @@
 using Ipee.Core.Exceptions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Ipee.Core.Addressing
 {
@@ -33,7 +34,11 @@ namespace Ipee.Core.Addressing
                 {
                     current = IPv4Value.Increase(current, 1);
 
-                    if (!givenAddresses.Contains(current))
+                    var isPossible = !givenAddresses.Contains(current)
+                                    && !ExistInSubnet(current)
+                                    && !IsPossibleInSubnet(current);
+
+                    if (isPossible)
                         yield return current;
                 }
             }
@@ -56,7 +61,7 @@ namespace Ipee.Core.Addressing
             if (address is null)
                 throw new NullReferenceException();
 
-            if (givenAddresses.Contains(address))
+            if (givenAddresses.Contains(address) || ExistInSubnet(address))
                 throw new AddressAlreadyExistException();
 
             if (IsNotInRange(address))
@@ -81,11 +86,38 @@ namespace Ipee.Core.Addressing
 
         public void AddSubnet(IPv4Addressnet subnet)
         {
+            if (subnet is null)
+                throw new ArgumentNullException(nameof(subnet));
+
+            if (subnets.Contains(subnet))
+                throw new NetworkAlreadyExistException();
+
+            if (IsNotInRange(subnet.NetAddress))
+                throw new NetworkOutOfRangeException();
+
             subnets.Add(subnet);
         }
 
         private bool IsInRange(IPv4Value address) => address > HostAddress || address < BroadcastAddress;
 
         private bool IsNotInRange(IPv4Value address) => address <= HostAddress || address >= BroadcastAddress;
+
+        private bool ExistInSubnet(IPv4Value address)
+        {
+            foreach (var subnet in this.subnets)
+                if (subnet.GivenAddresses.Contains(address) || address == subnet.HostAddress || address == subnet.BroadcastAddress)
+                    return true;
+
+            return false;
+        }
+
+        private bool IsPossibleInSubnet(IPv4Value address)
+        {
+            foreach (var subnet in this.subnets)
+                if (subnet.AllPossibleAddresses.Contains(address) || address == subnet.HostAddress || address == subnet.BroadcastAddress)
+                    return true;
+
+            return false;
+        }
     }
 }
