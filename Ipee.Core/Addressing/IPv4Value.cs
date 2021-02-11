@@ -117,6 +117,32 @@ namespace Ipee.Core.Addressing
             => new IPv4Value(BitConverter.GetBytes(left.ToInt() | right.ToInt()));
 
         /// <summary>
+        /// Prüft, ob das linke <see cref="IPv4Value"/> Objekt den gleichen Wert wie das rechte bestitzt.
+        /// </summary>
+        /// <returns>Gibt true zurück, wenn beide Objekte den gleichen Wert haben.</returns>
+        /// <example>
+        /// <code>
+        /// var foo = new IPv4Address("253.21.161.14") == new IPv4Address("253.21.161.14"); //true
+        /// var bar = new IPv4Address("253.21.161.14") == new IPv4Address("253.0.161.14"); //false
+        /// </code>
+        /// </example>
+        public static bool operator ==(IPv4Value left, IPv4Value right)
+            => left.Equals(right);
+
+        /// <summary>
+        /// Prüft, ob das linke <see cref="IPv4Value"/> Objekt einen ungleichen Wert wie das rechte bestitzt.
+        /// </summary>
+        /// <returns>Gibt true zurück, wenn beide Objekte einen ungleichen Wert haben.</returns>
+        /// <example>
+        /// <code>
+        /// var foo = new IPv4Address("253.21.161.14") != new IPv4Address("253.188.0.1"); //true
+        /// var bar = new IPv4Address("253.21.161.14") != new IPv4Address("253.21.161.14"); //false
+        /// </code>
+        /// </example>
+        public static bool operator !=(IPv4Value left, IPv4Value right)
+            => !left.Equals(right);
+
+        /// <summary>
         /// Prüft, ob das linke <see cref="IPv4Value"/> Objekt einen niedrigeren Wert bestitzt.
         /// </summary>
         /// <returns>Gibt true zurück, wenn Links kleiner ist.</returns>
@@ -141,5 +167,19 @@ namespace Ipee.Core.Addressing
         /// </example>
         public static bool operator >(IPv4Value left, IPv4Value right)
             => left.ToInt() > right.ToInt();
+
+        /// <summary>
+        /// Prüft, ob das linke <see cref="IPv4Value"/> Objekt den gleichen, oder einen größeren Wert wie das Rechte bestitzt.
+        /// </summary>
+        /// <returns>Gibt true zurück, wenn beide Objekte den gleichen Wert, oder das Linke einen Größeren Wert hat.</returns>
+        public static bool operator >=(IPv4Value left, IPv4Value right)
+            => left.Equals(right) || left > right;
+
+        /// <summary>
+        /// Prüft, ob das linke <see cref="IPv4Value"/> Objekt den gleichen, oder einen kleineren Wert wie das Rechte bestitzt.
+        /// </summary>
+        /// <returns>Gibt true zurück, wenn beide Objekte den gleichen Wert, oder das Linke einen kleineren Wert hat.</returns>
+        public static bool operator <=(IPv4Value left, IPv4Value right)
+            => left.Equals(right) || left < right;
     }
 }
