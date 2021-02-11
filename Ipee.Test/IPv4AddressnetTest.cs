@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Ipee.Test
 {
-    public class IPv4SubnetTest
+    public class IPv4AddressnetTest
     {
         [Fact]
         public void CanCalculateNetAddress()
@@ -16,7 +16,7 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var subnet = new IPv4Subnet(address, mask);
+            var subnet = new IPv4Addressnet(address, mask);
 
             Assert.Equal("192.168.8.0", subnet.NetAddress.ToString());
         }
@@ -27,7 +27,7 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var subnet = new IPv4Subnet(address, mask);
+            var subnet = new IPv4Addressnet(address, mask);
 
             Assert.Equal("192.168.11.255", subnet.BroadcastAddress.ToString());
         }
@@ -38,7 +38,7 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var subnet = new IPv4Subnet(address, mask);
+            var subnet = new IPv4Addressnet(address, mask);
 
             Assert.Equal("192.168.8.1", subnet.HostAddress.ToString());
         }
@@ -49,7 +49,7 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var subnet = new IPv4Subnet(address, mask);
+            var subnet = new IPv4Addressnet(address, mask);
 
             Assert.Equal(1022, subnet.AllPossibleAddresses.Count());
         }
