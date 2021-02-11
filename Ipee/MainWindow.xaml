@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:Ipee"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="OpenDebugWindowButton" Content="Debug" Margin="0,0,10,10" Click="OpenDebugWindowButtonClick" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="137" />
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Button x:Name="OpenDebugWindowButton" Content="Debug" Margin="0,0,10,10" Click="OpenDebugWindowButtonClick" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="137" />
+        </Grid>
+    </DockPanel>
 </Window>
