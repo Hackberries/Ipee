@@ -13,7 +13,18 @@ namespace Ipee.Core.Addressing
         private List<IPv4Value> givenAddresses = new();
         private List<IPv4Network> subnets = new();
 
-        public IEnumerable<IPv4Value> GivenAddresses => givenAddresses;
+        public IEnumerable<IPv4Value> GivenAddresses
+        {
+            get
+            {
+                foreach (var address in givenAddresses)
+                    yield return address;
+
+                foreach (var subnet in subnets)
+                    foreach (var address in subnet.GivenAddresses)
+                        yield return address;
+            }
+        }
 
         public IPv4Value NetAddress => address & mask;
 
