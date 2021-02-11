@@ -76,18 +76,18 @@ namespace Ipee.Core.Addressing
             }
         }
 
+        /// <summary>
+        /// Erzeugt ein neues <see cref="IPv4Base"/> Objekt auf Basis des angegebenen und erhöht es um einen bestimmten Wert.
+        /// </summary>
+        /// <param name="address">Die Basis, auf der erhöht werden soll.</param>
+        /// <param name="increaseBy">Der Wert, um welche der Wert erhöht werden soll</param>
+        /// <example>
+        /// <code>
+        /// var foo = IPv4Base.Increase(new IPv4Address("253.21.161.14"), 2); // = "253.21.161.16"
+        /// </code>
+        /// </example>
         public static IPv4Base Increase(IPv4Base address, int increaseBy)
         {
-            //var reversedBytes = address._bytes;
-
-            //Array.Reverse(reversedBytes);
-
-            //var reversedValue = BitConverter.ToInt32(reversedBytes);
-            //reversedValue = reversedValue + increaseBy;
-
-            //var bytes = BitConverter.GetBytes(reversedValue);
-            //Array.Reverse(bytes);
-
             var value = address.ToInt() + increaseBy;
             var bytes = BitConverter.GetBytes(value);
 
@@ -116,9 +116,29 @@ namespace Ipee.Core.Addressing
         public static IPv4Base operator |(IPv4Base left, IPv4Base right)
             => new IPv4Base(BitConverter.GetBytes(left.ToInt() | right.ToInt()));
 
+        /// <summary>
+        /// Prüft, ob das linke <see cref="IPv4Base"/> Objekt einen niedrigeren Wert bestitzt.
+        /// </summary>
+        /// <returns>Gibt true zurück, wenn Links kleiner ist.</returns>
+        /// <example>
+        /// <code>
+        /// var foo = new IPv4Address("253.21.161.14") &lt; new IPv4Address("253.188.0.1"); //true
+        /// var bar = new IPv4Address("253.21.161.14") &lt; new IPv4Address("253.0.161.14"); //false
+        /// </code>
+        /// </example>
         public static bool operator <(IPv4Base left, IPv4Base right)
             => left.ToInt() < right.ToInt();
 
+        /// <summary>
+        /// Prüft, ob das linke <see cref="IPv4Base"/> Objekt einen höheren Wert bestitzt.
+        /// </summary>
+        /// <returns>Gibt true zurück, wenn Links größer ist.</returns>
+        /// <example>
+        /// <code>
+        /// var foo = new IPv4Address("253.21.161.14") &gt; new IPv4Address("253.188.0.1"); //true
+        /// var bar = new IPv4Address("253.21.161.14") &gt; new IPv4Address("253.0.161.14"); //false
+        /// </code>
+        /// </example>
         public static bool operator >(IPv4Base left, IPv4Base right)
             => left.ToInt() > right.ToInt();
     }
