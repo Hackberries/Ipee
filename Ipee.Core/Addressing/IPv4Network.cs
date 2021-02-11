@@ -5,13 +5,13 @@ using System.Linq;
 
 namespace Ipee.Core.Addressing
 {
-    public class IPv4Addressnet
+    public class IPv4Network
     {
         private IPv4Address address;
         private IPv4SubnetMask mask;
 
         private List<IPv4Value> givenAddresses = new();
-        private List<IPv4Addressnet> subnets = new();
+        private List<IPv4Network> subnets = new();
 
         public IEnumerable<IPv4Value> GivenAddresses => givenAddresses;
 
@@ -44,7 +44,7 @@ namespace Ipee.Core.Addressing
             }
         }
 
-        public IPv4Addressnet(IPv4Address address, IPv4SubnetMask mask)
+        public IPv4Network(IPv4Address address, IPv4SubnetMask mask)
         {
             this.address = address;
             this.mask = mask;
@@ -84,7 +84,7 @@ namespace Ipee.Core.Addressing
             givenAddresses.Remove(address);
         }
 
-        public void AddSubnet(IPv4Addressnet subnet)
+        public void AddSubnet(IPv4Network subnet)
         {
             if (subnet is null)
                 throw new ArgumentNullException(nameof(subnet));

@@ -22,7 +22,7 @@ namespace Ipee.Core.Store
 
         private List<IPv4Address> addresses = new();
 
-        private List<IPv4Addressnet> subnets = new();
+        private List<IPv4Network> subnets = new();
 
         public ConfigManager ConfigManager;
 
@@ -48,7 +48,7 @@ namespace Ipee.Core.Store
             this.addresses.Add(address);
         }
 
-        public void AddSubnet(IPv4Addressnet subnet)
+        public void AddSubnet(IPv4Network subnet)
         {
             if (subnet is null)
                 throw new NullReferenceException();

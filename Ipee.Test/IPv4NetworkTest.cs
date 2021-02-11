@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Ipee.Test
 {
-    public class IPv4AddressnetTest
+    public class IPv4NetworkTest
     {
         [Fact]
         public void CanCalculateNetAddress()
@@ -16,7 +16,7 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var subnet = new IPv4Addressnet(address, mask);
+            var subnet = new IPv4Network(address, mask);
 
             Assert.Equal("192.168.8.0", subnet.NetAddress.ToString());
         }
@@ -27,7 +27,7 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var subnet = new IPv4Addressnet(address, mask);
+            var subnet = new IPv4Network(address, mask);
 
             Assert.Equal("192.168.11.255", subnet.BroadcastAddress.ToString());
         }
@@ -38,7 +38,7 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var subnet = new IPv4Addressnet(address, mask);
+            var subnet = new IPv4Network(address, mask);
 
             Assert.Equal("192.168.8.1", subnet.HostAddress.ToString());
         }
@@ -49,14 +49,14 @@ namespace Ipee.Test
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
 
-            var network = new IPv4Addressnet(address, mask);
+            var network = new IPv4Network(address, mask);
             Assert.Equal(1022, network.AllPossibleAddresses.Count());
 
             network.AddAddress(new IPv4Address("192.168.10.7"));
             network.AddAddress(new IPv4Address("192.168.10.8"));
             Assert.Equal(1020, network.AllPossibleAddresses.Count());
 
-            var subnet = new IPv4Addressnet(new IPv4Address("192.168.10.5"), new IPv4SubnetMask("255.255.254.0"));
+            var subnet = new IPv4Network(new IPv4Address("192.168.10.5"), new IPv4SubnetMask("255.255.254.0"));
             subnet.AddAddress(new IPv4Address("192.168.11.204"));
             network.AddSubnet(subnet);
 
@@ -68,7 +68,7 @@ namespace Ipee.Test
         {
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
-            var network = new IPv4Addressnet(address, mask);
+            var network = new IPv4Network(address, mask);
 
             var address1 = new IPv4Address("192.168.10.7");
             var address2 = new IPv4Address("192.168.10.8");
@@ -85,7 +85,7 @@ namespace Ipee.Test
         {
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
-            var subnet = new IPv4Addressnet(address, mask);
+            var subnet = new IPv4Network(address, mask);
 
             var address1 = new IPv4Address("192.168.10.7");
             subnet.AddAddress(address1);
@@ -99,7 +99,7 @@ namespace Ipee.Test
         {
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
-            var subnet = new IPv4Addressnet(address, mask);
+            var subnet = new IPv4Network(address, mask);
 
             Assert.ThrowsAny<Exception>(() => subnet.AddAddress(new IPv4Address("192.168.8.1")));
             Assert.ThrowsAny<Exception>(() => subnet.AddAddress(new IPv4Address("192.0.0.0")));
@@ -115,12 +115,12 @@ namespace Ipee.Test
         {
             var address = new IPv4Address("192.168.10.5");
             var mask = new IPv4SubnetMask("255.255.252.0");
-            var network = new IPv4Addressnet(address, mask);
+            var network = new IPv4Network(address, mask);
 
             Assert.ThrowsAny<Exception>(() => network.AddSubnet(null));
-            Assert.ThrowsAny<Exception>(() => network.AddSubnet(new IPv4Addressnet(new IPv4Address("1.1.1.1"), new IPv4SubnetMask("0.0.0.0"))));
+            Assert.ThrowsAny<Exception>(() => network.AddSubnet(new IPv4Network(new IPv4Address("1.1.1.1"), new IPv4SubnetMask("0.0.0.0"))));
 
-            var subnet = new IPv4Addressnet(new IPv4Address("192.168.10.5"), new IPv4SubnetMask("255.255.254.0"));
+            var subnet = new IPv4Network(new IPv4Address("192.168.10.5"), new IPv4SubnetMask("255.255.254.0"));
             network.AddSubnet(subnet);
             Assert.ThrowsAny<Exception>(() => network.AddSubnet(subnet));
         }
