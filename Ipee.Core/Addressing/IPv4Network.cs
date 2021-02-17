@@ -88,7 +88,7 @@ namespace Ipee.Core.Addressing
         /// <exception cref="AddressAlreadyExistException"></exception>
         /// <exception cref="NullReferenceException"></exception>
         /// <param name="address">Die Adresse, welche hinzugefügt werden soll.</param>
-        public void AddAddress(IPv4Address address)
+        public void AddAddress(IPv4Value address)
         {
             if (address is null)
                 throw new NullReferenceException();
@@ -109,7 +109,13 @@ namespace Ipee.Core.Addressing
         /// <exception cref="AddressAlreadyExistException"></exception>
         /// <exception cref="NullReferenceException"></exception>
         /// <param name="address">Die Adresse, welche hinzugefügt werden soll.</param>
-        public void RemoveAddress(IPv4Address address)
+        /// <example>
+        /// <code>
+        /// var address = AppStore.Instance.MainNetwork.AllGivenAddresses.Where(add => add.Address == "192.168.1.1").First();
+        /// address.Network.RemoveAddress(tst);
+        /// </code>
+        /// </example>
+        public void RemoveAddress(IPv4Value address)
         {
             if (address is null)
                 throw new NullReferenceException();
