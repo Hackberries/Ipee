@@ -3,14 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text.Json.Serialization;
 
 namespace Ipee.Core.Addressing
 {
     public class IPv4Value
     {
+        [JsonIgnore]
         public IPv4Network Network { get; set; }
 
         private readonly byte[] _bytes = new byte[4];
+        public byte[] Bytes { get => _bytes; init => _bytes = value; }
+        public string Address => this.ToString();
 
         /// <summary>
         /// Erstellt aus dem angegebenen String eine neue IPv4Value-Instanz.<br />

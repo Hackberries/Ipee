@@ -31,5 +31,7 @@
         <Button Name="alleNetzwerke" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="705,227,0,0" VerticalAlignment="Top" Width="160" Click="alleNetzwerke_Click" />
         <ListBox Name="IPListe" Grid.Column="1" Margin="717,10,110,256" />
         <Button Content="Netwerk Test" Grid.Column="1" HorizontalAlignment="Left" Margin="525,307,0,0" VerticalAlignment="Top" Height="47" Width="87" Click="Button_Click_3" />
+        <Button Content="Json Test" Grid.Column="1" HorizontalAlignment="Left" Margin="749,311,0,0" VerticalAlignment="Top" Click="Button_Click_4" />
+        <Button Content="Json load Test" Grid.Column="1" HorizontalAlignment="Left" Margin="739,365,0,0" VerticalAlignment="Top" Click="Button_Click_5" />
     </Grid>
 </Window>

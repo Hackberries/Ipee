@@ -2,20 +2,29 @@ using Ipee.Core.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace Ipee.Core.Addressing
 {
     public class IPv4Network
     {
+        [JsonIgnore]
         public IPv4Network MotherNetwork { get; set; }
 
-        public IPv4Address SourceAddress { get; private set; }
-        public IPv4SubnetMask SubnetMask { get; private set; }
+        public IPv4Address SourceAddress { get; init; }
+        public IPv4SubnetMask SubnetMask { get; init; }
 
         private List<IPv4Value> givenAddresses = new();
         private List<IPv4Network> subnets = new();
 
         public IEnumerable<IPv4Value> GivenAddresses
+        {
+            get => givenAddresses;
+
+            init => givenAddresses = value.ToList();
+        }
+
+        public IEnumerable<IPv4Value> AllGivenAddresses
         {
             get
             {
@@ -28,6 +37,8 @@ namespace Ipee.Core.Addressing
             }
         }
 
+        public IEnumerable<IPv4Network> Subnets { get => subnets; init => subnets = value.ToList(); }
+
         public IPv4Value NetAddress => SourceAddress & SubnetMask;
 
         public IPv4Value BroadcastAddress => SourceAddress | IPv4SubnetMask.Invert(SubnetMask);
@@ -37,6 +48,7 @@ namespace Ipee.Core.Addressing
         /// <summary>
         /// Gibt alle Addressen in Form <see cref="IPv4Value"/>  aus, welche sich zwischen der errechneten HostAddress und der BroadcastAddress befinden.
         /// </summary>
+        [JsonIgnore]
         public IEnumerable<IPv4Value> AllPossibleAddresses
         {
             get
@@ -57,11 +69,18 @@ namespace Ipee.Core.Addressing
             }
         }
 
-        public IPv4Network(IPv4Address address, IPv4SubnetMask mask)
+        public IPv4Network(IPv4Address SourceAddress, IPv4SubnetMask SubnetMask)
         {
-            this.SourceAddress = address;
-            this.SubnetMask = mask;
+            this.SourceAddress = SourceAddress;
+            this.SubnetMask = SubnetMask;
         }
+
+        //[JsonConstructor]
+        //public IPv4Network(string address, string mask)
+        //{
+        //    this.SourceAddress = new IPv4Address(address);
+        //    this.SubnetMask = new IPv4SubnetMask(mask);
+        //}
 
         /// <summary>
         /// Fügt eine neue IpAdresse hinzu.
@@ -122,7 +141,7 @@ namespace Ipee.Core.Addressing
         private bool ExistInSubnet(IPv4Value address)
         {
             foreach (var subnet in this.subnets)
-                if (subnet.GivenAddresses.Contains(address) || address == subnet.HostAddress || address == subnet.BroadcastAddress)
+                if (subnet.AllGivenAddresses.Contains(address) || address == subnet.HostAddress || address == subnet.BroadcastAddress)
                     return true;
 
             return false;

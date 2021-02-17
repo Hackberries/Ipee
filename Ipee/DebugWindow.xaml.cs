@@ -9,6 +9,9 @@ using Ipee.Core.Store;
 using Ipee.Core.Exceptions;
 using Ipee.Core.Addressing;
 using System.Linq;
+using System.Text.Json;
+using System.Text;
+using System.Text.Encodings.Web;
 
 namespace Ipee
 {
@@ -189,6 +192,27 @@ namespace Ipee
 
             var view = new NetworkView(new IPv4Network(address, mask));
             view.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var address = new IPv4Address("192.168.10.5");
+            var mask = new IPv4SubnetMask("255.255.252.0");
+            var network = new IPv4Network(address, mask);
+            network.AddAddress(new IPv4Address("192.168.10.7"));
+            network.AddAddress(new IPv4Address("192.168.10.8"));
+            var subnet = new IPv4Network(new IPv4Address("192.168.10.5"), new IPv4SubnetMask("255.255.254.0"));
+            subnet.AddAddress(new IPv4Address("192.168.11.204"));
+            network.AddSubnet(subnet);
+
+            AppStore.Instance.MainNetwork = network;
+
+            System.IO.File.WriteAllText(@"C:\Users\FSN\Desktop\Network.json", JsonSerializer.Serialize(AppStore.Instance.MainNetwork));
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var network = JsonSerializer.Deserialize<IPv4Network>(System.IO.File.ReadAllText(@"C:\Users\FSN\Desktop\Network.json"));
         }
     }
 }
