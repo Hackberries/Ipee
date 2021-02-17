@@ -12,7 +12,7 @@
           "hash": "Yc1X9PfpGK8IZGe5qIfs2g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.IPv4Address.html",
-          "hash": "13OdQ1jwSWympECQcb1lbg=="
+          "hash": "I4dZV503qJbqa3/JFT5eZA=="
         }
       },
       "is_incremental": false,
@@ -29,23 +29,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ipee.Core.Addressing.IPv4Base.yml",
+      "source_relative_path": "api/Ipee.Core.Addressing.IPv4Network.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ipee.Core.Addressing.IPv4Base.html",
-          "hash": "caykPnJr9ZY6XmHbOHLKrQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ipee.Core.Addressing.IPv4Subnet.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ipee.Core.Addressing.IPv4Subnet.html",
-          "hash": "NpRrunOqd9FaKsCdWGGKww=="
+          "relative_path": "api/Ipee.Core.Addressing.IPv4Network.html",
+          "hash": "iu1puRy0UEusSbg0EEC6/A=="
         }
       },
       "is_incremental": false,
@@ -57,7 +45,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.IPv4SubnetMask.html",
-          "hash": "3xnwuMLXteHbh5eVNT4hrA=="
+          "hash": "RWUFORdhhmXVEX3kWjf1wA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ipee.Core.Addressing.IPv4Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipee.Core.Addressing.IPv4Value.html",
+          "hash": "JlqYgN77Wdq7qVBtefLyGw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.html",
-          "hash": "hPx6LD+7bV5f6a1PDg+YZw=="
+          "hash": "73VTxEKdV2OgpxtzxtrXwA=="
         }
       },
       "is_incremental": false,
@@ -84,7 +84,7 @@
           "hash": "5zRkPngii1Pbovze6veq/w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "xvUwJ3Gj5fonHYongw8IGQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "m3/pH0ckRyWEuTmzfQowVg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "f7umy6R9FtO2ZReNY7BDCg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -132,7 +132,7 @@
           "hash": "qQrh/DKe9WKBx/MA+wvBOg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -144,31 +144,7 @@
           "hash": "HcqqQeySkVJ7TKf+nFei4A=="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.html",
-          "hash": "FUK2EaUBo+mprNZvMQ874Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Ipee.Core.Exceptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Ipee.Core.Exceptions.html",
-          "hash": "YC4w1ap26ymOP0pQtFrM1Q=="
-        }
-      },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -177,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Store.AppStore.html",
-          "hash": "gX5cmC5J+tutEKCdBvrnbQ=="
+          "hash": "ItOEaAa/1MKZrKN7G9D1Sg=="
         }
       },
       "is_incremental": false,
@@ -197,11 +173,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Ipee.DebugWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipee.DebugWindow.html",
+          "hash": "GBcYd61oGVL/Pbvmg3JDyw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ipee.IP4toIP6Window.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipee.IP4toIP6Window.html",
+          "hash": "9NZPtSOBxZJ45rssUJWqIw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Ipee.MainWindow.yml",
       "output": {
         ".html": {
           "relative_path": "api/Ipee.MainWindow.html",
-          "hash": "WGQo2g0/hfVemB+52xVJNg=="
+          "hash": "OKWTUySN+RGiUzTbAHh1Aw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Ipee.NetworkView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Ipee.NetworkView.html",
+          "hash": "dMAvpqTsaaY3pTB1k/YYTw=="
         }
       },
       "is_incremental": false,
@@ -216,7 +228,7 @@
           "hash": "NhCd2hdd/yoZXfqtfsF0tw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -228,7 +240,7 @@
           "hash": "SK4gXwDaA9+Oyhwc2BEbCg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -240,19 +252,19 @@
           "hash": "CRLTkjsGamtlvhLpXW2Hew=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ipee.Test.IPv4BaseTest.yml",
+      "source_relative_path": "api/Ipee.Test.IPv4NetworkTest.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ipee.Test.IPv4BaseTest.html",
-          "hash": "nHZf6maoU3Dwz2Dx+1ffSQ=="
+          "relative_path": "api/Ipee.Test.IPv4NetworkTest.html",
+          "hash": "rcR0bF39VFm3gRIl5PiemA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -264,19 +276,19 @@
           "hash": "sg29Ey1aLAM0TkoAGQXyBw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Ipee.Test.IPv4SubnetTest.yml",
+      "source_relative_path": "api/Ipee.Test.IPv4ValueTest.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Ipee.Test.IPv4SubnetTest.html",
-          "hash": "Q4uuV86lPub/3abjbPk+aw=="
+          "relative_path": "api/Ipee.Test.IPv4ValueTest.html",
+          "hash": "iGO/ilLNmqaC86NIwXiEaA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -285,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Test.html",
-          "hash": "cN3rdHyMqHjqUsj38ZyNdg=="
+          "hash": "oa9kx5rz6QmdnIJh184MDw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.html",
-          "hash": "JGGROUZnvwGDu1CzS6YoRw=="
+          "hash": "2sSDTzgKMN1dja5u0t0Mcg=="
         }
       },
       "is_incremental": false,
@@ -321,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "JGRiELhLKcxTDh1kK8a2JQ=="
+          "hash": "LARk+eKMxaQ+3f+Ac7crMg=="
         }
       },
       "is_incremental": false,
@@ -394,8 +406,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 25,
-          "skipped_file_count": 8
+          "total_file_count": 26,
+          "skipped_file_count": 25
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

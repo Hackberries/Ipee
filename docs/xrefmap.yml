@@ -73,235 +73,207 @@ references:
   isSpec: "True"
   fullName: Ipee.Core.Addressing.IPv4Address.IPv4Address
   nameWithType: IPv4Address.IPv4Address
-- uid: Ipee.Core.Addressing.IPv4Base
-  name: IPv4Base
-  href: api/Ipee.Core.Addressing.IPv4Base.html
-  commentId: T:Ipee.Core.Addressing.IPv4Base
-  fullName: Ipee.Core.Addressing.IPv4Base
-  nameWithType: IPv4Base
-- uid: Ipee.Core.Addressing.IPv4Base.#ctor(System.Byte[])
-  name: IPv4Base(Byte[])
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base__ctor_System_Byte___
-  commentId: M:Ipee.Core.Addressing.IPv4Base.#ctor(System.Byte[])
-  name.vb: IPv4Base(Byte())
-  fullName: Ipee.Core.Addressing.IPv4Base.IPv4Base(System.Byte[])
-  fullName.vb: Ipee.Core.Addressing.IPv4Base.IPv4Base(System.Byte())
-  nameWithType: IPv4Base.IPv4Base(Byte[])
-  nameWithType.vb: IPv4Base.IPv4Base(Byte())
-- uid: Ipee.Core.Addressing.IPv4Base.#ctor(System.String)
-  name: IPv4Base(String)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base__ctor_System_String_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.#ctor(System.String)
-  fullName: Ipee.Core.Addressing.IPv4Base.IPv4Base(System.String)
-  nameWithType: IPv4Base.IPv4Base(String)
-- uid: Ipee.Core.Addressing.IPv4Base.#ctor*
-  name: IPv4Base
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base__ctor_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.#ctor
+- uid: Ipee.Core.Addressing.IPv4Address.Random
+  name: Random()
+  href: api/Ipee.Core.Addressing.IPv4Address.html#Ipee_Core_Addressing_IPv4Address_Random
+  commentId: M:Ipee.Core.Addressing.IPv4Address.Random
+  fullName: Ipee.Core.Addressing.IPv4Address.Random()
+  nameWithType: IPv4Address.Random()
+- uid: Ipee.Core.Addressing.IPv4Address.Random*
+  name: Random
+  href: api/Ipee.Core.Addressing.IPv4Address.html#Ipee_Core_Addressing_IPv4Address_Random_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Address.Random
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.IPv4Base
-  nameWithType: IPv4Base.IPv4Base
-- uid: Ipee.Core.Addressing.IPv4Base.Equals(System.Object)
-  name: Equals(Object)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_Equals_System_Object_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.Equals(System.Object)
-  fullName: Ipee.Core.Addressing.IPv4Base.Equals(System.Object)
-  nameWithType: IPv4Base.Equals(Object)
-- uid: Ipee.Core.Addressing.IPv4Base.Equals*
-  name: Equals
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_Equals_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.Equals
+  fullName: Ipee.Core.Addressing.IPv4Address.Random
+  nameWithType: IPv4Address.Random
+- uid: Ipee.Core.Addressing.IPv4Network
+  name: IPv4Network
+  href: api/Ipee.Core.Addressing.IPv4Network.html
+  commentId: T:Ipee.Core.Addressing.IPv4Network
+  fullName: Ipee.Core.Addressing.IPv4Network
+  nameWithType: IPv4Network
+- uid: Ipee.Core.Addressing.IPv4Network.#ctor(Ipee.Core.Addressing.IPv4Address,Ipee.Core.Addressing.IPv4SubnetMask)
+  name: IPv4Network(IPv4Address, IPv4SubnetMask)
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network__ctor_Ipee_Core_Addressing_IPv4Address_Ipee_Core_Addressing_IPv4SubnetMask_
+  commentId: M:Ipee.Core.Addressing.IPv4Network.#ctor(Ipee.Core.Addressing.IPv4Address,Ipee.Core.Addressing.IPv4SubnetMask)
+  fullName: Ipee.Core.Addressing.IPv4Network.IPv4Network(Ipee.Core.Addressing.IPv4Address, Ipee.Core.Addressing.IPv4SubnetMask)
+  nameWithType: IPv4Network.IPv4Network(IPv4Address, IPv4SubnetMask)
+- uid: Ipee.Core.Addressing.IPv4Network.#ctor*
+  name: IPv4Network
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network__ctor_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.#ctor
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.Equals
-  nameWithType: IPv4Base.Equals
-- uid: Ipee.Core.Addressing.IPv4Base.GetHashCode
-  name: GetHashCode()
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_GetHashCode
-  commentId: M:Ipee.Core.Addressing.IPv4Base.GetHashCode
-  fullName: Ipee.Core.Addressing.IPv4Base.GetHashCode()
-  nameWithType: IPv4Base.GetHashCode()
-- uid: Ipee.Core.Addressing.IPv4Base.GetHashCode*
-  name: GetHashCode
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_GetHashCode_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.GetHashCode
+  fullName: Ipee.Core.Addressing.IPv4Network.IPv4Network
+  nameWithType: IPv4Network.IPv4Network
+- uid: Ipee.Core.Addressing.IPv4Network.AddAddress(Ipee.Core.Addressing.IPv4Value)
+  name: AddAddress(IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AddAddress_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Network.AddAddress(Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Network.AddAddress(Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Network.AddAddress(IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Network.AddAddress*
+  name: AddAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AddAddress_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.AddAddress
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.GetHashCode
-  nameWithType: IPv4Base.GetHashCode
-- uid: Ipee.Core.Addressing.IPv4Base.Increase(Ipee.Core.Addressing.IPv4Base,System.Int32)
-  name: Increase(IPv4Base, Int32)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_Increase_Ipee_Core_Addressing_IPv4Base_System_Int32_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.Increase(Ipee.Core.Addressing.IPv4Base,System.Int32)
-  fullName: Ipee.Core.Addressing.IPv4Base.Increase(Ipee.Core.Addressing.IPv4Base, System.Int32)
-  nameWithType: IPv4Base.Increase(IPv4Base, Int32)
-- uid: Ipee.Core.Addressing.IPv4Base.Increase*
-  name: Increase
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_Increase_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.Increase
+  fullName: Ipee.Core.Addressing.IPv4Network.AddAddress
+  nameWithType: IPv4Network.AddAddress
+- uid: Ipee.Core.Addressing.IPv4Network.AddSubnet(Ipee.Core.Addressing.IPv4Network)
+  name: AddSubnet(IPv4Network)
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AddSubnet_Ipee_Core_Addressing_IPv4Network_
+  commentId: M:Ipee.Core.Addressing.IPv4Network.AddSubnet(Ipee.Core.Addressing.IPv4Network)
+  fullName: Ipee.Core.Addressing.IPv4Network.AddSubnet(Ipee.Core.Addressing.IPv4Network)
+  nameWithType: IPv4Network.AddSubnet(IPv4Network)
+- uid: Ipee.Core.Addressing.IPv4Network.AddSubnet*
+  name: AddSubnet
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AddSubnet_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.AddSubnet
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.Increase
-  nameWithType: IPv4Base.Increase
-- uid: Ipee.Core.Addressing.IPv4Base.op_BitwiseAnd(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  name: BitwiseAnd(IPv4Base, IPv4Base)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_BitwiseAnd_Ipee_Core_Addressing_IPv4Base_Ipee_Core_Addressing_IPv4Base_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.op_BitwiseAnd(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  fullName: Ipee.Core.Addressing.IPv4Base.BitwiseAnd(Ipee.Core.Addressing.IPv4Base, Ipee.Core.Addressing.IPv4Base)
-  nameWithType: IPv4Base.BitwiseAnd(IPv4Base, IPv4Base)
-- uid: Ipee.Core.Addressing.IPv4Base.op_BitwiseAnd*
-  name: BitwiseAnd
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_BitwiseAnd_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.op_BitwiseAnd
+  fullName: Ipee.Core.Addressing.IPv4Network.AddSubnet
+  nameWithType: IPv4Network.AddSubnet
+- uid: Ipee.Core.Addressing.IPv4Network.AllGivenAddresses
+  name: AllGivenAddresses
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AllGivenAddresses
+  commentId: P:Ipee.Core.Addressing.IPv4Network.AllGivenAddresses
+  fullName: Ipee.Core.Addressing.IPv4Network.AllGivenAddresses
+  nameWithType: IPv4Network.AllGivenAddresses
+- uid: Ipee.Core.Addressing.IPv4Network.AllGivenAddresses*
+  name: AllGivenAddresses
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AllGivenAddresses_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.AllGivenAddresses
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.BitwiseAnd
-  nameWithType: IPv4Base.BitwiseAnd
-- uid: Ipee.Core.Addressing.IPv4Base.op_BitwiseOr(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  name: BitwiseOr(IPv4Base, IPv4Base)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_BitwiseOr_Ipee_Core_Addressing_IPv4Base_Ipee_Core_Addressing_IPv4Base_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.op_BitwiseOr(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  fullName: Ipee.Core.Addressing.IPv4Base.BitwiseOr(Ipee.Core.Addressing.IPv4Base, Ipee.Core.Addressing.IPv4Base)
-  nameWithType: IPv4Base.BitwiseOr(IPv4Base, IPv4Base)
-- uid: Ipee.Core.Addressing.IPv4Base.op_BitwiseOr*
-  name: BitwiseOr
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_BitwiseOr_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.op_BitwiseOr
-  isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.BitwiseOr
-  nameWithType: IPv4Base.BitwiseOr
-- uid: Ipee.Core.Addressing.IPv4Base.op_GreaterThan(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  name: GreaterThan(IPv4Base, IPv4Base)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_GreaterThan_Ipee_Core_Addressing_IPv4Base_Ipee_Core_Addressing_IPv4Base_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.op_GreaterThan(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  fullName: Ipee.Core.Addressing.IPv4Base.GreaterThan(Ipee.Core.Addressing.IPv4Base, Ipee.Core.Addressing.IPv4Base)
-  nameWithType: IPv4Base.GreaterThan(IPv4Base, IPv4Base)
-- uid: Ipee.Core.Addressing.IPv4Base.op_GreaterThan*
-  name: GreaterThan
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_GreaterThan_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.op_GreaterThan
-  isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.GreaterThan
-  nameWithType: IPv4Base.GreaterThan
-- uid: Ipee.Core.Addressing.IPv4Base.op_LessThan(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  name: LessThan(IPv4Base, IPv4Base)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_LessThan_Ipee_Core_Addressing_IPv4Base_Ipee_Core_Addressing_IPv4Base_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.op_LessThan(Ipee.Core.Addressing.IPv4Base,Ipee.Core.Addressing.IPv4Base)
-  fullName: Ipee.Core.Addressing.IPv4Base.LessThan(Ipee.Core.Addressing.IPv4Base, Ipee.Core.Addressing.IPv4Base)
-  nameWithType: IPv4Base.LessThan(IPv4Base, IPv4Base)
-- uid: Ipee.Core.Addressing.IPv4Base.op_LessThan*
-  name: LessThan
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_op_LessThan_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.op_LessThan
-  isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.LessThan
-  nameWithType: IPv4Base.LessThan
-- uid: Ipee.Core.Addressing.IPv4Base.Parse(System.String)
-  name: Parse(String)
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_Parse_System_String_
-  commentId: M:Ipee.Core.Addressing.IPv4Base.Parse(System.String)
-  fullName: Ipee.Core.Addressing.IPv4Base.Parse(System.String)
-  nameWithType: IPv4Base.Parse(String)
-- uid: Ipee.Core.Addressing.IPv4Base.Parse*
-  name: Parse
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_Parse_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.Parse
-  isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.Parse
-  nameWithType: IPv4Base.Parse
-- uid: Ipee.Core.Addressing.IPv4Base.ToInt
-  name: ToInt()
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_ToInt
-  commentId: M:Ipee.Core.Addressing.IPv4Base.ToInt
-  fullName: Ipee.Core.Addressing.IPv4Base.ToInt()
-  nameWithType: IPv4Base.ToInt()
-- uid: Ipee.Core.Addressing.IPv4Base.ToInt*
-  name: ToInt
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_ToInt_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.ToInt
-  isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.ToInt
-  nameWithType: IPv4Base.ToInt
-- uid: Ipee.Core.Addressing.IPv4Base.ToString
-  name: ToString()
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_ToString
-  commentId: M:Ipee.Core.Addressing.IPv4Base.ToString
-  fullName: Ipee.Core.Addressing.IPv4Base.ToString()
-  nameWithType: IPv4Base.ToString()
-- uid: Ipee.Core.Addressing.IPv4Base.ToString*
-  name: ToString
-  href: api/Ipee.Core.Addressing.IPv4Base.html#Ipee_Core_Addressing_IPv4Base_ToString_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Base.ToString
-  isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Base.ToString
-  nameWithType: IPv4Base.ToString
-- uid: Ipee.Core.Addressing.IPv4Subnet
-  name: IPv4Subnet
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html
-  commentId: T:Ipee.Core.Addressing.IPv4Subnet
-  fullName: Ipee.Core.Addressing.IPv4Subnet
-  nameWithType: IPv4Subnet
-- uid: Ipee.Core.Addressing.IPv4Subnet.#ctor(Ipee.Core.Addressing.IPv4Address,Ipee.Core.Addressing.IPv4SubnetMask)
-  name: IPv4Subnet(IPv4Address, IPv4SubnetMask)
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet__ctor_Ipee_Core_Addressing_IPv4Address_Ipee_Core_Addressing_IPv4SubnetMask_
-  commentId: M:Ipee.Core.Addressing.IPv4Subnet.#ctor(Ipee.Core.Addressing.IPv4Address,Ipee.Core.Addressing.IPv4SubnetMask)
-  fullName: Ipee.Core.Addressing.IPv4Subnet.IPv4Subnet(Ipee.Core.Addressing.IPv4Address, Ipee.Core.Addressing.IPv4SubnetMask)
-  nameWithType: IPv4Subnet.IPv4Subnet(IPv4Address, IPv4SubnetMask)
-- uid: Ipee.Core.Addressing.IPv4Subnet.#ctor*
-  name: IPv4Subnet
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet__ctor_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Subnet.#ctor
-  isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Subnet.IPv4Subnet
-  nameWithType: IPv4Subnet.IPv4Subnet
-- uid: Ipee.Core.Addressing.IPv4Subnet.AllPossibleAddresses
+  fullName: Ipee.Core.Addressing.IPv4Network.AllGivenAddresses
+  nameWithType: IPv4Network.AllGivenAddresses
+- uid: Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses
   name: AllPossibleAddresses
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_AllPossibleAddresses
-  commentId: P:Ipee.Core.Addressing.IPv4Subnet.AllPossibleAddresses
-  fullName: Ipee.Core.Addressing.IPv4Subnet.AllPossibleAddresses
-  nameWithType: IPv4Subnet.AllPossibleAddresses
-- uid: Ipee.Core.Addressing.IPv4Subnet.AllPossibleAddresses*
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AllPossibleAddresses
+  commentId: P:Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses
+  fullName: Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses
+  nameWithType: IPv4Network.AllPossibleAddresses
+- uid: Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses*
   name: AllPossibleAddresses
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_AllPossibleAddresses_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Subnet.AllPossibleAddresses
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AllPossibleAddresses_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Subnet.AllPossibleAddresses
-  nameWithType: IPv4Subnet.AllPossibleAddresses
-- uid: Ipee.Core.Addressing.IPv4Subnet.BroadcastAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses
+  nameWithType: IPv4Network.AllPossibleAddresses
+- uid: Ipee.Core.Addressing.IPv4Network.BroadcastAddress
   name: BroadcastAddress
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_BroadcastAddress
-  commentId: P:Ipee.Core.Addressing.IPv4Subnet.BroadcastAddress
-  fullName: Ipee.Core.Addressing.IPv4Subnet.BroadcastAddress
-  nameWithType: IPv4Subnet.BroadcastAddress
-- uid: Ipee.Core.Addressing.IPv4Subnet.BroadcastAddress*
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_BroadcastAddress
+  commentId: P:Ipee.Core.Addressing.IPv4Network.BroadcastAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.BroadcastAddress
+  nameWithType: IPv4Network.BroadcastAddress
+- uid: Ipee.Core.Addressing.IPv4Network.BroadcastAddress*
   name: BroadcastAddress
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_BroadcastAddress_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Subnet.BroadcastAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_BroadcastAddress_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.BroadcastAddress
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Subnet.BroadcastAddress
-  nameWithType: IPv4Subnet.BroadcastAddress
-- uid: Ipee.Core.Addressing.IPv4Subnet.HostAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.BroadcastAddress
+  nameWithType: IPv4Network.BroadcastAddress
+- uid: Ipee.Core.Addressing.IPv4Network.GivenAddresses
+  name: GivenAddresses
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_GivenAddresses
+  commentId: P:Ipee.Core.Addressing.IPv4Network.GivenAddresses
+  fullName: Ipee.Core.Addressing.IPv4Network.GivenAddresses
+  nameWithType: IPv4Network.GivenAddresses
+- uid: Ipee.Core.Addressing.IPv4Network.GivenAddresses*
+  name: GivenAddresses
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_GivenAddresses_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.GivenAddresses
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Network.GivenAddresses
+  nameWithType: IPv4Network.GivenAddresses
+- uid: Ipee.Core.Addressing.IPv4Network.HostAddress
   name: HostAddress
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_HostAddress
-  commentId: P:Ipee.Core.Addressing.IPv4Subnet.HostAddress
-  fullName: Ipee.Core.Addressing.IPv4Subnet.HostAddress
-  nameWithType: IPv4Subnet.HostAddress
-- uid: Ipee.Core.Addressing.IPv4Subnet.HostAddress*
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_HostAddress
+  commentId: P:Ipee.Core.Addressing.IPv4Network.HostAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.HostAddress
+  nameWithType: IPv4Network.HostAddress
+- uid: Ipee.Core.Addressing.IPv4Network.HostAddress*
   name: HostAddress
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_HostAddress_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Subnet.HostAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_HostAddress_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.HostAddress
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Subnet.HostAddress
-  nameWithType: IPv4Subnet.HostAddress
-- uid: Ipee.Core.Addressing.IPv4Subnet.NetAddress
-  name: NetAddress
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_NetAddress
-  commentId: P:Ipee.Core.Addressing.IPv4Subnet.NetAddress
-  fullName: Ipee.Core.Addressing.IPv4Subnet.NetAddress
-  nameWithType: IPv4Subnet.NetAddress
-- uid: Ipee.Core.Addressing.IPv4Subnet.NetAddress*
-  name: NetAddress
-  href: api/Ipee.Core.Addressing.IPv4Subnet.html#Ipee_Core_Addressing_IPv4Subnet_NetAddress_
-  commentId: Overload:Ipee.Core.Addressing.IPv4Subnet.NetAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.HostAddress
+  nameWithType: IPv4Network.HostAddress
+- uid: Ipee.Core.Addressing.IPv4Network.MotherNetwork
+  name: MotherNetwork
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_MotherNetwork
+  commentId: P:Ipee.Core.Addressing.IPv4Network.MotherNetwork
+  fullName: Ipee.Core.Addressing.IPv4Network.MotherNetwork
+  nameWithType: IPv4Network.MotherNetwork
+- uid: Ipee.Core.Addressing.IPv4Network.MotherNetwork*
+  name: MotherNetwork
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_MotherNetwork_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.MotherNetwork
   isSpec: "True"
-  fullName: Ipee.Core.Addressing.IPv4Subnet.NetAddress
-  nameWithType: IPv4Subnet.NetAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.MotherNetwork
+  nameWithType: IPv4Network.MotherNetwork
+- uid: Ipee.Core.Addressing.IPv4Network.NetAddress
+  name: NetAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_NetAddress
+  commentId: P:Ipee.Core.Addressing.IPv4Network.NetAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.NetAddress
+  nameWithType: IPv4Network.NetAddress
+- uid: Ipee.Core.Addressing.IPv4Network.NetAddress*
+  name: NetAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_NetAddress_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.NetAddress
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Network.NetAddress
+  nameWithType: IPv4Network.NetAddress
+- uid: Ipee.Core.Addressing.IPv4Network.RemoveAddress(Ipee.Core.Addressing.IPv4Value)
+  name: RemoveAddress(IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_RemoveAddress_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Network.RemoveAddress(Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Network.RemoveAddress(Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Network.RemoveAddress(IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Network.RemoveAddress*
+  name: RemoveAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_RemoveAddress_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.RemoveAddress
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Network.RemoveAddress
+  nameWithType: IPv4Network.RemoveAddress
+- uid: Ipee.Core.Addressing.IPv4Network.SourceAddress
+  name: SourceAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_SourceAddress
+  commentId: P:Ipee.Core.Addressing.IPv4Network.SourceAddress
+  fullName: Ipee.Core.Addressing.IPv4Network.SourceAddress
+  nameWithType: IPv4Network.SourceAddress
+- uid: Ipee.Core.Addressing.IPv4Network.SourceAddress*
+  name: SourceAddress
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_SourceAddress_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.SourceAddress
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Network.SourceAddress
+  nameWithType: IPv4Network.SourceAddress
+- uid: Ipee.Core.Addressing.IPv4Network.SubnetMask
+  name: SubnetMask
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_SubnetMask
+  commentId: P:Ipee.Core.Addressing.IPv4Network.SubnetMask
+  fullName: Ipee.Core.Addressing.IPv4Network.SubnetMask
+  nameWithType: IPv4Network.SubnetMask
+- uid: Ipee.Core.Addressing.IPv4Network.SubnetMask*
+  name: SubnetMask
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_SubnetMask_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.SubnetMask
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Network.SubnetMask
+  nameWithType: IPv4Network.SubnetMask
+- uid: Ipee.Core.Addressing.IPv4Network.Subnets
+  name: Subnets
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_Subnets
+  commentId: P:Ipee.Core.Addressing.IPv4Network.Subnets
+  fullName: Ipee.Core.Addressing.IPv4Network.Subnets
+  nameWithType: IPv4Network.Subnets
+- uid: Ipee.Core.Addressing.IPv4Network.Subnets*
+  name: Subnets
+  href: api/Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_Subnets_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Network.Subnets
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Network.Subnets
+  nameWithType: IPv4Network.Subnets
 - uid: Ipee.Core.Addressing.IPv4SubnetMask
   name: IPv4SubnetMask
   href: api/Ipee.Core.Addressing.IPv4SubnetMask.html
@@ -347,6 +319,268 @@ references:
   isSpec: "True"
   fullName: Ipee.Core.Addressing.IPv4SubnetMask.Invert
   nameWithType: IPv4SubnetMask.Invert
+- uid: Ipee.Core.Addressing.IPv4SubnetMask.Random
+  name: Random()
+  href: api/Ipee.Core.Addressing.IPv4SubnetMask.html#Ipee_Core_Addressing_IPv4SubnetMask_Random
+  commentId: M:Ipee.Core.Addressing.IPv4SubnetMask.Random
+  fullName: Ipee.Core.Addressing.IPv4SubnetMask.Random()
+  nameWithType: IPv4SubnetMask.Random()
+- uid: Ipee.Core.Addressing.IPv4SubnetMask.Random*
+  name: Random
+  href: api/Ipee.Core.Addressing.IPv4SubnetMask.html#Ipee_Core_Addressing_IPv4SubnetMask_Random_
+  commentId: Overload:Ipee.Core.Addressing.IPv4SubnetMask.Random
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4SubnetMask.Random
+  nameWithType: IPv4SubnetMask.Random
+- uid: Ipee.Core.Addressing.IPv4Value
+  name: IPv4Value
+  href: api/Ipee.Core.Addressing.IPv4Value.html
+  commentId: T:Ipee.Core.Addressing.IPv4Value
+  fullName: Ipee.Core.Addressing.IPv4Value
+  nameWithType: IPv4Value
+- uid: Ipee.Core.Addressing.IPv4Value.#ctor(System.Byte[])
+  name: IPv4Value(Byte[])
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value__ctor_System_Byte___
+  commentId: M:Ipee.Core.Addressing.IPv4Value.#ctor(System.Byte[])
+  name.vb: IPv4Value(Byte())
+  fullName: Ipee.Core.Addressing.IPv4Value.IPv4Value(System.Byte[])
+  fullName.vb: Ipee.Core.Addressing.IPv4Value.IPv4Value(System.Byte())
+  nameWithType: IPv4Value.IPv4Value(Byte[])
+  nameWithType.vb: IPv4Value.IPv4Value(Byte())
+- uid: Ipee.Core.Addressing.IPv4Value.#ctor(System.String)
+  name: IPv4Value(String)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value__ctor_System_String_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.#ctor(System.String)
+  fullName: Ipee.Core.Addressing.IPv4Value.IPv4Value(System.String)
+  nameWithType: IPv4Value.IPv4Value(String)
+- uid: Ipee.Core.Addressing.IPv4Value.#ctor*
+  name: IPv4Value
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value__ctor_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.#ctor
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.IPv4Value
+  nameWithType: IPv4Value.IPv4Value
+- uid: Ipee.Core.Addressing.IPv4Value.Address
+  name: Address
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Address
+  commentId: P:Ipee.Core.Addressing.IPv4Value.Address
+  fullName: Ipee.Core.Addressing.IPv4Value.Address
+  nameWithType: IPv4Value.Address
+- uid: Ipee.Core.Addressing.IPv4Value.Address*
+  name: Address
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Address_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.Address
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Address
+  nameWithType: IPv4Value.Address
+- uid: Ipee.Core.Addressing.IPv4Value.Bytes
+  name: Bytes
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Bytes
+  commentId: P:Ipee.Core.Addressing.IPv4Value.Bytes
+  fullName: Ipee.Core.Addressing.IPv4Value.Bytes
+  nameWithType: IPv4Value.Bytes
+- uid: Ipee.Core.Addressing.IPv4Value.Bytes*
+  name: Bytes
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Bytes_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.Bytes
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Bytes
+  nameWithType: IPv4Value.Bytes
+- uid: Ipee.Core.Addressing.IPv4Value.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Equals_System_Object_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.Equals(System.Object)
+  fullName: Ipee.Core.Addressing.IPv4Value.Equals(System.Object)
+  nameWithType: IPv4Value.Equals(Object)
+- uid: Ipee.Core.Addressing.IPv4Value.Equals*
+  name: Equals
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Equals_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.Equals
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Equals
+  nameWithType: IPv4Value.Equals
+- uid: Ipee.Core.Addressing.IPv4Value.GetHashCode
+  name: GetHashCode()
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_GetHashCode
+  commentId: M:Ipee.Core.Addressing.IPv4Value.GetHashCode
+  fullName: Ipee.Core.Addressing.IPv4Value.GetHashCode()
+  nameWithType: IPv4Value.GetHashCode()
+- uid: Ipee.Core.Addressing.IPv4Value.GetHashCode*
+  name: GetHashCode
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_GetHashCode_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.GetHashCode
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.GetHashCode
+  nameWithType: IPv4Value.GetHashCode
+- uid: Ipee.Core.Addressing.IPv4Value.Increase(Ipee.Core.Addressing.IPv4Value,System.Int32)
+  name: Increase(IPv4Value, Int32)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Increase_Ipee_Core_Addressing_IPv4Value_System_Int32_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.Increase(Ipee.Core.Addressing.IPv4Value,System.Int32)
+  fullName: Ipee.Core.Addressing.IPv4Value.Increase(Ipee.Core.Addressing.IPv4Value, System.Int32)
+  nameWithType: IPv4Value.Increase(IPv4Value, Int32)
+- uid: Ipee.Core.Addressing.IPv4Value.Increase*
+  name: Increase
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Increase_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.Increase
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Increase
+  nameWithType: IPv4Value.Increase
+- uid: Ipee.Core.Addressing.IPv4Value.Network
+  name: Network
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Network
+  commentId: P:Ipee.Core.Addressing.IPv4Value.Network
+  fullName: Ipee.Core.Addressing.IPv4Value.Network
+  nameWithType: IPv4Value.Network
+- uid: Ipee.Core.Addressing.IPv4Value.Network*
+  name: Network
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Network_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.Network
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Network
+  nameWithType: IPv4Value.Network
+- uid: Ipee.Core.Addressing.IPv4Value.op_BitwiseAnd(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: BitwiseAnd(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_BitwiseAnd_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_BitwiseAnd(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.BitwiseAnd(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.BitwiseAnd(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_BitwiseAnd*
+  name: BitwiseAnd
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_BitwiseAnd_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_BitwiseAnd
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.BitwiseAnd
+  nameWithType: IPv4Value.BitwiseAnd
+- uid: Ipee.Core.Addressing.IPv4Value.op_BitwiseOr(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: BitwiseOr(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_BitwiseOr_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_BitwiseOr(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.BitwiseOr(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.BitwiseOr(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_BitwiseOr*
+  name: BitwiseOr
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_BitwiseOr_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_BitwiseOr
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.BitwiseOr
+  nameWithType: IPv4Value.BitwiseOr
+- uid: Ipee.Core.Addressing.IPv4Value.op_Equality(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: Equality(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_Equality_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_Equality(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.Equality(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.Equality(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_Equality*
+  name: Equality
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_Equality_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_Equality
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Equality
+  nameWithType: IPv4Value.Equality
+- uid: Ipee.Core.Addressing.IPv4Value.op_GreaterThan(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: GreaterThan(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_GreaterThan_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_GreaterThan(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.GreaterThan(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.GreaterThan(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_GreaterThan*
+  name: GreaterThan
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_GreaterThan_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_GreaterThan
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.GreaterThan
+  nameWithType: IPv4Value.GreaterThan
+- uid: Ipee.Core.Addressing.IPv4Value.op_GreaterThanOrEqual(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: GreaterThanOrEqual(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_GreaterThanOrEqual_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_GreaterThanOrEqual(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.GreaterThanOrEqual(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.GreaterThanOrEqual(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_GreaterThanOrEqual*
+  name: GreaterThanOrEqual
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_GreaterThanOrEqual_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_GreaterThanOrEqual
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.GreaterThanOrEqual
+  nameWithType: IPv4Value.GreaterThanOrEqual
+- uid: Ipee.Core.Addressing.IPv4Value.op_Inequality(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: Inequality(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_Inequality_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_Inequality(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.Inequality(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.Inequality(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_Inequality*
+  name: Inequality
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_Inequality_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_Inequality
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Inequality
+  nameWithType: IPv4Value.Inequality
+- uid: Ipee.Core.Addressing.IPv4Value.op_LessThan(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: LessThan(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_LessThan_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_LessThan(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.LessThan(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.LessThan(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_LessThan*
+  name: LessThan
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_LessThan_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_LessThan
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.LessThan
+  nameWithType: IPv4Value.LessThan
+- uid: Ipee.Core.Addressing.IPv4Value.op_LessThanOrEqual(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  name: LessThanOrEqual(IPv4Value, IPv4Value)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_LessThanOrEqual_Ipee_Core_Addressing_IPv4Value_Ipee_Core_Addressing_IPv4Value_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.op_LessThanOrEqual(Ipee.Core.Addressing.IPv4Value,Ipee.Core.Addressing.IPv4Value)
+  fullName: Ipee.Core.Addressing.IPv4Value.LessThanOrEqual(Ipee.Core.Addressing.IPv4Value, Ipee.Core.Addressing.IPv4Value)
+  nameWithType: IPv4Value.LessThanOrEqual(IPv4Value, IPv4Value)
+- uid: Ipee.Core.Addressing.IPv4Value.op_LessThanOrEqual*
+  name: LessThanOrEqual
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_op_LessThanOrEqual_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.op_LessThanOrEqual
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.LessThanOrEqual
+  nameWithType: IPv4Value.LessThanOrEqual
+- uid: Ipee.Core.Addressing.IPv4Value.Parse(System.String)
+  name: Parse(String)
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Parse_System_String_
+  commentId: M:Ipee.Core.Addressing.IPv4Value.Parse(System.String)
+  fullName: Ipee.Core.Addressing.IPv4Value.Parse(System.String)
+  nameWithType: IPv4Value.Parse(String)
+- uid: Ipee.Core.Addressing.IPv4Value.Parse*
+  name: Parse
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_Parse_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.Parse
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.Parse
+  nameWithType: IPv4Value.Parse
+- uid: Ipee.Core.Addressing.IPv4Value.ToInt
+  name: ToInt()
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_ToInt
+  commentId: M:Ipee.Core.Addressing.IPv4Value.ToInt
+  fullName: Ipee.Core.Addressing.IPv4Value.ToInt()
+  nameWithType: IPv4Value.ToInt()
+- uid: Ipee.Core.Addressing.IPv4Value.ToInt*
+  name: ToInt
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_ToInt_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.ToInt
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.ToInt
+  nameWithType: IPv4Value.ToInt
+- uid: Ipee.Core.Addressing.IPv4Value.ToString
+  name: ToString()
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_ToString
+  commentId: M:Ipee.Core.Addressing.IPv4Value.ToString
+  fullName: Ipee.Core.Addressing.IPv4Value.ToString()
+  nameWithType: IPv4Value.ToString()
+- uid: Ipee.Core.Addressing.IPv4Value.ToString*
+  name: ToString
+  href: api/Ipee.Core.Addressing.IPv4Value.html#Ipee_Core_Addressing_IPv4Value_ToString_
+  commentId: Overload:Ipee.Core.Addressing.IPv4Value.ToString
+  isSpec: "True"
+  fullName: Ipee.Core.Addressing.IPv4Value.ToString
+  nameWithType: IPv4Value.ToString
 - uid: Ipee.Core.Converter
   name: Ipee.Core.Converter
   href: api/Ipee.Core.Converter.html
@@ -571,31 +805,6 @@ references:
   isSpec: "True"
   fullName: Ipee.Core.DataPersistence.Models.SubnetConfig.SubnetIp
   nameWithType: SubnetConfig.SubnetIp
-- uid: Ipee.Core.Exceptions
-  name: Ipee.Core.Exceptions
-  href: api/Ipee.Core.Exceptions.html
-  commentId: N:Ipee.Core.Exceptions
-  fullName: Ipee.Core.Exceptions
-  nameWithType: Ipee.Core.Exceptions
-- uid: Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException
-  name: InvalidSubnetMaskBitCountException
-  href: api/Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.html
-  commentId: T:Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException
-  fullName: Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException
-  nameWithType: InvalidSubnetMaskBitCountException
-- uid: Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.#ctor
-  name: InvalidSubnetMaskBitCountException()
-  href: api/Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.html#Ipee_Core_Exceptions_InvalidSubnetMaskBitCountException__ctor
-  commentId: M:Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.#ctor
-  fullName: Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.InvalidSubnetMaskBitCountException()
-  nameWithType: InvalidSubnetMaskBitCountException.InvalidSubnetMaskBitCountException()
-- uid: Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.#ctor*
-  name: InvalidSubnetMaskBitCountException
-  href: api/Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.html#Ipee_Core_Exceptions_InvalidSubnetMaskBitCountException__ctor_
-  commentId: Overload:Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.#ctor
-  isSpec: "True"
-  fullName: Ipee.Core.Exceptions.InvalidSubnetMaskBitCountException.InvalidSubnetMaskBitCountException
-  nameWithType: InvalidSubnetMaskBitCountException.InvalidSubnetMaskBitCountException
 - uid: Ipee.Core.Store
   name: Ipee.Core.Store
   href: api/Ipee.Core.Store.html
@@ -608,51 +817,25 @@ references:
   commentId: T:Ipee.Core.Store.AppStore
   fullName: Ipee.Core.Store.AppStore
   nameWithType: AppStore
-- uid: Ipee.Core.Store.AppStore.AddAddress(Ipee.Core.Addressing.IPv4Address)
-  name: AddAddress(IPv4Address)
-  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_AddAddress_Ipee_Core_Addressing_IPv4Address_
-  commentId: M:Ipee.Core.Store.AppStore.AddAddress(Ipee.Core.Addressing.IPv4Address)
-  fullName: Ipee.Core.Store.AppStore.AddAddress(Ipee.Core.Addressing.IPv4Address)
-  nameWithType: AppStore.AddAddress(IPv4Address)
-- uid: Ipee.Core.Store.AppStore.AddAddress*
-  name: AddAddress
-  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_AddAddress_
-  commentId: Overload:Ipee.Core.Store.AppStore.AddAddress
-  isSpec: "True"
-  fullName: Ipee.Core.Store.AppStore.AddAddress
-  nameWithType: AppStore.AddAddress
-- uid: Ipee.Core.Store.AppStore.AddSubnet(Ipee.Core.Addressing.IPv4Subnet)
-  name: AddSubnet(IPv4Subnet)
-  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_AddSubnet_Ipee_Core_Addressing_IPv4Subnet_
-  commentId: M:Ipee.Core.Store.AppStore.AddSubnet(Ipee.Core.Addressing.IPv4Subnet)
-  fullName: Ipee.Core.Store.AppStore.AddSubnet(Ipee.Core.Addressing.IPv4Subnet)
-  nameWithType: AppStore.AddSubnet(IPv4Subnet)
-- uid: Ipee.Core.Store.AppStore.AddSubnet*
-  name: AddSubnet
-  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_AddSubnet_
-  commentId: Overload:Ipee.Core.Store.AppStore.AddSubnet
-  isSpec: "True"
-  fullName: Ipee.Core.Store.AppStore.AddSubnet
-  nameWithType: AppStore.AddSubnet
 - uid: Ipee.Core.Store.AppStore.ConfigManager
   name: ConfigManager
   href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_ConfigManager
   commentId: F:Ipee.Core.Store.AppStore.ConfigManager
   fullName: Ipee.Core.Store.AppStore.ConfigManager
   nameWithType: AppStore.ConfigManager
-- uid: Ipee.Core.Store.AppStore.Initialized(System.String)
-  name: Initialized(String)
-  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_Initialized_System_String_
-  commentId: M:Ipee.Core.Store.AppStore.Initialized(System.String)
-  fullName: Ipee.Core.Store.AppStore.Initialized(System.String)
-  nameWithType: AppStore.Initialized(String)
-- uid: Ipee.Core.Store.AppStore.Initialized*
-  name: Initialized
-  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_Initialized_
-  commentId: Overload:Ipee.Core.Store.AppStore.Initialized
+- uid: Ipee.Core.Store.AppStore.GivenAddresses
+  name: GivenAddresses
+  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_GivenAddresses
+  commentId: P:Ipee.Core.Store.AppStore.GivenAddresses
+  fullName: Ipee.Core.Store.AppStore.GivenAddresses
+  nameWithType: AppStore.GivenAddresses
+- uid: Ipee.Core.Store.AppStore.GivenAddresses*
+  name: GivenAddresses
+  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_GivenAddresses_
+  commentId: Overload:Ipee.Core.Store.AppStore.GivenAddresses
   isSpec: "True"
-  fullName: Ipee.Core.Store.AppStore.Initialized
-  nameWithType: AppStore.Initialized
+  fullName: Ipee.Core.Store.AppStore.GivenAddresses
+  nameWithType: AppStore.GivenAddresses
 - uid: Ipee.Core.Store.AppStore.Instance
   name: Instance
   href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_Instance
@@ -666,6 +849,96 @@ references:
   isSpec: "True"
   fullName: Ipee.Core.Store.AppStore.Instance
   nameWithType: AppStore.Instance
+- uid: Ipee.Core.Store.AppStore.MainNetwork
+  name: MainNetwork
+  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_MainNetwork
+  commentId: P:Ipee.Core.Store.AppStore.MainNetwork
+  fullName: Ipee.Core.Store.AppStore.MainNetwork
+  nameWithType: AppStore.MainNetwork
+- uid: Ipee.Core.Store.AppStore.MainNetwork*
+  name: MainNetwork
+  href: api/Ipee.Core.Store.AppStore.html#Ipee_Core_Store_AppStore_MainNetwork_
+  commentId: Overload:Ipee.Core.Store.AppStore.MainNetwork
+  isSpec: "True"
+  fullName: Ipee.Core.Store.AppStore.MainNetwork
+  nameWithType: AppStore.MainNetwork
+- uid: Ipee.DebugWindow
+  name: DebugWindow
+  href: api/Ipee.DebugWindow.html
+  commentId: T:Ipee.DebugWindow
+  fullName: Ipee.DebugWindow
+  nameWithType: DebugWindow
+- uid: Ipee.DebugWindow.#ctor
+  name: DebugWindow()
+  href: api/Ipee.DebugWindow.html#Ipee_DebugWindow__ctor
+  commentId: M:Ipee.DebugWindow.#ctor
+  fullName: Ipee.DebugWindow.DebugWindow()
+  nameWithType: DebugWindow.DebugWindow()
+- uid: Ipee.DebugWindow.#ctor*
+  name: DebugWindow
+  href: api/Ipee.DebugWindow.html#Ipee_DebugWindow__ctor_
+  commentId: Overload:Ipee.DebugWindow.#ctor
+  isSpec: "True"
+  fullName: Ipee.DebugWindow.DebugWindow
+  nameWithType: DebugWindow.DebugWindow
+- uid: Ipee.DebugWindow.HandleSomethingWentWrongException(System.String)
+  name: HandleSomethingWentWrongException(String)
+  href: api/Ipee.DebugWindow.html#Ipee_DebugWindow_HandleSomethingWentWrongException_System_String_
+  commentId: M:Ipee.DebugWindow.HandleSomethingWentWrongException(System.String)
+  fullName: Ipee.DebugWindow.HandleSomethingWentWrongException(System.String)
+  nameWithType: DebugWindow.HandleSomethingWentWrongException(String)
+- uid: Ipee.DebugWindow.HandleSomethingWentWrongException*
+  name: HandleSomethingWentWrongException
+  href: api/Ipee.DebugWindow.html#Ipee_DebugWindow_HandleSomethingWentWrongException_
+  commentId: Overload:Ipee.DebugWindow.HandleSomethingWentWrongException
+  isSpec: "True"
+  fullName: Ipee.DebugWindow.HandleSomethingWentWrongException
+  nameWithType: DebugWindow.HandleSomethingWentWrongException
+- uid: Ipee.DebugWindow.InitializeComponent
+  name: InitializeComponent()
+  href: api/Ipee.DebugWindow.html#Ipee_DebugWindow_InitializeComponent
+  commentId: M:Ipee.DebugWindow.InitializeComponent
+  fullName: Ipee.DebugWindow.InitializeComponent()
+  nameWithType: DebugWindow.InitializeComponent()
+- uid: Ipee.DebugWindow.InitializeComponent*
+  name: InitializeComponent
+  href: api/Ipee.DebugWindow.html#Ipee_DebugWindow_InitializeComponent_
+  commentId: Overload:Ipee.DebugWindow.InitializeComponent
+  isSpec: "True"
+  fullName: Ipee.DebugWindow.InitializeComponent
+  nameWithType: DebugWindow.InitializeComponent
+- uid: Ipee.IP4toIP6Window
+  name: IP4toIP6Window
+  href: api/Ipee.IP4toIP6Window.html
+  commentId: T:Ipee.IP4toIP6Window
+  fullName: Ipee.IP4toIP6Window
+  nameWithType: IP4toIP6Window
+- uid: Ipee.IP4toIP6Window.#ctor
+  name: IP4toIP6Window()
+  href: api/Ipee.IP4toIP6Window.html#Ipee_IP4toIP6Window__ctor
+  commentId: M:Ipee.IP4toIP6Window.#ctor
+  fullName: Ipee.IP4toIP6Window.IP4toIP6Window()
+  nameWithType: IP4toIP6Window.IP4toIP6Window()
+- uid: Ipee.IP4toIP6Window.#ctor*
+  name: IP4toIP6Window
+  href: api/Ipee.IP4toIP6Window.html#Ipee_IP4toIP6Window__ctor_
+  commentId: Overload:Ipee.IP4toIP6Window.#ctor
+  isSpec: "True"
+  fullName: Ipee.IP4toIP6Window.IP4toIP6Window
+  nameWithType: IP4toIP6Window.IP4toIP6Window
+- uid: Ipee.IP4toIP6Window.InitializeComponent
+  name: InitializeComponent()
+  href: api/Ipee.IP4toIP6Window.html#Ipee_IP4toIP6Window_InitializeComponent
+  commentId: M:Ipee.IP4toIP6Window.InitializeComponent
+  fullName: Ipee.IP4toIP6Window.InitializeComponent()
+  nameWithType: IP4toIP6Window.InitializeComponent()
+- uid: Ipee.IP4toIP6Window.InitializeComponent*
+  name: InitializeComponent
+  href: api/Ipee.IP4toIP6Window.html#Ipee_IP4toIP6Window_InitializeComponent_
+  commentId: Overload:Ipee.IP4toIP6Window.InitializeComponent
+  isSpec: "True"
+  fullName: Ipee.IP4toIP6Window.InitializeComponent
+  nameWithType: IP4toIP6Window.InitializeComponent
 - uid: Ipee.MainWindow
   name: MainWindow
   href: api/Ipee.MainWindow.html
@@ -685,19 +958,6 @@ references:
   isSpec: "True"
   fullName: Ipee.MainWindow.MainWindow
   nameWithType: MainWindow.MainWindow
-- uid: Ipee.MainWindow.HandleSomethingWentWrongException(System.String)
-  name: HandleSomethingWentWrongException(String)
-  href: api/Ipee.MainWindow.html#Ipee_MainWindow_HandleSomethingWentWrongException_System_String_
-  commentId: M:Ipee.MainWindow.HandleSomethingWentWrongException(System.String)
-  fullName: Ipee.MainWindow.HandleSomethingWentWrongException(System.String)
-  nameWithType: MainWindow.HandleSomethingWentWrongException(String)
-- uid: Ipee.MainWindow.HandleSomethingWentWrongException*
-  name: HandleSomethingWentWrongException
-  href: api/Ipee.MainWindow.html#Ipee_MainWindow_HandleSomethingWentWrongException_
-  commentId: Overload:Ipee.MainWindow.HandleSomethingWentWrongException
-  isSpec: "True"
-  fullName: Ipee.MainWindow.HandleSomethingWentWrongException
-  nameWithType: MainWindow.HandleSomethingWentWrongException
 - uid: Ipee.MainWindow.InitializeComponent
   name: InitializeComponent()
   href: api/Ipee.MainWindow.html#Ipee_MainWindow_InitializeComponent
@@ -711,6 +971,38 @@ references:
   isSpec: "True"
   fullName: Ipee.MainWindow.InitializeComponent
   nameWithType: MainWindow.InitializeComponent
+- uid: Ipee.NetworkView
+  name: NetworkView
+  href: api/Ipee.NetworkView.html
+  commentId: T:Ipee.NetworkView
+  fullName: Ipee.NetworkView
+  nameWithType: NetworkView
+- uid: Ipee.NetworkView.#ctor(Ipee.Core.Addressing.IPv4Network)
+  name: NetworkView(IPv4Network)
+  href: api/Ipee.NetworkView.html#Ipee_NetworkView__ctor_Ipee_Core_Addressing_IPv4Network_
+  commentId: M:Ipee.NetworkView.#ctor(Ipee.Core.Addressing.IPv4Network)
+  fullName: Ipee.NetworkView.NetworkView(Ipee.Core.Addressing.IPv4Network)
+  nameWithType: NetworkView.NetworkView(IPv4Network)
+- uid: Ipee.NetworkView.#ctor*
+  name: NetworkView
+  href: api/Ipee.NetworkView.html#Ipee_NetworkView__ctor_
+  commentId: Overload:Ipee.NetworkView.#ctor
+  isSpec: "True"
+  fullName: Ipee.NetworkView.NetworkView
+  nameWithType: NetworkView.NetworkView
+- uid: Ipee.NetworkView.InitializeComponent
+  name: InitializeComponent()
+  href: api/Ipee.NetworkView.html#Ipee_NetworkView_InitializeComponent
+  commentId: M:Ipee.NetworkView.InitializeComponent
+  fullName: Ipee.NetworkView.InitializeComponent()
+  nameWithType: NetworkView.InitializeComponent()
+- uid: Ipee.NetworkView.InitializeComponent*
+  name: InitializeComponent
+  href: api/Ipee.NetworkView.html#Ipee_NetworkView_InitializeComponent_
+  commentId: Overload:Ipee.NetworkView.InitializeComponent
+  isSpec: "True"
+  fullName: Ipee.NetworkView.InitializeComponent
+  nameWithType: NetworkView.InitializeComponent
 - uid: Ipee.Test
   name: Ipee.Test
   href: api/Ipee.Test.html
@@ -852,106 +1144,116 @@ references:
   commentId: T:Ipee.Test.IPv4AddressTest
   fullName: Ipee.Test.IPv4AddressTest
   nameWithType: IPv4AddressTest
-- uid: Ipee.Test.IPv4BaseTest
-  name: IPv4BaseTest
-  href: api/Ipee.Test.IPv4BaseTest.html
-  commentId: T:Ipee.Test.IPv4BaseTest
-  fullName: Ipee.Test.IPv4BaseTest
-  nameWithType: IPv4BaseTest
-- uid: Ipee.Test.IPv4BaseTest.AND_Operation
-  name: AND_Operation()
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_AND_Operation
-  commentId: M:Ipee.Test.IPv4BaseTest.AND_Operation
-  fullName: Ipee.Test.IPv4BaseTest.AND_Operation()
-  nameWithType: IPv4BaseTest.AND_Operation()
-- uid: Ipee.Test.IPv4BaseTest.AND_Operation*
-  name: AND_Operation
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_AND_Operation_
-  commentId: Overload:Ipee.Test.IPv4BaseTest.AND_Operation
+- uid: Ipee.Test.IPv4NetworkTest
+  name: IPv4NetworkTest
+  href: api/Ipee.Test.IPv4NetworkTest.html
+  commentId: T:Ipee.Test.IPv4NetworkTest
+  fullName: Ipee.Test.IPv4NetworkTest
+  nameWithType: IPv4NetworkTest
+- uid: Ipee.Test.IPv4NetworkTest.CanAddAddresses
+  name: CanAddAddresses()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanAddAddresses
+  commentId: M:Ipee.Test.IPv4NetworkTest.CanAddAddresses
+  fullName: Ipee.Test.IPv4NetworkTest.CanAddAddresses()
+  nameWithType: IPv4NetworkTest.CanAddAddresses()
+- uid: Ipee.Test.IPv4NetworkTest.CanAddAddresses*
+  name: CanAddAddresses
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanAddAddresses_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.CanAddAddresses
   isSpec: "True"
-  fullName: Ipee.Test.IPv4BaseTest.AND_Operation
-  nameWithType: IPv4BaseTest.AND_Operation
-- uid: Ipee.Test.IPv4BaseTest.CanParseFromString(System.String,System.Byte[])
-  name: CanParseFromString(String, Byte[])
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_CanParseFromString_System_String_System_Byte___
-  commentId: M:Ipee.Test.IPv4BaseTest.CanParseFromString(System.String,System.Byte[])
-  name.vb: CanParseFromString(String, Byte())
-  fullName: Ipee.Test.IPv4BaseTest.CanParseFromString(System.String, System.Byte[])
-  fullName.vb: Ipee.Test.IPv4BaseTest.CanParseFromString(System.String, System.Byte())
-  nameWithType: IPv4BaseTest.CanParseFromString(String, Byte[])
-  nameWithType.vb: IPv4BaseTest.CanParseFromString(String, Byte())
-- uid: Ipee.Test.IPv4BaseTest.CanParseFromString*
-  name: CanParseFromString
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_CanParseFromString_
-  commentId: Overload:Ipee.Test.IPv4BaseTest.CanParseFromString
+  fullName: Ipee.Test.IPv4NetworkTest.CanAddAddresses
+  nameWithType: IPv4NetworkTest.CanAddAddresses
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateAllPossibleAddresses
+  name: CanCalculateAllPossibleAddresses()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateAllPossibleAddresses
+  commentId: M:Ipee.Test.IPv4NetworkTest.CanCalculateAllPossibleAddresses
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateAllPossibleAddresses()
+  nameWithType: IPv4NetworkTest.CanCalculateAllPossibleAddresses()
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateAllPossibleAddresses*
+  name: CanCalculateAllPossibleAddresses
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateAllPossibleAddresses_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.CanCalculateAllPossibleAddresses
   isSpec: "True"
-  fullName: Ipee.Test.IPv4BaseTest.CanParseFromString
-  nameWithType: IPv4BaseTest.CanParseFromString
-- uid: Ipee.Test.IPv4BaseTest.IncreaseCorrectly(System.String,System.Int32,System.String)
-  name: IncreaseCorrectly(String, Int32, String)
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_IncreaseCorrectly_System_String_System_Int32_System_String_
-  commentId: M:Ipee.Test.IPv4BaseTest.IncreaseCorrectly(System.String,System.Int32,System.String)
-  fullName: Ipee.Test.IPv4BaseTest.IncreaseCorrectly(System.String, System.Int32, System.String)
-  nameWithType: IPv4BaseTest.IncreaseCorrectly(String, Int32, String)
-- uid: Ipee.Test.IPv4BaseTest.IncreaseCorrectly*
-  name: IncreaseCorrectly
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_IncreaseCorrectly_
-  commentId: Overload:Ipee.Test.IPv4BaseTest.IncreaseCorrectly
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateAllPossibleAddresses
+  nameWithType: IPv4NetworkTest.CanCalculateAllPossibleAddresses
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateBroadcastAddress
+  name: CanCalculateBroadcastAddress()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateBroadcastAddress
+  commentId: M:Ipee.Test.IPv4NetworkTest.CanCalculateBroadcastAddress
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateBroadcastAddress()
+  nameWithType: IPv4NetworkTest.CanCalculateBroadcastAddress()
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateBroadcastAddress*
+  name: CanCalculateBroadcastAddress
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateBroadcastAddress_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.CanCalculateBroadcastAddress
   isSpec: "True"
-  fullName: Ipee.Test.IPv4BaseTest.IncreaseCorrectly
-  nameWithType: IPv4BaseTest.IncreaseCorrectly
-- uid: Ipee.Test.IPv4BaseTest.IsComparable
-  name: IsComparable()
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_IsComparable
-  commentId: M:Ipee.Test.IPv4BaseTest.IsComparable
-  fullName: Ipee.Test.IPv4BaseTest.IsComparable()
-  nameWithType: IPv4BaseTest.IsComparable()
-- uid: Ipee.Test.IPv4BaseTest.IsComparable*
-  name: IsComparable
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_IsComparable_
-  commentId: Overload:Ipee.Test.IPv4BaseTest.IsComparable
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateBroadcastAddress
+  nameWithType: IPv4NetworkTest.CanCalculateBroadcastAddress
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateHostAddress
+  name: CanCalculateHostAddress()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateHostAddress
+  commentId: M:Ipee.Test.IPv4NetworkTest.CanCalculateHostAddress
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateHostAddress()
+  nameWithType: IPv4NetworkTest.CanCalculateHostAddress()
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateHostAddress*
+  name: CanCalculateHostAddress
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateHostAddress_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.CanCalculateHostAddress
   isSpec: "True"
-  fullName: Ipee.Test.IPv4BaseTest.IsComparable
-  nameWithType: IPv4BaseTest.IsComparable
-- uid: Ipee.Test.IPv4BaseTest.IsConstructedCorrectly(System.String)
-  name: IsConstructedCorrectly(String)
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_IsConstructedCorrectly_System_String_
-  commentId: M:Ipee.Test.IPv4BaseTest.IsConstructedCorrectly(System.String)
-  fullName: Ipee.Test.IPv4BaseTest.IsConstructedCorrectly(System.String)
-  nameWithType: IPv4BaseTest.IsConstructedCorrectly(String)
-- uid: Ipee.Test.IPv4BaseTest.IsConstructedCorrectly*
-  name: IsConstructedCorrectly
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_IsConstructedCorrectly_
-  commentId: Overload:Ipee.Test.IPv4BaseTest.IsConstructedCorrectly
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateHostAddress
+  nameWithType: IPv4NetworkTest.CanCalculateHostAddress
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateNetAddress
+  name: CanCalculateNetAddress()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateNetAddress
+  commentId: M:Ipee.Test.IPv4NetworkTest.CanCalculateNetAddress
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateNetAddress()
+  nameWithType: IPv4NetworkTest.CanCalculateNetAddress()
+- uid: Ipee.Test.IPv4NetworkTest.CanCalculateNetAddress*
+  name: CanCalculateNetAddress
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanCalculateNetAddress_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.CanCalculateNetAddress
   isSpec: "True"
-  fullName: Ipee.Test.IPv4BaseTest.IsConstructedCorrectly
-  nameWithType: IPv4BaseTest.IsConstructedCorrectly
-- uid: Ipee.Test.IPv4BaseTest.OR_Operation
-  name: OR_Operation()
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_OR_Operation
-  commentId: M:Ipee.Test.IPv4BaseTest.OR_Operation
-  fullName: Ipee.Test.IPv4BaseTest.OR_Operation()
-  nameWithType: IPv4BaseTest.OR_Operation()
-- uid: Ipee.Test.IPv4BaseTest.OR_Operation*
-  name: OR_Operation
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_OR_Operation_
-  commentId: Overload:Ipee.Test.IPv4BaseTest.OR_Operation
+  fullName: Ipee.Test.IPv4NetworkTest.CanCalculateNetAddress
+  nameWithType: IPv4NetworkTest.CanCalculateNetAddress
+- uid: Ipee.Test.IPv4NetworkTest.CanRemoveAddresses
+  name: CanRemoveAddresses()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanRemoveAddresses
+  commentId: M:Ipee.Test.IPv4NetworkTest.CanRemoveAddresses
+  fullName: Ipee.Test.IPv4NetworkTest.CanRemoveAddresses()
+  nameWithType: IPv4NetworkTest.CanRemoveAddresses()
+- uid: Ipee.Test.IPv4NetworkTest.CanRemoveAddresses*
+  name: CanRemoveAddresses
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_CanRemoveAddresses_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.CanRemoveAddresses
   isSpec: "True"
-  fullName: Ipee.Test.IPv4BaseTest.OR_Operation
-  nameWithType: IPv4BaseTest.OR_Operation
-- uid: Ipee.Test.IPv4BaseTest.ThrowsParseException(System.String)
-  name: ThrowsParseException(String)
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_ThrowsParseException_System_String_
-  commentId: M:Ipee.Test.IPv4BaseTest.ThrowsParseException(System.String)
-  fullName: Ipee.Test.IPv4BaseTest.ThrowsParseException(System.String)
-  nameWithType: IPv4BaseTest.ThrowsParseException(String)
-- uid: Ipee.Test.IPv4BaseTest.ThrowsParseException*
-  name: ThrowsParseException
-  href: api/Ipee.Test.IPv4BaseTest.html#Ipee_Test_IPv4BaseTest_ThrowsParseException_
-  commentId: Overload:Ipee.Test.IPv4BaseTest.ThrowsParseException
+  fullName: Ipee.Test.IPv4NetworkTest.CanRemoveAddresses
+  nameWithType: IPv4NetworkTest.CanRemoveAddresses
+- uid: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses
+  name: ThrowsExceptionWhenAddingWrongAddresses()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_ThrowsExceptionWhenAddingWrongAddresses
+  commentId: M:Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses
+  fullName: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses()
+  nameWithType: IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses()
+- uid: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses*
+  name: ThrowsExceptionWhenAddingWrongAddresses
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_ThrowsExceptionWhenAddingWrongAddresses_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses
   isSpec: "True"
-  fullName: Ipee.Test.IPv4BaseTest.ThrowsParseException
-  nameWithType: IPv4BaseTest.ThrowsParseException
+  fullName: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses
+  nameWithType: IPv4NetworkTest.ThrowsExceptionWhenAddingWrongAddresses
+- uid: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks
+  name: ThrowsExceptionWhenAddingWrongNNetworks()
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_ThrowsExceptionWhenAddingWrongNNetworks
+  commentId: M:Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks
+  fullName: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks()
+  nameWithType: IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks()
+- uid: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks*
+  name: ThrowsExceptionWhenAddingWrongNNetworks
+  href: api/Ipee.Test.IPv4NetworkTest.html#Ipee_Test_IPv4NetworkTest_ThrowsExceptionWhenAddingWrongNNetworks_
+  commentId: Overload:Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks
+  isSpec: "True"
+  fullName: Ipee.Test.IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks
+  nameWithType: IPv4NetworkTest.ThrowsExceptionWhenAddingWrongNNetworks
 - uid: Ipee.Test.IPv4SubnetMaskTest
   name: IPv4SubnetMaskTest
   href: api/Ipee.Test.IPv4SubnetMaskTest.html
@@ -997,61 +1299,129 @@ references:
   isSpec: "True"
   fullName: Ipee.Test.IPv4SubnetMaskTest.ThrowsByBitCountException
   nameWithType: IPv4SubnetMaskTest.ThrowsByBitCountException
-- uid: Ipee.Test.IPv4SubnetTest
-  name: IPv4SubnetTest
-  href: api/Ipee.Test.IPv4SubnetTest.html
-  commentId: T:Ipee.Test.IPv4SubnetTest
-  fullName: Ipee.Test.IPv4SubnetTest
-  nameWithType: IPv4SubnetTest
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateAllPossibleAddresses
-  name: CanCalculateAllPossibleAddresses()
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateAllPossibleAddresses
-  commentId: M:Ipee.Test.IPv4SubnetTest.CanCalculateAllPossibleAddresses
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateAllPossibleAddresses()
-  nameWithType: IPv4SubnetTest.CanCalculateAllPossibleAddresses()
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateAllPossibleAddresses*
-  name: CanCalculateAllPossibleAddresses
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateAllPossibleAddresses_
-  commentId: Overload:Ipee.Test.IPv4SubnetTest.CanCalculateAllPossibleAddresses
+- uid: Ipee.Test.IPv4ValueTest
+  name: IPv4ValueTest
+  href: api/Ipee.Test.IPv4ValueTest.html
+  commentId: T:Ipee.Test.IPv4ValueTest
+  fullName: Ipee.Test.IPv4ValueTest
+  nameWithType: IPv4ValueTest
+- uid: Ipee.Test.IPv4ValueTest.AND_Operation
+  name: AND_Operation()
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_AND_Operation
+  commentId: M:Ipee.Test.IPv4ValueTest.AND_Operation
+  fullName: Ipee.Test.IPv4ValueTest.AND_Operation()
+  nameWithType: IPv4ValueTest.AND_Operation()
+- uid: Ipee.Test.IPv4ValueTest.AND_Operation*
+  name: AND_Operation
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_AND_Operation_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.AND_Operation
   isSpec: "True"
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateAllPossibleAddresses
-  nameWithType: IPv4SubnetTest.CanCalculateAllPossibleAddresses
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateBroadcastAddress
-  name: CanCalculateBroadcastAddress()
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateBroadcastAddress
-  commentId: M:Ipee.Test.IPv4SubnetTest.CanCalculateBroadcastAddress
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateBroadcastAddress()
-  nameWithType: IPv4SubnetTest.CanCalculateBroadcastAddress()
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateBroadcastAddress*
-  name: CanCalculateBroadcastAddress
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateBroadcastAddress_
-  commentId: Overload:Ipee.Test.IPv4SubnetTest.CanCalculateBroadcastAddress
+  fullName: Ipee.Test.IPv4ValueTest.AND_Operation
+  nameWithType: IPv4ValueTest.AND_Operation
+- uid: Ipee.Test.IPv4ValueTest.CanParseFromString(System.String,System.Byte[])
+  name: CanParseFromString(String, Byte[])
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_CanParseFromString_System_String_System_Byte___
+  commentId: M:Ipee.Test.IPv4ValueTest.CanParseFromString(System.String,System.Byte[])
+  name.vb: CanParseFromString(String, Byte())
+  fullName: Ipee.Test.IPv4ValueTest.CanParseFromString(System.String, System.Byte[])
+  fullName.vb: Ipee.Test.IPv4ValueTest.CanParseFromString(System.String, System.Byte())
+  nameWithType: IPv4ValueTest.CanParseFromString(String, Byte[])
+  nameWithType.vb: IPv4ValueTest.CanParseFromString(String, Byte())
+- uid: Ipee.Test.IPv4ValueTest.CanParseFromString*
+  name: CanParseFromString
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_CanParseFromString_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.CanParseFromString
   isSpec: "True"
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateBroadcastAddress
-  nameWithType: IPv4SubnetTest.CanCalculateBroadcastAddress
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateHostAddress
-  name: CanCalculateHostAddress()
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateHostAddress
-  commentId: M:Ipee.Test.IPv4SubnetTest.CanCalculateHostAddress
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateHostAddress()
-  nameWithType: IPv4SubnetTest.CanCalculateHostAddress()
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateHostAddress*
-  name: CanCalculateHostAddress
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateHostAddress_
-  commentId: Overload:Ipee.Test.IPv4SubnetTest.CanCalculateHostAddress
+  fullName: Ipee.Test.IPv4ValueTest.CanParseFromString
+  nameWithType: IPv4ValueTest.CanParseFromString
+- uid: Ipee.Test.IPv4ValueTest.GreaterThanOrEqual_Operation
+  name: GreaterThanOrEqual_Operation()
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_GreaterThanOrEqual_Operation
+  commentId: M:Ipee.Test.IPv4ValueTest.GreaterThanOrEqual_Operation
+  fullName: Ipee.Test.IPv4ValueTest.GreaterThanOrEqual_Operation()
+  nameWithType: IPv4ValueTest.GreaterThanOrEqual_Operation()
+- uid: Ipee.Test.IPv4ValueTest.GreaterThanOrEqual_Operation*
+  name: GreaterThanOrEqual_Operation
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_GreaterThanOrEqual_Operation_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.GreaterThanOrEqual_Operation
   isSpec: "True"
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateHostAddress
-  nameWithType: IPv4SubnetTest.CanCalculateHostAddress
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateNetAddress
-  name: CanCalculateNetAddress()
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateNetAddress
-  commentId: M:Ipee.Test.IPv4SubnetTest.CanCalculateNetAddress
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateNetAddress()
-  nameWithType: IPv4SubnetTest.CanCalculateNetAddress()
-- uid: Ipee.Test.IPv4SubnetTest.CanCalculateNetAddress*
-  name: CanCalculateNetAddress
-  href: api/Ipee.Test.IPv4SubnetTest.html#Ipee_Test_IPv4SubnetTest_CanCalculateNetAddress_
-  commentId: Overload:Ipee.Test.IPv4SubnetTest.CanCalculateNetAddress
+  fullName: Ipee.Test.IPv4ValueTest.GreaterThanOrEqual_Operation
+  nameWithType: IPv4ValueTest.GreaterThanOrEqual_Operation
+- uid: Ipee.Test.IPv4ValueTest.IncreaseCorrectly(System.String,System.Int32,System.String)
+  name: IncreaseCorrectly(String, Int32, String)
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_IncreaseCorrectly_System_String_System_Int32_System_String_
+  commentId: M:Ipee.Test.IPv4ValueTest.IncreaseCorrectly(System.String,System.Int32,System.String)
+  fullName: Ipee.Test.IPv4ValueTest.IncreaseCorrectly(System.String, System.Int32, System.String)
+  nameWithType: IPv4ValueTest.IncreaseCorrectly(String, Int32, String)
+- uid: Ipee.Test.IPv4ValueTest.IncreaseCorrectly*
+  name: IncreaseCorrectly
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_IncreaseCorrectly_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.IncreaseCorrectly
   isSpec: "True"
-  fullName: Ipee.Test.IPv4SubnetTest.CanCalculateNetAddress
-  nameWithType: IPv4SubnetTest.CanCalculateNetAddress
+  fullName: Ipee.Test.IPv4ValueTest.IncreaseCorrectly
+  nameWithType: IPv4ValueTest.IncreaseCorrectly
+- uid: Ipee.Test.IPv4ValueTest.IsComparable
+  name: IsComparable()
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_IsComparable
+  commentId: M:Ipee.Test.IPv4ValueTest.IsComparable
+  fullName: Ipee.Test.IPv4ValueTest.IsComparable()
+  nameWithType: IPv4ValueTest.IsComparable()
+- uid: Ipee.Test.IPv4ValueTest.IsComparable*
+  name: IsComparable
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_IsComparable_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.IsComparable
+  isSpec: "True"
+  fullName: Ipee.Test.IPv4ValueTest.IsComparable
+  nameWithType: IPv4ValueTest.IsComparable
+- uid: Ipee.Test.IPv4ValueTest.IsConstructedCorrectly(System.String)
+  name: IsConstructedCorrectly(String)
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_IsConstructedCorrectly_System_String_
+  commentId: M:Ipee.Test.IPv4ValueTest.IsConstructedCorrectly(System.String)
+  fullName: Ipee.Test.IPv4ValueTest.IsConstructedCorrectly(System.String)
+  nameWithType: IPv4ValueTest.IsConstructedCorrectly(String)
+- uid: Ipee.Test.IPv4ValueTest.IsConstructedCorrectly*
+  name: IsConstructedCorrectly
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_IsConstructedCorrectly_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.IsConstructedCorrectly
+  isSpec: "True"
+  fullName: Ipee.Test.IPv4ValueTest.IsConstructedCorrectly
+  nameWithType: IPv4ValueTest.IsConstructedCorrectly
+- uid: Ipee.Test.IPv4ValueTest.LessThanOrEqual_Operation
+  name: LessThanOrEqual_Operation()
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_LessThanOrEqual_Operation
+  commentId: M:Ipee.Test.IPv4ValueTest.LessThanOrEqual_Operation
+  fullName: Ipee.Test.IPv4ValueTest.LessThanOrEqual_Operation()
+  nameWithType: IPv4ValueTest.LessThanOrEqual_Operation()
+- uid: Ipee.Test.IPv4ValueTest.LessThanOrEqual_Operation*
+  name: LessThanOrEqual_Operation
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_LessThanOrEqual_Operation_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.LessThanOrEqual_Operation
+  isSpec: "True"
+  fullName: Ipee.Test.IPv4ValueTest.LessThanOrEqual_Operation
+  nameWithType: IPv4ValueTest.LessThanOrEqual_Operation
+- uid: Ipee.Test.IPv4ValueTest.OR_Operation
+  name: OR_Operation()
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_OR_Operation
+  commentId: M:Ipee.Test.IPv4ValueTest.OR_Operation
+  fullName: Ipee.Test.IPv4ValueTest.OR_Operation()
+  nameWithType: IPv4ValueTest.OR_Operation()
+- uid: Ipee.Test.IPv4ValueTest.OR_Operation*
+  name: OR_Operation
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_OR_Operation_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.OR_Operation
+  isSpec: "True"
+  fullName: Ipee.Test.IPv4ValueTest.OR_Operation
+  nameWithType: IPv4ValueTest.OR_Operation
+- uid: Ipee.Test.IPv4ValueTest.ThrowsParseException(System.String)
+  name: ThrowsParseException(String)
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_ThrowsParseException_System_String_
+  commentId: M:Ipee.Test.IPv4ValueTest.ThrowsParseException(System.String)
+  fullName: Ipee.Test.IPv4ValueTest.ThrowsParseException(System.String)
+  nameWithType: IPv4ValueTest.ThrowsParseException(String)
+- uid: Ipee.Test.IPv4ValueTest.ThrowsParseException*
+  name: ThrowsParseException
+  href: api/Ipee.Test.IPv4ValueTest.html#Ipee_Test_IPv4ValueTest_ThrowsParseException_
+  commentId: Overload:Ipee.Test.IPv4ValueTest.ThrowsParseException
+  isSpec: "True"
+  fullName: Ipee.Test.IPv4ValueTest.ThrowsParseException
+  nameWithType: IPv4ValueTest.ThrowsParseException
