@@ -74,15 +74,15 @@
 <p>Um möglichst auf eigene Leistungen zu setzen, wurden auf weitere Bibliotheken verzichtet. <em>.NET alleine bietet dafür schon viel zu viel</em> 😅</p>
 <h3 id="xunit">XUnit</h3>
 <p>Damit wir im Falle von nachträglichen Codeanpassungen die Korrektheit unserer Funktionen garantieren können, haben wir von Anfang an auf den Einsatz von Unittests gesetzt, wofür das Framework XUnit zum Einsatz kommt. So war es uns möglich, nach jeder Codeanpassung einmal sämtliche Test durchlaufen zu lassen und ohne die Oberfläche starten zu müssen, Fehler zu finden.</p>
-<p><img src="..%5Cimages%5Cunittests.png" alt="image-20210218000314004"></p>
+<p><img src="../images/unittests.png" alt="image-20210218000314004"></p>
 <h2 id="github">Github</h2>
 <p>Einen hohen Stellenwert in unserer Arbeit nahm die Versionscontrolle mittels Git ein. Als Host für unser Repository haben wir uns dann für Github entschieden, da es all unsere geforderten Features bietet und in unserem Team vertraut war. Doch diente Github uns weit mehr als nur für das eigentliche Repository - wir konnten eine ganze Pipeline darüber laufen lassen.</p>
 <h3 id="github-projects">Github-Projects</h3>
 <p>Mittels <a href="https://github.com/Hackberries/Ipee/issues">Issues</a> und dem <a href="https://github.com/Hackberries/Ipee/projects/1">Projekt</a> von Github konnten wir unsere Aufgaben darstellen, zuordnen und dokumentieren.</p>
-<p><img src="..%5Cimages%5Cproject_board.png" alt="image-20210217235754485"></p>
+<p><img src="../images/project_board.png" alt="image-20210217235754485"></p>
 <h3 id="github-actions">Github-Actions</h3>
 <p>Über die sogenannten Actions von Github, haben wir uns einen Workflow eingerichtet, welcher nach jedem Commit auf dem Main-Branch konsequent ausgeführt wird. Dieser versucht den Sourcecode erst zu kompilieren und anschließend sämtliche Unittests darauf anzuwenden. Sollte es dabei zu einem Fehler kommen, würden wir als Entwickler automatisch informiert. Theoretisch wäre es auch möglich, darüber nach jeden Commit die statische Code-Doku-Seite aktualisieren zu lassen, jedoch scheiterte die Umsetzung bis zu Abgabe dieses Projekts an mangelndem Wissen darüber.</p>
-<p><img src="..%5Cimages%5Cactions.png" alt="image-20210218001101508"></p>
+<p><img src="../images/actions.png" alt="image-20210218001101508"></p>
 </article>
           </div>
           
