@@ -20,6 +20,10 @@ namespace Ipee.Core.Addressing
         {
         }
 
+        /// <summary>
+        /// Erzeugt ein zufällig generiertes IPv4Address-Objekt.
+        /// </summary>
+        /// <returns></returns>
         public static IPv4Address Random() => new IPv4Address(BitConverter.GetBytes(new Random().Next(int.MinValue, int.MaxValue)));
     }
 }

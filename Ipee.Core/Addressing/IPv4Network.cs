@@ -6,17 +6,34 @@ using System.Text.Json.Serialization;
 
 namespace Ipee.Core.Addressing
 {
+    /// <summary>
+    /// Dieses Objekt soll ein komplettes Netzwerk von zugeordneten IP-Adressen, dessen Netz-, Broadcast- und Host-Adresse, sowie allen Subnetzen darstellen.
+    /// </summary>
     public class IPv4Network
     {
+        /// <summary>
+        /// Referenz auf das übergeordnete IPv4Network-Objekt. Siehe auch: <seealso cref="IPv4Network.Subnets"/>.
+        /// </summary>
         [JsonIgnore]
         public IPv4Network MotherNetwork { get; set; }
 
+        /// <summary>
+        /// Die Adresse auf dessen Basis das Netzwerk erstellt wurde.
+        /// </summary>
         public IPv4Address SourceAddress { get; init; }
+
+        /// <summary>
+        /// Die Subnetzmaske auf dessen Basis das Netzwerk erstellt wurde.
+        /// </summary>
         public IPv4SubnetMask SubnetMask { get; init; }
 
         private List<IPv4Value> givenAddresses = new();
         private List<IPv4Network> subnets = new();
 
+        /// <summary>
+        /// Eine Iteration an allen vergebenen Adressen in diesem Netzwerk. <br/>
+        /// Siehe auch: <seealso cref="IPv4Network.AllGivenAddresses"/>.
+        /// </summary>
         public IEnumerable<IPv4Value> GivenAddresses
         {
             get => givenAddresses;
@@ -24,6 +41,11 @@ namespace Ipee.Core.Addressing
             init => givenAddresses = value.ToList();
         }
 
+        /// <summary>
+        /// Eine Iteration an allen vergebenen Adressen in diesem Netzwerk sowie allen vergebenen Adressen in den Subnetzen. <br/>
+        /// Dies wird für die komplette Verschachtelungstiefe dieses Netzwerks, ab diesem Netzwerk durchgeführt.<br/>
+        /// Siehe auch: <seealso cref="IPv4Network.GivenAddresses"/>.
+        /// </summary>
         public IEnumerable<IPv4Value> AllGivenAddresses
         {
             get
@@ -37,12 +59,24 @@ namespace Ipee.Core.Addressing
             }
         }
 
+        /// <summary>
+        /// Eine Iteration an allen untergeordneten IPv4Network-Objekten dieses Netzwerkes.
+        /// </summary>
         public IEnumerable<IPv4Network> Subnets { get => subnets; init => subnets = value.ToList(); }
 
+        /// <summary>
+        /// Netz-Adresse dieses Netzwerkes. Wird automatisch ermittelt.
+        /// </summary>
         public IPv4Value NetAddress => SourceAddress & SubnetMask;
 
+        /// <summary>
+        /// Broadcast-Adresse dieses Netzwerkes. Wird automatisch ermittelt.
+        /// </summary>
         public IPv4Value BroadcastAddress => SourceAddress | IPv4SubnetMask.Invert(SubnetMask);
 
+        /// <summary>
+        /// Host-Adresse dieses Netzwerkes. Wird automatisch ermittelt.
+        /// </summary>
         public IPv4Value HostAddress => IPv4Address.Increase(NetAddress, 1);
 
         /// <summary>
@@ -75,13 +109,6 @@ namespace Ipee.Core.Addressing
             this.SubnetMask = SubnetMask;
         }
 
-        //[JsonConstructor]
-        //public IPv4Network(string address, string mask)
-        //{
-        //    this.SourceAddress = new IPv4Address(address);
-        //    this.SubnetMask = new IPv4SubnetMask(mask);
-        //}
-
         /// <summary>
         /// Fügt eine neue IpAdresse hinzu.
         /// </summary>
@@ -112,7 +139,7 @@ namespace Ipee.Core.Addressing
         /// <example>
         /// <code>
         /// var address = AppStore.Instance.MainNetwork.AllGivenAddresses.Where(add => add.Address == "192.168.1.1").First();
-        /// address.Network.RemoveAddress(tst);
+        /// address.Network.RemoveAddress(address);
         /// </code>
         /// </example>
         public void RemoveAddress(IPv4Value address)
@@ -125,6 +152,10 @@ namespace Ipee.Core.Addressing
             givenAddresses.Remove(address);
         }
 
+        /// <summary>
+        /// Weißt dem Netzwerk ein untergeordnetes IPv4Network zu.
+        /// </summary>
+        /// <param name="subnet">Das IPv4Network welches untergeordnet werden soll.</param>
         public void AddSubnet(IPv4Network subnet)
         {
             if (subnet is null)

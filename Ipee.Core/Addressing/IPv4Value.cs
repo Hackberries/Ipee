@@ -9,11 +9,22 @@ namespace Ipee.Core.Addressing
 {
     public class IPv4Value
     {
+        /// <summary>
+        /// Referenz auf das übergeordnete IPv4Network-Objekt. Siehe auch: <seealso cref="IPv4Network.GivenAddresses"/>.
+        /// </summary>
         [JsonIgnore]
         public IPv4Network Network { get; set; }
 
         private readonly byte[] _bytes = new byte[4];
+
+        /// <summary>
+        /// Die Daten in Form eines Byte-Array mit festen 4 Elementen.
+        /// </summary>
         public byte[] Bytes { get => _bytes; init => _bytes = value; }
+
+        /// <summary>
+        /// Die Daten als lesbaren String konvertiert. Siehe <see cref="IPv4Value.ToString"/>
+        /// </summary>
         public string Address => this.ToString();
 
         /// <summary>
@@ -102,6 +113,10 @@ namespace Ipee.Core.Addressing
 
         public override int GetHashCode() => HashCode.Combine(_bytes);
 
+        /// <summary>
+        /// Konvertiert die 4 Elemente aus den <seealso cref="IPv4Value.Bytes"/> in einen lesbaren String.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString() => $"{this._bytes[3]}.{this._bytes[2]}.{this._bytes[1]}.{this._bytes[0]}";
 
         /// <summary>

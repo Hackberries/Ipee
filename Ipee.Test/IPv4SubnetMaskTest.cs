@@ -18,6 +18,7 @@ namespace Ipee.Test
         public void CreatesByBitCountCorrectly(int bitCount, string expected)
         {
             var mask = IPv4SubnetMask.ByBitCount(bitCount);
+            throw new Exception();
             Assert.Equal(expected, mask.ToString());
         }
 

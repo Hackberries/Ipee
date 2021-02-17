@@ -61,6 +61,10 @@ namespace Ipee.Core.Addressing
         public static IPv4SubnetMask Invert(IPv4SubnetMask mask)
             => new IPv4SubnetMask(BitConverter.GetBytes(~mask.ToInt()));
 
+        /// <summary>
+        /// Erzeugt ein zufällig generiertes IPv4SubnetMask-Objekt.
+        /// </summary>
+        /// <returns></returns>
         public static IPv4SubnetMask Random() => ByBitCount(new Random().Next(1, 32));
     }
 }
