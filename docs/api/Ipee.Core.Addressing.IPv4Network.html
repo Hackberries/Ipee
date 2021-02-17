@@ -73,7 +73,8 @@
   
   <h1 id="Ipee_Core_Addressing_IPv4Network" data-uid="Ipee.Core.Addressing.IPv4Network" class="text-break">Class IPv4Network
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Dieses Objekt soll ein komplettes Netzwerk von zugeordneten IP-Adressen, dessen Netz-, Broadcast- und Host-Adresse, sowie allen Subnetzen darstellen.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -117,7 +118,7 @@
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network__ctor_Ipee_Core_Addressing_IPv4Address_Ipee_Core_Addressing_IPv4SubnetMask_.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.%23ctor(Ipee.Core.Addressing.IPv4Address%2CIpee.Core.Addressing.IPv4SubnetMask)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L72">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L106">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network__ctor_" data-uid="Ipee.Core.Addressing.IPv4Network.#ctor*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network__ctor_Ipee_Core_Addressing_IPv4Address_Ipee_Core_Addressing_IPv4SubnetMask_" data-uid="Ipee.Core.Addressing.IPv4Network.#ctor(Ipee.Core.Addressing.IPv4Address,Ipee.Core.Addressing.IPv4SubnetMask)">IPv4Network(IPv4Address, IPv4SubnetMask)</h4>
@@ -156,11 +157,14 @@
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_AllGivenAddresses.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.AllGivenAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L27">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L49">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_AllGivenAddresses_" data-uid="Ipee.Core.Addressing.IPv4Network.AllGivenAddresses*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_AllGivenAddresses" data-uid="Ipee.Core.Addressing.IPv4Network.AllGivenAddresses">AllGivenAddresses</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eine Iteration an allen vergebenen Adressen in diesem Netzwerk sowie allen vergebenen Adressen in den Subnetzen. <br>
+Dies wird für die komplette Verschachtelungstiefe dieses Netzwerks, ab diesem Netzwerk durchgeführt.<br>
+Siehe auch: <a class="xref" href="Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_GivenAddresses">GivenAddresses</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -186,7 +190,7 @@
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_AllPossibleAddresses.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L51">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L85">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_AllPossibleAddresses_" data-uid="Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_AllPossibleAddresses" data-uid="Ipee.Core.Addressing.IPv4Network.AllPossibleAddresses">AllPossibleAddresses</h4>
@@ -218,11 +222,12 @@ public IEnumerable&lt;IPv4Value&gt; AllPossibleAddresses { get; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_BroadcastAddress.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.BroadcastAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L44">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L75">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_BroadcastAddress_" data-uid="Ipee.Core.Addressing.IPv4Network.BroadcastAddress*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_BroadcastAddress" data-uid="Ipee.Core.Addressing.IPv4Network.BroadcastAddress">BroadcastAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Broadcast-Adresse dieses Netzwerkes. Wird automatisch ermittelt.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -248,11 +253,13 @@ public IEnumerable&lt;IPv4Value&gt; AllPossibleAddresses { get; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_GivenAddresses.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.GivenAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L20">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L37">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_GivenAddresses_" data-uid="Ipee.Core.Addressing.IPv4Network.GivenAddresses*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_GivenAddresses" data-uid="Ipee.Core.Addressing.IPv4Network.GivenAddresses">GivenAddresses</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eine Iteration an allen vergebenen Adressen in diesem Netzwerk. <br>
+Siehe auch: <a class="xref" href="Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_AllGivenAddresses">AllGivenAddresses</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -278,11 +285,12 @@ public IEnumerable&lt;IPv4Value&gt; AllPossibleAddresses { get; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_HostAddress.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.HostAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L46">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L80">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_HostAddress_" data-uid="Ipee.Core.Addressing.IPv4Network.HostAddress*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_HostAddress" data-uid="Ipee.Core.Addressing.IPv4Network.HostAddress">HostAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Host-Adresse dieses Netzwerkes. Wird automatisch ermittelt.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -308,11 +316,12 @@ public IEnumerable&lt;IPv4Value&gt; AllPossibleAddresses { get; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_MotherNetwork.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.MotherNetwork%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L11">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L17">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_MotherNetwork_" data-uid="Ipee.Core.Addressing.IPv4Network.MotherNetwork*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_MotherNetwork" data-uid="Ipee.Core.Addressing.IPv4Network.MotherNetwork">MotherNetwork</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Referenz auf das übergeordnete IPv4Network-Objekt. Siehe auch: <a class="xref" href="Ipee.Core.Addressing.IPv4Network.html#Ipee_Core_Addressing_IPv4Network_Subnets">Subnets</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -339,11 +348,12 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_NetAddress.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.NetAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L42">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L70">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_NetAddress_" data-uid="Ipee.Core.Addressing.IPv4Network.NetAddress*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_NetAddress" data-uid="Ipee.Core.Addressing.IPv4Network.NetAddress">NetAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Netz-Adresse dieses Netzwerkes. Wird automatisch ermittelt.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -369,11 +379,12 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_SourceAddress.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.SourceAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L14">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L23">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_SourceAddress_" data-uid="Ipee.Core.Addressing.IPv4Network.SourceAddress*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_SourceAddress" data-uid="Ipee.Core.Addressing.IPv4Network.SourceAddress">SourceAddress</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Die Adresse auf dessen Basis das Netzwerk erstellt wurde.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -399,11 +410,12 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_SubnetMask.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.SubnetMask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L15">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L28">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_SubnetMask_" data-uid="Ipee.Core.Addressing.IPv4Network.SubnetMask*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_SubnetMask" data-uid="Ipee.Core.Addressing.IPv4Network.SubnetMask">SubnetMask</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Die Subnetzmaske auf dessen Basis das Netzwerk erstellt wurde.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -429,11 +441,12 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_Subnets.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.Subnets%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L40">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L65">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_Subnets_" data-uid="Ipee.Core.Addressing.IPv4Network.Subnets*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_Subnets" data-uid="Ipee.Core.Addressing.IPv4Network.Subnets">Subnets</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Eine Iteration an allen untergeordneten IPv4Network-Objekten dieses Netzwerkes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,7 +474,7 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_AddAddress_Ipee_Core_Addressing_IPv4Value_.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.AddAddress(Ipee.Core.Addressing.IPv4Value)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L91">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L118">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_AddAddress_" data-uid="Ipee.Core.Addressing.IPv4Network.AddAddress*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_AddAddress_Ipee_Core_Addressing_IPv4Value_" data-uid="Ipee.Core.Addressing.IPv4Network.AddAddress(Ipee.Core.Addressing.IPv4Value)">AddAddress(IPv4Value)</h4>
@@ -514,11 +527,12 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_AddSubnet_Ipee_Core_Addressing_IPv4Network_.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.AddSubnet(Ipee.Core.Addressing.IPv4Network)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L128">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L159">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_AddSubnet_" data-uid="Ipee.Core.Addressing.IPv4Network.AddSubnet*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_AddSubnet_Ipee_Core_Addressing_IPv4Network_" data-uid="Ipee.Core.Addressing.IPv4Network.AddSubnet(Ipee.Core.Addressing.IPv4Network)">AddSubnet(IPv4Network)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Weißt dem Netzwerk ein untergeordnetes IPv4Network zu.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -537,7 +551,8 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a></td>
         <td><span class="parametername">subnet</span></td>
-        <td></td>
+        <td><p>Das IPv4Network welches untergeordnet werden soll.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -546,7 +561,7 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network_RemoveAddress_Ipee_Core_Addressing_IPv4Value_.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network.RemoveAddress(Ipee.Core.Addressing.IPv4Value)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L118">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L145">View Source</a>
   </span>
   <a id="Ipee_Core_Addressing_IPv4Network_RemoveAddress_" data-uid="Ipee.Core.Addressing.IPv4Network.RemoveAddress*"></a>
   <h4 id="Ipee_Core_Addressing_IPv4Network_RemoveAddress_Ipee_Core_Addressing_IPv4Value_" data-uid="Ipee.Core.Addressing.IPv4Network.RemoveAddress(Ipee.Core.Addressing.IPv4Value)">RemoveAddress(IPv4Value)</h4>
@@ -577,7 +592,7 @@ public IPv4Network MotherNetwork { get; set; }</code></pre>
   </table>
   <h5 id="Ipee_Core_Addressing_IPv4Network_RemoveAddress_Ipee_Core_Addressing_IPv4Value__examples">Examples</h5>
   <pre><code>var address = AppStore.Instance.MainNetwork.AllGivenAddresses.Where(add => add.Address == &quot;192.168.1.1&quot;).First();
-address.Network.RemoveAddress(tst);</code></pre>
+address.Network.RemoveAddress(address);</code></pre>
 
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -609,7 +624,7 @@ address.Network.RemoveAddress(tst);</code></pre>
                     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_Core_Addressing_IPv4Network.md&amp;value=---%0Auid%3A%20Ipee.Core.Addressing.IPv4Network%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee.Core/Addressing/IPv4Network.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

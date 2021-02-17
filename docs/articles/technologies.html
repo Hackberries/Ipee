@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Wichtige Namespaces </title>
+    <title>Verwendete Technologien </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Wichtige Namespaces ">
+    <meta name="title" content="Verwendete Technologien ">
     <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,18 +67,22 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="wichtige-namespaces">Wichtige Namespaces</h1>
+<h1 id="verwendete-technologien">Verwendete Technologien</h1>
 
-<h2 id="ipee">Ipee</h2>
-<p>Hier sind sämtliche Klassen zu finden, welche für die GUI nötig sind. Das beinhaltet hauptsächlich die Klassen für die Fenster, sowie deren .xaml Dateien.</p>
-<h2 id="ipeecoreaddressing">Ipee.Core.Addressing</h2>
-<p>Sämtliche Logik bezüglich der Netzwerke und den IP-Adressen. Siehe für weitere Details: <a href="../articles/addressing.html">IPv4-Netzwerke &amp; IPv4-Adressen</a></p>
-<h2 id="ipeecoreconverter">Ipee.Core.Converter</h2>
-<p>Klassen, die für die Konvertierung von und zwischen bestimmten Objekten notwendig sind. IPv4 -&gt; IPv6</p>
-<h2 id="ipeecoredatapersistence">Ipee.Core.DataPersistence</h2>
-<p>In diesem Namespace geht es um die Persistierung von Daten. Unabhängig davon, ob es mittels ASCII-Dateien, Datenbanken oder Sonstiges geschieht.</p>
-<h2 id="ipeetest">Ipee.Test</h2>
-<p>Sämtliche Unit tests können hier gefunden werden. Eine Dokumentation zu diesen wurde aus zeitlichen Gründen ausgelassen.</p>
+<h2 id="c-kosmos">C# Kosmos</h2>
+<p>Um dieses Projekt in Maße unserer Vorstellungen und eigenen Ansprüchen umzusetzen, wurde auf eine Vielzahl an Technologien gesetzt. Als gewählte Programmiersprache kam gänzlich C# mit .NET 5 zum Einsatz. Damit einher ging auch die Wahl auf WPF (Windows Presentation Foundation), welches ein Framework zu Erstellung von nativen Benutzeroberflächen unter Windows darstellt.</p>
+<p>Um möglichst auf eigene Leistungen zu setzen, wurden auf weitere Bibliotheken verzichtet. <em>.NET alleine bietet dafür schon viel zu viel</em> 😅</p>
+<h3 id="xunit">XUnit</h3>
+<p>Damit wir im Falle von nachträglichen Codeanpassungen die Korrektheit unserer Funktionen garantieren können, haben wir von Anfang an auf den Einsatz von Unittests gesetzt, wofür das Framework XUnit zum Einsatz kommt. So war es uns möglich, nach jeder Codeanpassung einmal sämtliche Test durchlaufen zu lassen und ohne die Oberfläche starten zu müssen, Fehler zu finden.</p>
+<p><img src="..%5Cimages%5Cunittests.png" alt="image-20210218000314004"></p>
+<h2 id="github">Github</h2>
+<p>Einen hohen Stellenwert in unserer Arbeit nahm die Versionscontrolle mittels Git ein. Als Host für unser Repository haben wir uns dann für Github entschieden, da es all unsere geforderten Features bietet und in unserem Team vertraut war. Doch diente Github uns weit mehr als nur für das eigentliche Repository - wir konnten eine ganze Pipeline darüber laufen lassen.</p>
+<h3 id="github-projects">Github-Projects</h3>
+<p>Mittels <a href="https://github.com/Hackberries/Ipee/issues">Issues</a> und dem <a href="https://github.com/Hackberries/Ipee/projects/1">Projekt</a> von Github konnten wir unsere Aufgaben darstellen, zuordnen und dokumentieren.</p>
+<p><img src="..%5Cimages%5Cproject_board.png" alt="image-20210217235754485"></p>
+<h3 id="github-actions">Github-Actions</h3>
+<p>Über die sogenannten Actions von Github, haben wir uns einen Workflow eingerichtet, welcher nach jedem Commit auf dem Main-Branch konsequent ausgeführt wird. Dieser versucht den Sourcecode erst zu kompilieren und anschließend sämtliche Unittests darauf anzuwenden. Sollte es dabei zu einem Fehler kommen, würden wir als Entwickler automatisch informiert. Theoretisch wäre es auch möglich, darüber nach jeden Commit die statische Code-Doku-Seite aktualisieren zu lassen, jedoch scheiterte die Umsetzung bis zu Abgabe dieses Projekts an mangelndem Wissen darüber.</p>
+<p><img src="..%5Cimages%5Cactions.png" alt="image-20210218001101508"></p>
 </article>
           </div>
           
@@ -87,7 +91,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Hackberries/Ipee/blob/main/docfx/api/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Hackberries/Ipee/blob/main/docfx/articles/technologies.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
