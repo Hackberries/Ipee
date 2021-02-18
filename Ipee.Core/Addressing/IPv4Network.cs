@@ -183,6 +183,18 @@ namespace Ipee.Core.Addressing
             this.OnChanged?.Invoke();
         }
 
+        public void RemoveSubnet(IPv4Network subnet)
+        {
+            if (subnet is null)
+                throw new ArgumentNullException(nameof(subnet));
+
+            subnet.MotherNetwork = null;
+
+            subnets.Remove(subnet);
+
+            this.OnChanged?.Invoke();
+        }
+
         private bool IsInRange(IPv4Value address) => address > HostAddress || address < BroadcastAddress;
 
         private bool IsNotInRange(IPv4Value address) => address <= HostAddress || address >= BroadcastAddress;

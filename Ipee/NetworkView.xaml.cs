@@ -28,9 +28,8 @@ namespace Ipee
             this.network = network;
             this.network.OnChanged += RefreshWindow;
             InitializeComponent();
-            
+
             RefreshWindow();
-            
         }
 
         private void SubnetList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -48,6 +47,7 @@ namespace Ipee
             this.network.RemoveAddress(value);
             this.UpdateLayout();
         }
+
         private void PossibleAddressBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var listBox = (ListBox)sender;
@@ -61,7 +61,6 @@ namespace Ipee
             this.PossibleAddressBox.Items.Clear();
             this.VergebeneAddressen.Items.Clear();
             this.SubnetList.Items.Clear();
-
 
             this.SourceAddressBox.Text = this.network.SourceAddress.ToString();
             this.SubnetMaskBox.Text = this.network.SubnetMask.ToString();
@@ -77,7 +76,6 @@ namespace Ipee
             foreach (var address in allAddresses.Take(2500))
                 PossibleAddressBox.Items.Add(address);
 
-
             var allGivenAddresses = network.GivenAddresses.ToArray();
 
             VergebeneAddressenCountLabel.Content = allGivenAddresses.Length;
@@ -85,13 +83,16 @@ namespace Ipee
             foreach (var address in allGivenAddresses.Take(2500))
                 VergebeneAddressen.Items.Add(address);
 
-
             foreach (var subnet in network.Subnets)
             {
                 SubnetList.Items.Add(subnet);
             }
         }
 
-
+        private void RemoveSubnetButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedSubnet = (IPv4Network)SubnetList.SelectedItem;
+            this.network.RemoveSubnet(selectedSubnet);
+        }
     }
 }
