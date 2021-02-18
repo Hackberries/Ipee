@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.IPv4Address.html",
-          "hash": "I4dZV503qJbqa3/JFT5eZA=="
+          "hash": "abhj+CJo3S9/rMjIsvzb2g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.IPv4Network.html",
-          "hash": "iu1puRy0UEusSbg0EEC6/A=="
+          "hash": "doqCxZrZVi5pmB1cwSYAXw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.IPv4SubnetMask.html",
-          "hash": "RWUFORdhhmXVEX3kWjf1wA=="
+          "hash": "zcn9LWg+r2PxktjzBNjVpw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.IPv4Value.html",
-          "hash": "JlqYgN77Wdq7qVBtefLyGw=="
+          "hash": "MRzoGlFGe/Gpb4cXmEqMIA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Core.Addressing.html",
-          "hash": "73VTxEKdV2OgpxtzxtrXwA=="
+          "hash": "iNWzu+DoQe0nV9MRwVn00A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "ItOEaAa/1MKZrKN7G9D1Sg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -168,7 +168,7 @@
           "hash": "qtXTXFmKw5dUHMMAhSYI4A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -216,7 +216,7 @@
           "hash": "dMAvpqTsaaY3pTB1k/YYTw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Ipee.Test.IPv4SubnetMaskTest.html",
-          "hash": "sg29Ey1aLAM0TkoAGQXyBw=="
+          "hash": "iCEvSzZOJOSgfKvt7s/oDA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -300,7 +300,7 @@
           "hash": "oa9kx5rz6QmdnIJh184MDw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -312,7 +312,7 @@
           "hash": "2sSDTzgKMN1dja5u0t0Mcg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "NqemiPI+b2lzrYDIJi1y6A=="
+          "hash": "eKmvzqBfpcfPuNURnlLhpQ=="
         }
       },
       "is_incremental": true,
@@ -341,6 +341,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/addressing.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/addressing.html",
+          "hash": "g+QGzxG3d2aenLkNRe9mEg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
@@ -352,12 +364,60 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/technologies.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/technologies.html",
+          "hash": "1DTNK6OXC49wjt4BjZNWnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "gB8AESyvNru97tzIZofEEg=="
+          "hash": "P7P8Huph6vDnNpq/8MKIjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/actions.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/actions.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/project_board.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/project_board.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/unittests.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/unittests.png"
         }
       },
       "is_incremental": false,
@@ -369,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "qVe+gUmEjE+dhLmKVIJxwg=="
+          "hash": "Zhg60nFgCgfhezBR6ov+yg=="
         }
       },
       "is_incremental": true,
@@ -400,14 +460,21 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
+          "total_file_count": 5,
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 26,
           "skipped_file_count": 25
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

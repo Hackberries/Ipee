@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>IPv4-Netzwerke &amp; IPv4-Adressen </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="IPv4-Netzwerke &amp; IPv4-Adressen ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="ipv4-netzwerke--ipv4-adressen">IPv4-Netzwerke &amp; IPv4-Adressen</h1>
+
+<h2 id="grundsätzliches">Grundsätzliches</h2>
+<p>Für die Berechnung, Verwaltung und Validierung von IPv4-Netzwerken und deren IPv4-Adressen ist der <a href="../api/Ipee.Core.Addressing.html">Ipee.Core.Addressing</a> Namespace zuständig. Dabei sind vor allem die beiden Klassen <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> und <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> vorhanden. Über denen wird dementsprechend der hauptsächliche Use-Case abgebildet.</p>
+<h3 id="ipv4value">IPv4Value</h3>
+<p>Um nicht anhand von Strings alles an Berechnungen durchführen zu müssen, werden die Werte in dieser Klasse mittels eines Byte-Array aus 4 Elementen abgebildet. Dabei soll <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> die Basis einer IP-Adresse, als auch einer Subnetzmaske sein, da beides aus jeweils 4 Oktetten besteht und untereinander mit den selben Methoden verrechnet werden kann.</p>
+<h3 id="ipv4network">IPv4Network</h3>
+<p>Dieses Objekt soll ein komplettes Netzwerk von zugeordneten IP-Adressen, dessen Netz-, Broadcast- und Host-Adresse, sowie allen Subnetzen darstellen. Dabei sind die Subnetzen nichts anderes als andere <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> Objekte, welche lediglich einem anderen untergeordnet wurden. So können <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> Objekte untereinander eine komplexe Baumstruktur erzeugen.</p>
+<h2 id="berechnungen-zwischen-ip-adressen">Berechnungen zwischen IP-Adressen</h2>
+<p>Die Berechnungen zwischen IP-Adressen finden gänzlich über der <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> Klasse statt. Hierfür wurden folgende Operatoren zur Verfügung gestellt:</p>
+<ul>
+<li><h4 id="bitwiseand---">BitwiseAnd ( &amp; )</h4>
+</li>
+<li><h4 id="bitwiseor---">BitwiseOr ( | )</h4>
+</li>
+<li><h4 id="equality---">Equality ( == )</h4>
+</li>
+<li><h4 id="inequality---">Inequality ( != )</h4>
+</li>
+<li><h4 id="greaterthan---">GreaterThan ( &gt; )</h4>
+</li>
+<li><h4 id="greaterthanorequal---">GreaterThanOrEqual ( &gt;= )</h4>
+</li>
+<li><h4 id="lessthan---">LessThan ( &lt; )</h4>
+</li>
+<li><h4 id="lessthanorequal---">LessThanOrEqual ( &lt;= )</h4>
+</li>
+</ul>
+<p>Da <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> seinen Wert, also die IP-Adresse (z.B. 192.168.0.5), in einem Byte-Array aus 4 Elementen speichert, wären direkte Operationen zwischen zwei Adressen mit höherem Aufwand verbunden. Um die oben genannten Operationen zu erleichtern, <strong>werden die Bytes aus von dem Objekt immer zuerst in einen Integer konvertiert</strong>, da dieser Datentyp ebenfalls aus 4 Bytes besteht und sich perfekt dafür eignen, miteinander verglichen zu werden.</p>
+<p>Wenn wir also beispielsweise wissen wollen, ob &quot;253.21.161.14&quot; größer ist als &quot;253.21.162.16&quot;, geht es folgendermaßen vor:</p>
+<pre><code>&quot;253.21.161.14&quot;.toInt() = -48914162 //left
+&quot;253.21.162.16&quot;.ToInt()	= -48913904 //right
+
+-48914162 &gt; -48913904 = true
+</code></pre>
+<p>Ähnlich verläuft es dementsprechend auch bei AND oder OR Operationen. Auch hier werden die Bytes zuerst in Integer konvertiert, zwischen denen wird dann operiert und das Resultat wird anschließend wieder in ein Byte-Array  zurück konvertiert, welches einem neuen <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> zugeordnet wird.</p>
+<h2 id="berechnung-von-netz--broadcast--und-host-adresse">Berechnung von Netz-, Broadcast- und Host-Adresse</h2>
+<p>Neben <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> verläuft auch einiges an notwendiger Berechnungslogik in der <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> ab. Hier kommt es zur Berechnung der Netz-, Broadcast- und Host-Adresse. Um ein <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> zu erzeugen, wird immer eine Ursprungs-Adresse und eine Subnetzmaske vorausgesetzt, um auf dessen Basis sämtliche Berechnungen vollziehen zu können.</p>
+<h3 id="netz-adresse">Netz-Adresse</h3>
+<p>Die Netzadresse wird mittels BitwiseAnd-Operation zwischen der Ursprungs-Adresse und der Subnetzmaske ermittelt.</p>
+<pre><code class="lang-c#">NetAddress = SourceAddress &amp; SubnetMask
+</code></pre>
+<h3 id="host-adresse">Host-Adresse</h3>
+<p>Auf Basis der zuvor berechneten Netz-Adresse, wird dessen Wert um 1 erhöht. Auch hier werden die Bytes aus der <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> zuvor in ein Integer konvertiert, welches dann um 1 erhöht und anschließend zurück konvertiert wird.</p>
+<h3 id="broadcast-adresse">Broadcast-Adresse</h3>
+<p>Die Broadcast-Adresse ist das Resultat einer BitwiseOr-Operation zwischen der Ursprungs-Adresse und der <strong>invertierten</strong> Subnetzmaske.</p>
+<p>Beispiel:</p>
+<pre><code>BroadcastAddress = SourceAddress | ~SubnetMask
+
+// Daten
+Ursprungs-Adresse	= 192.168.10.5	= 1100 0000   1010 1000   0000 1010   0000 0101
+Subnetzmaske		= 255.255.252.0	= 1111 1111   1111 1111   1111 1100   0000 0000
+
+// 1. Subnetzmaske invertieren
+1111 1111   1111 1111   1111 1100   0000 0000
+wird zu
+0000 0000   0000 0000   0000 0011   1111 1111
+
+// BitwiseOr-Operation
+0000 0000   0000 0000   0000 0011   1111 1111	| Subnetzmaske invertiert
+1100 0000   1010 1000   0000 1010   0000 0101	| Ursprungs-Adresse
+---------------------------------------------
+1100 0000   1010 1000   0000 1011   1111 1111
+== 192.168.11.255
+
+</code></pre>
+<h2 id="berechnung-aller-freien-adressen-im-netzwerk">Berechnung aller freien Adressen im Netzwerk</h2>
+<p>Ein <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> liefert automatisch immer eine Iteration aller in ihm noch zu Verfügung stehenden IP-Adressen mit. Dafür werden <strong>alle möglichen Adressen zwischen der Host-Adresse und der Broadcast-Adresse</strong> zurückgegeben, mit Ausnahme aller Adressen die bereits in dem Netzwerk, oder einem untergeordnetem Netzwerk vergeben wurden.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Hackberries/Ipee/blob/main/docfx/articles/addressing.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
