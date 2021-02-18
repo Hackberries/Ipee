@@ -16,6 +16,20 @@
             </MenuItem>
         </Menu>
 
-        <Grid/>
+        <Grid>
+
+
+            <DataGrid x:Name="Subnets_DataGrid" Width="700" Height="200" Margin="0,0,0,20" VerticalAlignment="Bottom" SelectionChanged="Subnets_DataGrid_SelectionChanged" Initialized="Subnets_DataGrid_Initialized">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Beschreibung" Binding="{Binding Description}"/>
+                    <DataGridTextColumn Header="Hostadresse" Binding="{Binding HostAddress}"/>
+                    <DataGridTextColumn Header="Netzadresse" Binding="{Binding NetAddress}"/>
+                    <DataGridTextColumn Header="Broadcastadresse" Binding="{Binding BroadcastAddress}"/>
+                    <DataGridTextColumn Header="Subnetzmaske" Binding="{Binding SubnetMask}"/>
+                    <DataGridTextColumn Header="Subnetze" Binding="{Binding SubnetsCount}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="IP-Adressen" Binding="{Binding IpAddressesCount}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </DockPanel>
 </Window>

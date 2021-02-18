@@ -8,6 +8,12 @@ namespace Ipee.Core.Addressing
 {
     public class IPv4Network
     {
+        public string Description { get; set; }
+
+        public int SubnetsCount => subnets.Count();
+
+        public int IpAddressesCount => GivenAddresses.Count();
+
         [JsonIgnore]
         public IPv4Network MotherNetwork { get; set; }
 
