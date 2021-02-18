@@ -101,7 +101,7 @@ namespace Ipee.Test
             var mask = new IPv4SubnetMask("255.255.252.0");
             var subnet = new IPv4Network(address, mask);
 
-            Assert.ThrowsAny<Exception>(() => subnet.AddAddress(new IPv4Address("192.168.8.1")));
+            Assert.ThrowsAny<Exception>(() => subnet.AddAddress(new IPv4Address("192.168.8.0")));
             Assert.ThrowsAny<Exception>(() => subnet.AddAddress(new IPv4Address("192.0.0.0")));
             Assert.ThrowsAny<Exception>(() => subnet.AddAddress(null));
 

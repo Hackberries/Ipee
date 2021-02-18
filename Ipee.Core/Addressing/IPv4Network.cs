@@ -116,8 +116,8 @@ namespace Ipee.Core.Addressing
                 {
                     current = IPv4Value.Increase(current, 1);
 
-                    var isPossible = !givenAddresses.Contains(current)
-                                    && !ExistInSubnet(current)
+                    var isPossible = !AllGivenAddresses.Contains(current)
+                                    && !AllSubnets.Select(net => net.NetAddress).Contains(current)
                                     && !IsPossibleInSubnet(current)
                                     && current != BroadcastAddress;
 
@@ -213,14 +213,14 @@ namespace Ipee.Core.Addressing
             this.OnChanged?.Invoke();
         }
 
-        private bool IsInRange(IPv4Value address) => address > FirstAddress || address < BroadcastAddress;
+        private bool IsInRange(IPv4Value address) => address > NetAddress || address < BroadcastAddress;
 
-        private bool IsNotInRange(IPv4Value address) => address <= FirstAddress || address >= BroadcastAddress;
+        private bool IsNotInRange(IPv4Value address) => address <= NetAddress || address >= BroadcastAddress;
 
         private bool ExistInSubnet(IPv4Value address)
         {
             foreach (var subnet in this.subnets)
-                if (subnet.AllGivenAddresses.Contains(address) || address == subnet.FirstAddress || address == subnet.BroadcastAddress)
+                if (subnet.AllGivenAddresses.Contains(address) || address == subnet.NetAddress || address == subnet.BroadcastAddress)
                     return true;
 
             return false;
@@ -229,7 +229,7 @@ namespace Ipee.Core.Addressing
         private bool IsPossibleInSubnet(IPv4Value address)
         {
             foreach (var subnet in this.subnets)
-                if (subnet.AllPossibleAddresses.Contains(address) || address == subnet.FirstAddress || address == subnet.BroadcastAddress)
+                if (subnet.AllPossibleAddresses.Contains(address) || address == subnet.NetAddress || address == subnet.BroadcastAddress)
                     return true;
 
             return false;
