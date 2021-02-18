@@ -1,4 +1,5 @@
 ﻿using Ipee.Core.Addressing;
+using Ipee.Core.Store;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,42 @@ namespace Ipee
         public NetworkView(IPv4Network network)
         {
             this.network = network;
-
+            this.network.OnChanged += RefreshWindow;
             InitializeComponent();
+            
+            RefreshWindow();
+            
+        }
+
+        private void SubnetList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var listBox = (ListBox)sender;
+            var network = (IPv4Network)listBox.SelectedItem;
+            var view = new NetworkView(network);
+            view.Show();
+        }
+
+        private void VergebeneAddressen_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var listBox = (ListBox)sender;
+            var value = (IPv4Value)listBox.SelectedItem;
+            this.network.RemoveAddress(value);
+            this.UpdateLayout();
+        }
+        private void PossibleAddressBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var listBox = (ListBox)sender;
+            var value = (IPv4Value)listBox.SelectedItem;
+            this.network.AddAddress(value);
+            this.UpdateLayout();
+        }
+
+        private void RefreshWindow()
+        {
+            this.PossibleAddressBox.Items.Clear();
+            this.VergebeneAddressen.Items.Clear();
+            this.SubnetList.Items.Clear();
+
 
             this.SourceAddressBox.Text = this.network.SourceAddress.ToString();
             this.SubnetMaskBox.Text = this.network.SubnetMask.ToString();
@@ -57,12 +92,6 @@ namespace Ipee
             }
         }
 
-        private void SubnetList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            var listBox = (ListBox)sender;
-            var network = (IPv4Network)listBox.SelectedItem;
-            var view = new NetworkView(network);
-            view.Show();
-        }
+
     }
 }

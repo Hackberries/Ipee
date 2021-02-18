@@ -13,14 +13,14 @@
         <TextBox x:Name="NetAddressText" HorizontalAlignment="Left" Margin="146,101,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <TextBox x:Name="HostAddressText" HorizontalAlignment="Left" Margin="146,132,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <TextBox x:Name="BroadcastAddressText" HorizontalAlignment="Left" Margin="146,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <ListBox x:Name="PossibleAddressBox" Margin="0,40,19,11" HorizontalAlignment="Right" Width="159" />
+        <ListBox x:Name="PossibleAddressBox" Margin="0,40,19,11" HorizontalAlignment="Right" Width="159" MouseDoubleClick="PossibleAddressBox_MouseDoubleClick"/>
         <Label Content="Mögliche Adressen" HorizontalAlignment="Left" Margin="697,6,0,0" VerticalAlignment="Top" />
         <Label x:Name="PossibleAddressCountLabel" Content="9999" Margin="0,6,-3,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="65" />
         <Label Content="Ursprüngliche IP" HorizontalAlignment="Left" Margin="13,48,0,0" VerticalAlignment="Top" />
         <Label Content="Subnetzmaske" HorizontalAlignment="Left" Margin="13,74,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="SourceAddressBox" HorizontalAlignment="Left" Margin="146,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <TextBox x:Name="SubnetMaskBox" HorizontalAlignment="Left" Margin="146,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <ListBox x:Name="VergebeneAddressen" Margin="0,37,209,14" HorizontalAlignment="Right" Width="181" />
+        <ListBox x:Name="VergebeneAddressen" Margin="0,37,209,14" HorizontalAlignment="Right" Width="181" MouseDoubleClick="VergebeneAddressen_MouseDoubleClick"/>
         <Label Content="Vergebene Adressen" HorizontalAlignment="Left" Margin="498,7,0,0" VerticalAlignment="Top" />
         <Label x:Name="VergebeneAddressenCountLabel" Content="9999" Margin="0,6,196,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="65" />
         <ListBox x:Name="SubnetList" Margin="19,240,444,15" MouseDoubleClick="SubnetList_MouseDoubleClick" />

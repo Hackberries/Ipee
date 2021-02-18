@@ -11,6 +11,9 @@ namespace Ipee.Core.Addressing
     /// </summary>
     public class IPv4Network
     {
+        [JsonIgnore]
+        public Action OnChanged { get; set; }
+
         public string Description { get; set; }
 
         public int SubnetsCount => subnets.Count();
@@ -134,6 +137,7 @@ namespace Ipee.Core.Addressing
 
             address.Network = this;
             givenAddresses.Add(address);
+            this.OnChanged?.Invoke();
         }
 
         /// <summary>
@@ -156,6 +160,7 @@ namespace Ipee.Core.Addressing
             address.Network = null;
 
             givenAddresses.Remove(address);
+            this.OnChanged?.Invoke();
         }
 
         /// <summary>
@@ -175,6 +180,7 @@ namespace Ipee.Core.Addressing
 
             subnet.MotherNetwork = this;
             subnets.Add(subnet);
+            this.OnChanged?.Invoke();
         }
 
         private bool IsInRange(IPv4Value address) => address > HostAddress || address < BroadcastAddress;
