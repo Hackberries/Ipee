@@ -52,6 +52,7 @@ namespace Ipee
             }
 
             AppStore.Instance.Refresh();
+            this.Close();
         }
     }
 }
