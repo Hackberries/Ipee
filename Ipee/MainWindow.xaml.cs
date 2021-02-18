@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,7 +16,7 @@ using System.Windows.Shapes;
 
 using Ipee.Core.Addressing;
 using Ipee.Core.Store;
-
+using Microsoft.Win32;
 
 namespace Ipee
 {
@@ -26,6 +28,7 @@ namespace Ipee
         public MainWindow()
         {
             InitializeComponent();
+            AppStore.Instance.OnMainNetworkChanged += UpdateMainNetwork;
         }
 
         private void OpenDebugWindowButtonClick(object sender, RoutedEventArgs e)
@@ -52,28 +55,59 @@ namespace Ipee
 
         private void Subnets_DataGrid_Initialized(object sender, EventArgs e)
         {
-            var address1 = new IPv4Address("192.168.10.5");
-            var mask1 = new IPv4SubnetMask("255.255.252.0");
-            var network1 = new IPv4Network(address1, mask1);
-            network1.AddAddress(new IPv4Address("192.168.10.7"));
-            network1.AddAddress(new IPv4Address("192.168.10.8"));
-            var subnet1 = new IPv4Network(new IPv4Address("192.168.10.5"), new IPv4SubnetMask("255.255.254.0"));
-            subnet1.AddAddress(new IPv4Address("192.168.11.204"));
-            subnet1.Description = "Just a test";
-            network1.AddSubnet(subnet1);
 
-            AppStore.Instance.MainNetwork = network1;
+        }
 
-            var subnetList = AppStore.Instance.MainNetwork.Subnets.ToList();
-
-            foreach (IPv4Network network in subnetList)
+        private void UpdateMainNetwork(IPv4Network network)
+        {
+            Subnets_DataGrid.Items.Clear();
+            Subnets_DataGrid.Items.Add(AppStore.Instance.MainNetwork);
+            foreach (IPv4Network subnet in AppStore.Instance.MainNetwork.Subnets)
             {
-                Subnets_DataGrid.Items.Add(network);
+                Subnets_DataGrid.Items.Add(subnet);
             }
         }
 
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void MenuItem_SubnetImport(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if(openFileDialog.ShowDialog() == true)
+            {
+                var importedSubnet = File.ReadAllText(openFileDialog.FileName);
+                var network = JsonSerializer.Deserialize<IPv4Network>(importedSubnet);
+                AppStore.Instance.MainNetwork = network;
+            }
+                
+        }
+
+        private void MenuItem_SubnetAdd(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var importedSubnet = File.ReadAllText(openFileDialog.FileName);
+                var network = JsonSerializer.Deserialize<IPv4Network>(importedSubnet);
+                AppStore.Instance.MainNetwork.AddSubnet(network);
+                UpdateMainNetwork(network);
+            }
+
+        }
+
+        private void MenuItem_SubnetExport(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = "json";
+            saveFileDialog.Filter = "JSON files (*.json)| *.json";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                System.IO.File.WriteAllText(saveFileDialog.FileName, JsonSerializer.Serialize(AppStore.Instance.MainNetwork));
+            }
 
         }
     }

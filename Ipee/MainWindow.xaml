@@ -8,6 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Datei">
+                <MenuItem Header="Subnetze importieren" Click="MenuItem_SubnetImport">
+                </MenuItem>
+                <MenuItem Header="Weitere Subnetze hinzufügen" Click="MenuItem_SubnetAdd">
+                </MenuItem>
+                <MenuItem Header="Subnetze exportieren" Click="MenuItem_SubnetExport">
+                </MenuItem>
+            </MenuItem>
             <MenuItem Header="Debug" Click="OpenDebugWindowButtonClick">
             </MenuItem>
             <MenuItem Header="_Subnet">

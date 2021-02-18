@@ -20,7 +20,18 @@ namespace Ipee.Core.Store
         /// </summary>
         public static AppStore Instance { get; set; } = new AppStore();
 
-        public IPv4Network MainNetwork { get; set; } = new IPv4Network(new IPv4Address("0.0.0.0"), new IPv4SubnetMask("255.255.255.255"));
+        public Action<IPv4Network> OnMainNetworkChanged { get; set; }
+
+        private IPv4Network mainNetwork = new IPv4Network(new IPv4Address("0.0.0.0"), new IPv4SubnetMask("255.255.255.255"));
+        public IPv4Network MainNetwork
+        {
+            get => mainNetwork; 
+            set
+            {
+                mainNetwork = value;
+                OnMainNetworkChanged?.Invoke(value);
+            }
+        }
 
         public ConfigManager ConfigManager = new ConfigManager("./subnetConfig.json");
 

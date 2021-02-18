@@ -196,23 +196,20 @@ namespace Ipee
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            var address = new IPv4Address("192.168.10.5");
-            var mask = new IPv4SubnetMask("255.255.252.0");
+            var address = new IPv4Address("192.168.10.4");
+            var mask = new IPv4SubnetMask("255.255.255.0");
             var network = new IPv4Network(address, mask);
-            network.AddAddress(new IPv4Address("192.168.10.7"));
-            network.AddAddress(new IPv4Address("192.168.10.8"));
-            var subnet = new IPv4Network(new IPv4Address("192.168.10.5"), new IPv4SubnetMask("255.255.254.0"));
-            subnet.AddAddress(new IPv4Address("192.168.11.204"));
-            network.AddSubnet(subnet);
+            network.AddAddress(new IPv4Address("192.168.10.9"));
+            network.AddAddress(new IPv4Address("192.168.10.10"));
 
             AppStore.Instance.MainNetwork = network;
 
-            System.IO.File.WriteAllText(@"C:\Users\FSN\Desktop\Network.json", JsonSerializer.Serialize(AppStore.Instance.MainNetwork));
+            System.IO.File.WriteAllText(@"C:\Users\Flo\Desktop\Network.json", JsonSerializer.Serialize(AppStore.Instance.MainNetwork));
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            var network = JsonSerializer.Deserialize<IPv4Network>(System.IO.File.ReadAllText(@"C:\Users\FSN\Desktop\Network.json"));
+            var network = JsonSerializer.Deserialize<IPv4Network>(System.IO.File.ReadAllText(@"C:\Users\Flo\Desktop\Network.json"));
         }
     }
 }
