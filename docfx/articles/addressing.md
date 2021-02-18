@@ -16,21 +16,21 @@ Dieses Objekt soll ein komplettes Netzwerk von zugeordneten IP-Adressen, dessen 
 
 Die Berechnungen zwischen IP-Adressen finden gänzlich über der [IPv4Value](~/api/Ipee.Core.Addressing.IPv4Value.yml) Klasse statt. Hierfür wurden folgende Operatoren zur Verfügung gestellt:
 
-* #### BitwiseAnd ( & )
+- #### BitwiseAnd ( & )
 
-* #### BitwiseOr ( | )
+- #### BitwiseOr ( | )
 
-* #### Equality ( == )
+- #### Equality ( == )
 
-* #### Inequality ( != )
+- #### Inequality ( != )
 
-* #### GreaterThan ( > )
+- #### GreaterThan ( > )
 
-* #### GreaterThanOrEqual ( >= )
+- #### GreaterThanOrEqual ( >= )
 
-* #### LessThan ( < )
+- #### LessThan ( < )
 
-* #### LessThanOrEqual ( <= )
+- #### LessThanOrEqual ( <= )
 
 Da [IPv4Value](~/api/Ipee.Core.Addressing.IPv4Value.yml) seinen Wert, also die IP-Adresse (z.B. 192.168.0.5), in einem Byte-Array aus 4 Elementen speichert, wären direkte Operationen zwischen zwei Adressen mit höherem Aufwand verbunden. Um die oben genannten Operationen zu erleichtern, **werden die Bytes aus von dem Objekt immer zuerst in einen Integer konvertiert**, da dieser Datentyp ebenfalls aus 4 Bytes besteht und sich perfekt dafür eignen, miteinander verglichen zu werden.
 
@@ -43,9 +43,7 @@ Wenn wir also beispielsweise wissen wollen, ob "253.21.161.14" größer ist als 
 -48914162 > -48913904 = true
 ```
 
-Ähnlich verläuft es dementsprechend auch bei AND oder OR Operationen. Auch hier werden die Bytes zuerst in Integer konvertiert, zwischen denen wird dann operiert und das Resultat wird anschließend wieder in ein Byte-Array  zurück konvertiert, welches einem neuen [IPv4Value](~/api/Ipee.Core.Addressing.IPv4Value.yml) zugeordnet wird.
-
-
+Ähnlich verläuft es dementsprechend auch bei AND oder OR Operationen. Auch hier werden die Bytes zuerst in Integer konvertiert, zwischen denen wird dann operiert und das Resultat wird anschließend wieder in ein Byte-Array zurück konvertiert, welches einem neuen [IPv4Value](~/api/Ipee.Core.Addressing.IPv4Value.yml) zugeordnet wird.
 
 ## Berechnung von Netz-, Broadcast- und Host-Adresse
 
@@ -53,15 +51,11 @@ Neben [IPv4Value](~/api/Ipee.Core.Addressing.IPv4Value.yml) verläuft auch einig
 
 ### Netz-Adresse
 
-Die Netzadresse wird mittels BitwiseAnd-Operation zwischen der Ursprungs-Adresse und der Subnetzmaske ermittelt. 
+Die Netzadresse wird mittels BitwiseAnd-Operation zwischen der Ursprungs-Adresse und der Subnetzmaske ermittelt.
 
 ```c#
 NetAddress = SourceAddress & SubnetMask
 ```
-
-### Host-Adresse
-
-Auf Basis der zuvor berechneten Netz-Adresse, wird dessen Wert um 1 erhöht. Auch hier werden die Bytes aus der [IPv4Value](~/api/Ipee.Core.Addressing.IPv4Value.yml) zuvor in ein Integer konvertiert, welches dann um 1 erhöht und anschließend zurück konvertiert wird.
 
 ### Broadcast-Adresse
 
@@ -89,8 +83,6 @@ wird zu
 == 192.168.11.255
 
 ```
-
-
 
 ## Berechnung aller freien Adressen im Netzwerk
 

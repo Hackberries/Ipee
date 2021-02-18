@@ -98,9 +98,9 @@ namespace Ipee.Core.Addressing
         public IPv4Value BroadcastAddress => SourceAddress | IPv4SubnetMask.Invert(SubnetMask);
 
         /// <summary>
-        /// Host-Adresse dieses Netzwerkes. Wird automatisch ermittelt.
+        /// Die erste Adresse dieses Netzwerkes. Wird automatisch ermittelt.
         /// </summary>
-        public IPv4Value HostAddress => IPv4Address.Increase(NetAddress, 1);
+        public IPv4Value FirstAddress => IPv4Address.Increase(NetAddress, 1);
 
         /// <summary>
         /// Gibt alle Addressen in Form <see cref="IPv4Value"/>  aus, welche sich zwischen der errechneten HostAddress und der BroadcastAddress befinden.
@@ -110,7 +110,7 @@ namespace Ipee.Core.Addressing
         {
             get
             {
-                var current = HostAddress;
+                var current = NetAddress;
 
                 while (current < BroadcastAddress)
                 {
@@ -213,14 +213,14 @@ namespace Ipee.Core.Addressing
             this.OnChanged?.Invoke();
         }
 
-        private bool IsInRange(IPv4Value address) => address > HostAddress || address < BroadcastAddress;
+        private bool IsInRange(IPv4Value address) => address > FirstAddress || address < BroadcastAddress;
 
-        private bool IsNotInRange(IPv4Value address) => address <= HostAddress || address >= BroadcastAddress;
+        private bool IsNotInRange(IPv4Value address) => address <= FirstAddress || address >= BroadcastAddress;
 
         private bool ExistInSubnet(IPv4Value address)
         {
             foreach (var subnet in this.subnets)
-                if (subnet.AllGivenAddresses.Contains(address) || address == subnet.HostAddress || address == subnet.BroadcastAddress)
+                if (subnet.AllGivenAddresses.Contains(address) || address == subnet.FirstAddress || address == subnet.BroadcastAddress)
                     return true;
 
             return false;
@@ -229,7 +229,7 @@ namespace Ipee.Core.Addressing
         private bool IsPossibleInSubnet(IPv4Value address)
         {
             foreach (var subnet in this.subnets)
-                if (subnet.AllPossibleAddresses.Contains(address) || address == subnet.HostAddress || address == subnet.BroadcastAddress)
+                if (subnet.AllPossibleAddresses.Contains(address) || address == subnet.FirstAddress || address == subnet.BroadcastAddress)
                     return true;
 
             return false;

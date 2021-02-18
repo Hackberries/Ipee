@@ -40,7 +40,7 @@ namespace Ipee.Test
 
             var subnet = new IPv4Network(address, mask);
 
-            Assert.Equal("192.168.8.1", subnet.HostAddress.ToString());
+            Assert.Equal("192.168.8.1", subnet.FirstAddress.ToString());
         }
 
         [Fact]

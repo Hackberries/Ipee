@@ -66,7 +66,6 @@ namespace Ipee
             this.SubnetMaskBox.Text = this.network.SubnetMask.ToString();
             this.DescriptionBox.Text = this.network.Description?.ToString();
             this.NetAddressText.Text = this.network.NetAddress.ToString();
-            this.HostAddressText.Text = this.network.HostAddress.ToString();
             this.BroadcastAddressText.Text = this.network.BroadcastAddress.ToString();
 
             var allAddresses = network.AllPossibleAddresses.ToArray();

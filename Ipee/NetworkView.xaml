@@ -8,11 +8,9 @@
         Title="NetworkView" Height="450" Width="888">
     <Grid Margin="0,0,0,0">
         <Label Content="Netz-Adresse" HorizontalAlignment="Left" Margin="13,97,0,0" VerticalAlignment="Top" />
-        <Label Content="Host-Adresse" HorizontalAlignment="Left" Margin="15,128,0,0" VerticalAlignment="Top" />
-        <Label Content="Broadcast-Adresse" HorizontalAlignment="Left" Margin="15,159,0,0" VerticalAlignment="Top" />
+        <Label Content="Broadcast-Adresse" HorizontalAlignment="Left" Margin="13,128,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="NetAddressText" HorizontalAlignment="Left" Margin="146,101,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="HostAddressText" HorizontalAlignment="Left" Margin="146,132,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <TextBox x:Name="BroadcastAddressText" HorizontalAlignment="Left" Margin="146,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="BroadcastAddressText" HorizontalAlignment="Left" Margin="146,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
         <ListBox x:Name="PossibleAddressBox" Margin="0,40,19,11" HorizontalAlignment="Right" Width="159" MouseDoubleClick="PossibleAddressBox_MouseDoubleClick" />
         <Label Content="Mögliche Adressen" HorizontalAlignment="Left" Margin="697,6,0,0" VerticalAlignment="Top" />
         <Label x:Name="PossibleAddressCountLabel" Content="9999" Margin="0,6,-3,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="65" />
