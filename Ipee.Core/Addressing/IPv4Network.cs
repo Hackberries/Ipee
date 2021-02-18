@@ -198,5 +198,10 @@ namespace Ipee.Core.Addressing
 
             return false;
         }
+
+        public override string ToString()
+        {
+            return $"{this.Description} | Netz-Adresse: {this.NetAddress}";
+        }
     }
 }

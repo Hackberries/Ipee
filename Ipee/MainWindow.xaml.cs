@@ -110,5 +110,14 @@ namespace Ipee
             }
 
         }
+
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var row = (DataGridRow)sender;
+            var selectedNetwork = (IPv4Network)row.DataContext;
+            var view = new NetworkView(selectedNetwork);
+            view.Show();
+
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace Ipee
 
             this.SourceAddressBox.Text = this.network.SourceAddress.ToString();
             this.SubnetMaskBox.Text = this.network.SubnetMask.ToString();
-
+            this.DescriptionBox.Text = this.network.Description?.ToString();
             this.NetAddressText.Text = this.network.NetAddress.ToString();
             this.HostAddressText.Text = this.network.HostAddress.ToString();
             this.BroadcastAddressText.Text = this.network.BroadcastAddress.ToString();
@@ -41,6 +41,28 @@ namespace Ipee
 
             foreach (var address in allAddresses.Take(2500))
                 PossibleAddressBox.Items.Add(address);
+
+
+            var allGivenAddresses = network.GivenAddresses.ToArray();
+
+            VergebeneAddressenCountLabel.Content = allGivenAddresses.Length;
+
+            foreach (var address in allGivenAddresses.Take(2500))
+                VergebeneAddressen.Items.Add(address);
+
+
+            foreach (var subnet in network.Subnets)
+            {
+                SubnetList.Items.Add(subnet);
+            }
+        }
+
+        private void SubnetList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var listBox = (ListBox)sender;
+            var network = (IPv4Network)listBox.SelectedItem;
+            var view = new NetworkView(network);
+            view.Show();
         }
     }
 }
