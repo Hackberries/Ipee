@@ -93,6 +93,13 @@ namespace Ipee
         {
             var selectedSubnet = (IPv4Network)SubnetList.SelectedItem;
             this.network.RemoveSubnet(selectedSubnet);
+            AppStore.Instance.Refresh();
+        }
+
+        private void AddSubnetButton_Click(object sender, RoutedEventArgs e)
+        {
+            var view = new AddNetworkDialog(this.network);
+            view.Show();
         }
     }
 }

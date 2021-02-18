@@ -1,0 +1,20 @@
+﻿<Window x:Class="Ipee.AddNetworkDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ipee"
+        mc:Ignorable="d"
+        Title="Neues Netzwerk hinzufügen" Height="219" Width="360" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-6">
+        <Label Content="IP-Adresse" HorizontalAlignment="Left" Margin="13,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.491,0.528" />
+        <Label Content="Subnetzmaske" HorizontalAlignment="Left" Margin="58,107,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="SourceAddressBox" HorizontalAlignment="Left" Margin="191,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="SubnetMaskBox" HorizontalAlignment="Left" Margin="191,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+        <Label Content="Beschreibung" HorizontalAlignment="Left" Margin="13,19,0,0" VerticalAlignment="Top" Width="97" />
+        <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Margin="191,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Button x:Name="SaveButton" Content="Ist ok 👍" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="SaveButton_Click" />
+        <Label Content="Anzahl gewünschter Adressen" HorizontalAlignment="Left" Margin="13,77,0,0" VerticalAlignment="Top" />
+        <TextBox x:Name="AddresCountBox" HorizontalAlignment="Left" Margin="191,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</Window>

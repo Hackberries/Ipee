@@ -39,6 +39,20 @@ namespace Ipee.Core.Addressing
             return new IPv4SubnetMask(bytes);
         }
 
+        public static IPv4SubnetMask ByAddressCount(int addressCount)
+        {
+            var bitCount = 2;
+            var index = 0;
+
+            while (bitCount < addressCount)
+            {
+                bitCount = bitCount * 2;
+                index++;
+            }
+
+            return ByBitCount(31 - index);
+        }
+
         /// <summary>
         /// Gibt ein neues IPv4SubnetMask-Objekt zurück, dessen Bits das invertierte Ergebniss darstellen.
         /// </summary>

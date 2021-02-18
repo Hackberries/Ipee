@@ -16,33 +16,30 @@
                 <MenuItem Header="Subnetze exportieren" Click="MenuItem_SubnetExport">
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="Debug" Click="OpenDebugWindowButtonClick">
-            </MenuItem>
-            <MenuItem Header="_Subnet">
-            </MenuItem>
             <MenuItem Header="Address Converter" Click="OpenAddressConverterWindowButtonClick">
+            </MenuItem>
+            <MenuItem Header="Debug 🐞" Click="OpenDebugWindowButtonClick">
             </MenuItem>
         </Menu>
 
         <Grid>
-
-
-            <DataGrid x:Name="Subnets_DataGrid" Width="700" Height="200" Margin="0,0,0,20" VerticalAlignment="Bottom" SelectionChanged="Subnets_DataGrid_SelectionChanged" Initialized="Subnets_DataGrid_Initialized" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single" IsReadOnly="True">
+            <DataGrid x:Name="Subnets_DataGrid" Margin="10,10,10,10" SelectionChanged="Subnets_DataGrid_SelectionChanged" Initialized="Subnets_DataGrid_Initialized" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single" IsReadOnly="True">
                 <DataGrid.ItemContainerStyle>
                     <Style TargetType="DataGridRow">
-                        <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"/>
+                        <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick" />
                     </Style>
                 </DataGrid.ItemContainerStyle>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Beschreibung" Binding="{Binding Description}"/>
-                    <DataGridTextColumn Header="Hostadresse" Binding="{Binding HostAddress}"/>
-                    <DataGridTextColumn Header="Netzadresse" Binding="{Binding NetAddress}"/>
-                    <DataGridTextColumn Header="Broadcastadresse" Binding="{Binding BroadcastAddress}"/>
-                    <DataGridTextColumn Header="Subnetzmaske" Binding="{Binding SubnetMask}"/>
+                    <DataGridTextColumn Header="Beschreibung" Binding="{Binding Description}" />
+                    <DataGridTextColumn Header="Hostadresse" Binding="{Binding HostAddress}" />
+                    <DataGridTextColumn Header="Netzadresse" Binding="{Binding NetAddress}" />
+                    <DataGridTextColumn Header="Broadcastadresse" Binding="{Binding BroadcastAddress}" />
+                    <DataGridTextColumn Header="Subnetzmaske" Binding="{Binding SubnetMask}" />
                     <DataGridTextColumn Header="Subnetze" Binding="{Binding SubnetsCount}"></DataGridTextColumn>
                     <DataGridTextColumn Header="IP-Adressen" Binding="{Binding IpAddressesCount}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
+            <Button x:Name="MainNetworkCreateButton" Visibility="Hidden" Content="Hauptnetzwerk erstellen 🎆" HorizontalAlignment="Center" VerticalAlignment="Center" Click="MainNetworkCreateButton_Click" />
         </Grid>
     </DockPanel>
 </Window>

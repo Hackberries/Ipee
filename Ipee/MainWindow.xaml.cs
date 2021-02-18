@@ -28,7 +28,9 @@ namespace Ipee
         public MainWindow()
         {
             InitializeComponent();
-            AppStore.Instance.OnMainNetworkChanged += UpdateMainNetwork;
+            AppStore.Instance.OnMainNetworkChanged += (network) => { UpdateMainNetwork(); };
+            AppStore.Instance.OnRefresh += UpdateMainNetwork;
+            UpdateMainNetwork();
         }
 
         private void OpenDebugWindowButtonClick(object sender, RoutedEventArgs e)
@@ -45,45 +47,50 @@ namespace Ipee
 
         private void Subnets_DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void Subnets_DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void Subnets_DataGrid_Initialized(object sender, EventArgs e)
         {
-
         }
 
-        private void UpdateMainNetwork(IPv4Network network)
+        private void UpdateMainNetwork()
         {
-            Subnets_DataGrid.Items.Clear();
-            Subnets_DataGrid.Items.Add(AppStore.Instance.MainNetwork);
-            foreach (IPv4Network subnet in AppStore.Instance.MainNetwork.Subnets)
+            if (AppStore.Instance.MainNetwork is null)
             {
-                Subnets_DataGrid.Items.Add(subnet);
+                Subnets_DataGrid.Visibility = Visibility.Hidden;
+                MainNetworkCreateButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Subnets_DataGrid.Visibility = Visibility.Visible;
+                MainNetworkCreateButton.Visibility = Visibility.Hidden;
+
+                Subnets_DataGrid.Items.Clear();
+                Subnets_DataGrid.Items.Add(AppStore.Instance.MainNetwork);
+                foreach (IPv4Network subnet in AppStore.Instance.MainNetwork.AllSubnets)
+                {
+                    Subnets_DataGrid.Items.Add(subnet);
+                }
             }
         }
 
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void MenuItem_SubnetImport(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            if(openFileDialog.ShowDialog() == true)
+            if (openFileDialog.ShowDialog() == true)
             {
                 var importedSubnet = File.ReadAllText(openFileDialog.FileName);
                 var network = JsonSerializer.Deserialize<IPv4Network>(importedSubnet);
                 AppStore.Instance.MainNetwork = network;
             }
-                
         }
 
         private void MenuItem_SubnetAdd(object sender, RoutedEventArgs e)
@@ -94,9 +101,8 @@ namespace Ipee
                 var importedSubnet = File.ReadAllText(openFileDialog.FileName);
                 var network = JsonSerializer.Deserialize<IPv4Network>(importedSubnet);
                 AppStore.Instance.MainNetwork.AddSubnet(network);
-                UpdateMainNetwork(network);
+                UpdateMainNetwork();
             }
-
         }
 
         private void MenuItem_SubnetExport(object sender, RoutedEventArgs e)
@@ -108,7 +114,6 @@ namespace Ipee
             {
                 System.IO.File.WriteAllText(saveFileDialog.FileName, JsonSerializer.Serialize(AppStore.Instance.MainNetwork));
             }
-
         }
 
         private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -117,7 +122,12 @@ namespace Ipee
             var selectedNetwork = (IPv4Network)row.DataContext;
             var view = new NetworkView(selectedNetwork);
             view.Show();
+        }
 
+        private void MainNetworkCreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            var view = new AddNetworkDialog();
+            view.Show();
         }
     }
 }

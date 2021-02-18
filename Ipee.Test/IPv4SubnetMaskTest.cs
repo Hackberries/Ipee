@@ -22,6 +22,16 @@ namespace Ipee.Test
         }
 
         [Theory]
+        [InlineData(30, "255.255.255.224")]
+        [InlineData(8190, "255.255.224.0")]
+        [InlineData(500000, "255.248.0.0")]
+        public void CreatesByAddressCountCorrectly(int addressCount, string expected)
+        {
+            var mask = IPv4SubnetMask.ByAddressCount(addressCount);
+            Assert.Equal(expected, mask.ToString());
+        }
+
+        [Theory]
         [InlineData(33)]
         [InlineData(0)]
         [InlineData(-1)]

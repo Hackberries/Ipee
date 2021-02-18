@@ -73,6 +73,20 @@ namespace Ipee.Core.Addressing
         /// </summary>
         public IEnumerable<IPv4Network> Subnets { get => subnets; init => subnets = value.ToList(); }
 
+        public IEnumerable<IPv4Network> AllSubnets
+        {
+            get
+            {
+                foreach (var subnet in Subnets)
+                {
+                    yield return subnet;
+
+                    foreach (var subsubnet in subnet.Subnets)
+                        yield return subsubnet;
+                }
+            }
+        }
+
         /// <summary>
         /// Netz-Adresse dieses Netzwerkes. Wird automatisch ermittelt.
         /// </summary>
@@ -104,7 +118,8 @@ namespace Ipee.Core.Addressing
 
                     var isPossible = !givenAddresses.Contains(current)
                                     && !ExistInSubnet(current)
-                                    && !IsPossibleInSubnet(current);
+                                    && !IsPossibleInSubnet(current)
+                                    && current != BroadcastAddress;
 
                     if (isPossible)
                         yield return current;
@@ -175,7 +190,10 @@ namespace Ipee.Core.Addressing
             if (subnets.Contains(subnet))
                 throw new NetworkAlreadyExistException();
 
-            if (IsNotInRange(subnet.NetAddress))
+            if (IsNotInRange(subnet.SourceAddress))
+                throw new NetworkOutOfRangeException();
+
+            if (subnet.AllPossibleAddresses.Count() > this.AllPossibleAddresses.Count())
                 throw new NetworkOutOfRangeException();
 
             subnet.MotherNetwork = this;

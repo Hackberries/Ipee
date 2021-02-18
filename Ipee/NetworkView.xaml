@@ -27,7 +27,7 @@
         <Label Content="Subnetze:" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Center" Width="103" />
         <Label Content="Beschreibung" HorizontalAlignment="Left" Margin="13,19,0,0" VerticalAlignment="Top" Width="97" />
         <TextBox Name="DescriptionBox" HorizontalAlignment="Left" Margin="146,23,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        <Button x:Name="AddSubnetButton" Content="➕" HorizontalAlignment="Left" Margin="377,0,0,0" VerticalAlignment="Center" Width="25" Height="25" />
+        <Button x:Name="AddSubnetButton" Content="➕" HorizontalAlignment="Left" Margin="377,0,0,0" VerticalAlignment="Center" Width="25" Height="25" Click="AddSubnetButton_Click" />
         <Button x:Name="RemoveSubnetButton" Content="➖" HorizontalAlignment="Left" Margin="419,0,0,0" VerticalAlignment="Center" Width="25" Height="25" Click="RemoveSubnetButton_Click" />
     </Grid>
 </Window>
