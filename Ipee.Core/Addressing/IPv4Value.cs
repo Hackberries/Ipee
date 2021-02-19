@@ -54,17 +54,26 @@ namespace Ipee.Core.Addressing
         /// </example>
         public static byte[] Parse(string address)
         {
-            var stringOctets = address.Split('.');
+            try
+            {
+                var stringOctets = address.Split('.');
 
-            if (stringOctets.Length != 4)
-                throw new IPv4ValueParsingException();
+                if (stringOctets.Length != 4)
+                    throw new IPv4ValueParsingException();
 
-            var output = new List<byte>();
+                var output = new List<byte>();
 
-            foreach (var octet in stringOctets)
-                output.Add(byte.Parse(octet));
+                foreach (var octet in stringOctets)
+                    output.Add(byte.Parse(octet));
 
-            return output.ToArray();
+                return output.ToArray();
+            }
+            catch (Exception)
+            {
+                throw new InvalidIpv4AddressException(); 
+            }
+
+
         }
 
         protected int ToInt()

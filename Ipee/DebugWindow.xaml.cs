@@ -25,12 +25,6 @@ namespace Ipee
             InitializeComponent();
         }
 
-        // NOTE: Exception handling
-        public void HandleSomethingWentWrongException(string text)
-        {
-            exception_textBlock.Text = text;
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -74,10 +68,6 @@ namespace Ipee
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-        }
-
         private void ChooseSubnet_button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -116,9 +106,6 @@ namespace Ipee
         {
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-        }
 
         private void chooseIpAddress_button_Click(object sender, RoutedEventArgs e)
         {

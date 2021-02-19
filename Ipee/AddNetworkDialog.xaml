@@ -16,5 +16,6 @@
         <Button x:Name="SaveButton" Content="Ist ok 👍" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="SaveButton_Click" />
         <Label Content="Anzahl gewünschter Adressen" HorizontalAlignment="Left" Margin="13,77,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="AddresCountBox" HorizontalAlignment="Left" Margin="191,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBlock x:Name="Exception_TextBlock" HorizontalAlignment="Left" Width="249" Margin="22,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" TextAlignment="Center" Text="" Height="34"/>
     </Grid>
 </Window>
