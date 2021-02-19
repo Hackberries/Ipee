@@ -98,6 +98,7 @@
     <div><span class="xref">System.Windows.Markup.IQueryAmbient</span></div>
     <div><span class="xref">System.Windows.Markup.IAddChild</span></div>
     <div><span class="xref">System.Windows.Markup.IComponentConnector</span></div>
+    <div><span class="xref">System.Windows.Markup.IStyleConnector</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -2149,7 +2150,7 @@
   <h6><strong>Assembly</strong>: Ipee.dll</h6>
   <h5 id="Ipee_MainWindow_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MainWindow : Window, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild, IComponentConnector</code></pre>
+    <pre><code class="lang-csharp hljs">public class MainWindow : Window, IAnimatable, ISupportInitialize, IFrameworkInputElement, IInputElement, IQueryAmbient, IAddChild, IComponentConnector, IStyleConnector</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -2158,7 +2159,7 @@
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_MainWindow__ctor.md&amp;value=---%0Auid%3A%20Ipee.MainWindow.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee/MainWindow.xaml.cs/#L22">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee/MainWindow.xaml.cs/#L28">View Source</a>
   </span>
   <a id="Ipee_MainWindow__ctor_" data-uid="Ipee.MainWindow.#ctor*"></a>
   <h4 id="Ipee_MainWindow__ctor" data-uid="Ipee.MainWindow.#ctor">MainWindow()</h4>
@@ -2175,7 +2176,7 @@
     <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_MainWindow_InitializeComponent.md&amp;value=---%0Auid%3A%20Ipee.MainWindow.InitializeComponent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee/obj/Release/net5.0-windows/MainWindow.g.cs/#L49">View Source</a>
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee/obj/Release/net5.0-windows/MainWindow.g.cs/#L65">View Source</a>
   </span>
   <a id="Ipee_MainWindow_InitializeComponent_" data-uid="Ipee.MainWindow.InitializeComponent*"></a>
   <h4 id="Ipee_MainWindow_InitializeComponent" data-uid="Ipee.MainWindow.InitializeComponent">InitializeComponent()</h4>
@@ -2186,6 +2187,43 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void InitializeComponent()</code></pre>
   </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Hackberries/Ipee/new/main/apiSpec/new?filename=Ipee_MainWindow_ReloadData_System_Object_System_Windows_Input_MouseButtonEventArgs_.md&amp;value=---%0Auid%3A%20Ipee.MainWindow.ReloadData(System.Object%2CSystem.Windows.Input.MouseButtonEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Hackberries/Ipee/blob/main/Ipee/MainWindow.xaml.cs/#L133">View Source</a>
+  </span>
+  <a id="Ipee_MainWindow_ReloadData_" data-uid="Ipee.MainWindow.ReloadData*"></a>
+  <h4 id="Ipee_MainWindow_ReloadData_System_Object_System_Windows_Input_MouseButtonEventArgs_" data-uid="Ipee.MainWindow.ReloadData(System.Object,System.Windows.Input.MouseButtonEventArgs)">ReloadData(Object, MouseButtonEventArgs)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReloadData(object sender, MouseButtonEventArgs e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">sender</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Windows.Input.MouseButtonEventArgs</span></td>
+        <td><span class="parametername">e</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">System.Windows.Media.Animation.IAnimatable</span>
@@ -2207,6 +2245,9 @@
   </div>
   <div>
       <span class="xref">System.Windows.Markup.IComponentConnector</span>
+  </div>
+  <div>
+      <span class="xref">System.Windows.Markup.IStyleConnector</span>
   </div>
 </article>
           </div>

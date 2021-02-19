@@ -102,15 +102,13 @@
 
 -48914162 &gt; -48913904 = true
 </code></pre>
-<p>Ähnlich verläuft es dementsprechend auch bei AND oder OR Operationen. Auch hier werden die Bytes zuerst in Integer konvertiert, zwischen denen wird dann operiert und das Resultat wird anschließend wieder in ein Byte-Array  zurück konvertiert, welches einem neuen <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> zugeordnet wird.</p>
+<p>Ähnlich verläuft es dementsprechend auch bei AND oder OR Operationen. Auch hier werden die Bytes zuerst in Integer konvertiert, zwischen denen wird dann operiert und das Resultat wird anschließend wieder in ein Byte-Array zurück konvertiert, welches einem neuen <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> zugeordnet wird.</p>
 <h2 id="berechnung-von-netz--broadcast--und-host-adresse">Berechnung von Netz-, Broadcast- und Host-Adresse</h2>
 <p>Neben <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> verläuft auch einiges an notwendiger Berechnungslogik in der <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> ab. Hier kommt es zur Berechnung der Netz-, Broadcast- und Host-Adresse. Um ein <a href="../api/Ipee.Core.Addressing.IPv4Network.html">IPv4Network</a> zu erzeugen, wird immer eine Ursprungs-Adresse und eine Subnetzmaske vorausgesetzt, um auf dessen Basis sämtliche Berechnungen vollziehen zu können.</p>
 <h3 id="netz-adresse">Netz-Adresse</h3>
 <p>Die Netzadresse wird mittels BitwiseAnd-Operation zwischen der Ursprungs-Adresse und der Subnetzmaske ermittelt.</p>
 <pre><code class="lang-c#">NetAddress = SourceAddress &amp; SubnetMask
 </code></pre>
-<h3 id="host-adresse">Host-Adresse</h3>
-<p>Auf Basis der zuvor berechneten Netz-Adresse, wird dessen Wert um 1 erhöht. Auch hier werden die Bytes aus der <a href="../api/Ipee.Core.Addressing.IPv4Value.html">IPv4Value</a> zuvor in ein Integer konvertiert, welches dann um 1 erhöht und anschließend zurück konvertiert wird.</p>
 <h3 id="broadcast-adresse">Broadcast-Adresse</h3>
 <p>Die Broadcast-Adresse ist das Resultat einer BitwiseOr-Operation zwischen der Ursprungs-Adresse und der <strong>invertierten</strong> Subnetzmaske.</p>
 <p>Beispiel:</p>
