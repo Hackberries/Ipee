@@ -31,7 +31,6 @@
                 </DataGrid.ItemContainerStyle>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Beschreibung" Binding="{Binding Description}" />
-                    <DataGridTextColumn Header="Hostadresse" Binding="{Binding SourceAddress}" />
                     <DataGridTextColumn Header="Netzadresse" Binding="{Binding NetAddress}" />
                     <DataGridTextColumn Header="Broadcastadresse" Binding="{Binding BroadcastAddress}" />
                     <DataGridTextColumn Header="Subnetzmaske" Binding="{Binding SubnetMask}" />
