@@ -129,5 +129,10 @@ namespace Ipee
             var view = new AddNetworkDialog();
             view.Show();
         }
+
+        public void ReloadData(object sender, MouseButtonEventArgs e)
+        {
+            AppStore.Instance.Refresh();
+        }
     }
 }

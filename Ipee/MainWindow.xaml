@@ -23,7 +23,7 @@
         </Menu>
 
         <Grid>
-            <DataGrid x:Name="Subnets_DataGrid" Margin="10,10,10,10" SelectionChanged="Subnets_DataGrid_SelectionChanged" Initialized="Subnets_DataGrid_Initialized" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single" IsReadOnly="True">
+            <DataGrid x:Name="Subnets_DataGrid" Margin="10,10,10,10" SelectionChanged="Subnets_DataGrid_SelectionChanged" Initialized="Subnets_DataGrid_Initialized" CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single" IsReadOnly="True" PreviewMouseRightButtonDown="ReloadData">
                 <DataGrid.ItemContainerStyle>
                     <Style TargetType="DataGridRow">
                         <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick" />
@@ -31,7 +31,7 @@
                 </DataGrid.ItemContainerStyle>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Beschreibung" Binding="{Binding Description}" />
-                    <DataGridTextColumn Header="Hostadresse" Binding="{Binding HostAddress}" />
+                    <DataGridTextColumn Header="Hostadresse" Binding="{Binding SourceAddress}" />
                     <DataGridTextColumn Header="Netzadresse" Binding="{Binding NetAddress}" />
                     <DataGridTextColumn Header="Broadcastadresse" Binding="{Binding BroadcastAddress}" />
                     <DataGridTextColumn Header="Subnetzmaske" Binding="{Binding SubnetMask}" />
